@@ -924,14 +924,16 @@ report 66006 "General Sales"
                             Gensales."Sale Amount" := GensalesNew."Sale Amount";
                             Gensales.TotalSales := GensalesNew.TotalSales;
                             Gensales.Margin := GensalesNew.Margin;
-                            Gensales."Margin %" := GensalesNew."Margin %";
+                            if Gensales.TotalSales <> 0 then
+                                Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
                             Gensales.MonthSort := 13;
                             Gensales.Insert();
                         end else begin
                             Gensales."Sale Amount" += GensalesNew."Sale Amount";
                             Gensales.TotalSales += GensalesNew.TotalSales;
                             Gensales.Margin += GensalesNew.Margin;
-                            Gensales."Margin %" += GensalesNew."Margin %";
+                            if Gensales.TotalSales <> 0 then
+                                Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
                             Gensales.Modify();
                         end;
                     until GensalesNew.Next() = 0;
@@ -984,7 +986,8 @@ report 66006 "General Sales"
                     Gensales.TotalSales := GensalesNew.TotalSales;
                     Gensales."Sale Amount" := 0;
                     toTotalSale := GensalesNew.TotalSales;
-                    Gensales.MonthSort := 16;
+                    Gensales.MonthSort := 15;
+                    j := Gensales.MonthSort;
                     Gensales.Insert();
                 end;
                 GensalesNew.Reset();
@@ -1007,8 +1010,9 @@ report 66006 "General Sales"
                             Gensales."Customer Posting Group" := GensalesNew."Customer Posting Group";
                             //Gensales."Sale Amount" := GensalesNew."Sale Amount" / 12;
                             Gensales.TotalSales := (GensalesNew."Sale Amount" * 100) / toTotalSale;
-                            Gensales.MonthSort := 17;
+                            Gensales.MonthSort := j + 1;
                             Gensales.Insert();
+                            j := Gensales.MonthSort;
 
                         end;
                     until GensalesNew.Next() = 0;
@@ -1034,14 +1038,17 @@ report 66006 "General Sales"
                             Gensales."Sale Amount" := GensalesNew."Sale Amount";
                             Gensales.TotalSales := GensalesNew.TotalSales;
                             Gensales.Margin := GensalesNew.Margin;
-                            Gensales."Margin %" := GensalesNew."Margin %";
+                            if Gensales.TotalSales <> 0 then
+                                Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
                             Gensales.MonthSort := 13;
                             Gensales.Insert();
                         end else begin
                             Gensales."Sale Amount" += GensalesNew."Sale Amount";
                             Gensales.TotalSales += GensalesNew.TotalSales;
                             Gensales.Margin += GensalesNew.Margin;
-                            Gensales."Margin %" += GensalesNew."Margin %";
+                            //Gensales."Margin %" += GensalesNew."Margin %";
+                            if Gensales.TotalSales <> 0 then
+                                Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
                             Gensales.Modify();
                         end;
                     until GensalesNew.Next() = 0;
@@ -1094,7 +1101,8 @@ report 66006 "General Sales"
                     Gensales."Sale Amount" := 0;
                     Gensales.TotalSales := GensalesNew.TotalSales;
                     fromTotalSale := GensalesNew.TotalSales;
-                    Gensales.MonthSort := 16;
+                    Gensales.MonthSort := 15;
+                    j := Gensales.MonthSort;
                     Gensales.Insert();
                 end;
                 GensalesNew.Reset();
@@ -1117,8 +1125,9 @@ report 66006 "General Sales"
                             Gensales."Customer Posting Group" := GensalesNew."Customer Posting Group";
                             //Gensales."Sale Amount" := GensalesNew."Sale Amount" / 12;
                             Gensales.TotalSales := (GensalesNew."Sale Amount" * 100) / fromTotalSale;
-                            Gensales.MonthSort := 17;
+                            Gensales.MonthSort := j + 1;
                             Gensales.Insert();
+                            j := Gensales.MonthSort;
 
                         end;
                     until GensalesNew.Next() = 0;
@@ -1765,4 +1774,5 @@ report 66006 "General Sales"
         toTurnOver: Decimal;
         fromMargin: Decimal;
         toMargin: Decimal;
+        j: Integer;
 }
