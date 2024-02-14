@@ -1,8 +1,8 @@
 {
-  "id": "7279bde3-7ce5-4ef1-8cbb-30bafb453c64",
-  "name": "RamanCmbh",
-  "publisher": "Default Publisher",
-  "version": "1.0.0.0",
+  "id": "116a14fb-cb34-43e3-b635-a937ae37098e",
+  "name": "CCS Mgmt",
+  "publisher": "Concept Cloud Services",
+  "version": "19.4.0.32",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -12,21 +12,17 @@
   "logo": "",
   "dependencies": [],
   "screenshots": [],
-  "platform": "1.0.0.0",
-  "application": "21.0.0.0",
-  "idRanges": [
-    {
-      "from": 50100,
-      "to": 50149
-    }
-  ],
-  "resourceExposurePolicy": {
-    "allowDebugging": true,
-    "allowDownloadingSource": true,
-    "includeSourceInSymbolFile": true
-  },
-  "runtime": "10.0",
-  "features": [
-    "NoImplicitWith"
-  ]
+  "platform": "22.0.0.0",
+  "application": "22.0.0.0",    
+  "resourceExposurePolicy": {"allowDebugging": true, "allowDownloadingSource": false,"includeSourceInSymbolFile": false},
+  "runtime": "11.0",
+  "features": ["TranslationFile","GenerateCaptions","ExcludeGeneratedTranslations"],
+  "idRanges": [{
+    "from": 66000,
+    "to": 66999
+  }
+    
+      ]
+      
+    
 }
