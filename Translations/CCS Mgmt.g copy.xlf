@@ -1,0 +1,1713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="de-DE" original="CCS Mgmt.g.xlf">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 1131054391 - NamedType 429708744" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Can not select more than %1 stock available - Open SO Quantity %2 for that item %3.</source>
+          <target>Kann nicht mehr als %1 Lager verfügbar sind - Öffnen Sie so Menge %2 für diesen Punkt %3.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CCS EventSubscriber - NamedType QtyError</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1131054391 - NamedType 4198758746" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is only %1 stock available for that item %2.\Do you want to continue?</source>
+          <target>Es gibt nur %1 Lager für diesen Artikel %2. \ Wollen Sie fortfahren?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CCS EventSubscriber - NamedType QtyWarning</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1131054391 - NamedType 3845178832" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WARNING: You broke the Masterbox Qty.\Next less Qty can be: %1 \Next High Qty can be: %2 \Masterbox Qty: %3 \You want to replace %4 pcs with %5 pcs.</source>
+          <target>WARNUNG: Sie haben die Masterbox-Qty gebrochen. \ Nächster weniger Menge kann sein:%1 \ Nächste High-Menge kann sein:%2 \ Masterbox Menge:%3 \ Sie möchten%4 PCs durch%5-Stck ersetzen.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CCS EventSubscriber - NamedType WarningLabel</note>
+        </trans-unit>
+        <trans-unit id="Page 3884139068 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CCS Purchase order Sub List</source>
+          <target>CCS-Bestell-Unterliste</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CCS Purchase order Sub List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3699566597 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CCS Sales order Sub List</source>
+          <target>CCS-Kundenauftrags-Unterliste</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CCS Sales order Sub List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 74569690 - Control 3852350287 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 526152577">
+          <source>Remaining Available Quantity</source>
+          <target>Verbleibende verfügbare Menge.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CCS Modify PO Subform - Control Free Available Stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3699825863 - Control 1785788369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>CCS Setups</source>
+          <target>CCS-Setups.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CCS ModifyItems - Control CCSSetups - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3699825863 - Control 784616729 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Backlog Order Inventory</source>
+          <target>Menge in Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CCS ModifyItems - Control CCS Backlog order Invt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3699825863 - Control 764369443 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Blocking Order Inventory</source>
+          <target>Menge in Blockungsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CCS ModifyItems - Control CCS Blocking Order Invt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3699825863 - Control 1807515016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Instant Order Inventory</source>
+          <target>Menge in Auftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CCS ModifyItems - Control CCS Instant Ord Invt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3699825863 - Control 1388507697 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Disposition Order Inventory</source>
+          <target>Menge in Dispositionsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CCS ModifyItems - Control CCS MRP order Invt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3699825863 - Control 3852350287 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Free Available Stock</source>
+          <target>Menge frei verfügbar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CCS ModifyItems - Control Free Available Stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3699825863 - Control 1340456162 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies how many units, such as pieces, boxes, or cans, of the item are in inventory.</source>
+          <target>Gibt an, wie viele Einheiten, wie Teile, Boxen oder Dosen, des Artikels im Lagerbestand sind.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CCS ModifyItems - Control InventoryInhand - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3699825863 - Control 1340456162 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Inventory</source>
+          <target>Lagerbestand</target>
+          <target>Lager</target>
+          <target>Bestand</target>
+          <target>Lagerbest</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CCS ModifyItems - Control InventoryInhand - Property Caption</note>
+        </trans-unit>
+         <trans-unit id="TableExtension 458191466 - Field 3950223402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>BDA Languages</source>
+          <target>BDA Sprachen</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field BDA Languages - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 2013554313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Cable length in m</source>
+          <target>Kabellänge in m</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Cable length in m - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 784616729 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Backlog order Inventory</source>
+          <target>Menge in Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Backlog order Invt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 20416754 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Battery</source>
+          <target>Batterie</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Battery - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 764369443 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Blocking Order Inventory</source>
+          <target>Menge in Blockungsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Blocking Order Invt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 1086888668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Brand</source>
+          <target>Marke</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Brand - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3753273258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Color</source>
+          <target>Farbe</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Color - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 1730661951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Custom Tax</source>
+          <target>Zollsteuer in %</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Custom Tax - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 91125595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>EAN</source>
+          <target>EAN Produkt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS EAN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 1807515016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Instant Order Inventory</source>
+          <target>Menge in Auftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Instant Ord Invt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 4050553958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Item Status</source>
+          <target>Artikelstatus</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Item Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 4050553958 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>S,A,N</source>
+          <target>S, a, n</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Item Status - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 718130158 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Masterbox Qty.</source>
+          <target>Menge VPE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Masterbox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 752566956 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Masterbox EAN</source>
+          <target>EAN VPE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Masterbox EAN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3528478780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Model Status</source>
+          <target>Produktstatus</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Model Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3528478780 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>SOR,EOL</source>
+          <source>SOR,EOL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Model Status - Property OptionCaption</note>
+        </trans-unit>        
+        <trans-unit id="TableExtension 458191466 - Field 1388507697 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Disposition order Inventory</source>
+          <target>Menge in Dispositionsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS MRP order Invt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 2777039651 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Packsize Unit</source>
+          <target>Einheit packen</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Packsize Unit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3175908189 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Pallet Info.</source>
+          <target>Menge auf 1,8m Palettenhöhe</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Pallet Info. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 2845552744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Rec. Sales Price</source>
+          <target>Verkaufspreis Export</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Rec. Sales Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3873260791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Rec. Street Price</source>
+          <target>UVP</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Rec. Street Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3834102155 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Unit Qty 20 feet Cont.</source>
+          <target>Menge 20 feet Container</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Unit Qty 20 feet Cont. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3262623353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Unit Qty 40 feet Cont.</source>
+          <target>Menge 40 feet Container</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Unit Qty 40 feet Cont. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3206170896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Unit Qty 40 HC feet Cont.</source>
+          <target>Menge 40 HC Container</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field CCS Unit Qty 40 HC feet Cont. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3852350287 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Free Available Stock</source>
+          <target>Menge frei verfügbar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Free Available Stock - Property Caption</note>
+        </trans-unit>
+         <trans-unit id="TableExtension 458191466 - Field 3585468072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Connector shape</source>
+          <target>Steckerform</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Connector shape - Property Caption</note>
+        </trans-unit>
+         <trans-unit id="TableExtension 458191466 - Field 3525700088 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Green dot</source>
+          <target>Grüner Punkt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Green dot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3184785479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>GS Co. License</source>
+          <target>GS Co. Lizenz</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field GS Co. License - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 867487682 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Pallet height 2,20m</source>
+          <target>Produktlänge in cm</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Pallet height 2,20m - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 473748895 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Product height in cm</source>
+          <target>Produkthöhe in cm</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Product height in cm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 936813218 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Product length in cm</source>
+          <target>Produktlänge in cm</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Product length in cm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 4156224576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Product width in cm</source>
+          <target>Produktbreite in cm</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Product width in cm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 1934707667 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Quantity pallet height 1,05m</source>
+          <target>Menge Palettenhöhe 1,05m</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Quantity pallet height 1,05m - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 417658827 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>PU PE foam in gr.</source>
+          <target>VPE PE Schaumstoff in gr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field PU PE foam in gr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 374890133 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>PU Styroport in gr.</source>
+          <target>VPE Styroport in gr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field PU Styroport in gr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 588466937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Goods Group</source>
+          <target>Warengruppe</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Goods Group - Property Caption</note>
+        </trans-unit>
+         <trans-unit id="TableExtension 458191466 - Field 3358549161 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Quantity Pallet height 2.20m</source>
+          <target>Menge Palettenhöhe 2,20m</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Quantity Pallet height 2.20m - Property Caption</note>
+        </trans-unit>        
+        <trans-unit id="TableExtension 458191466 - Field 1976705151 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VK foil in gr.</source>
+          <target>VK Folie in gr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VK foil in gr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 1332548126 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VK P/P/K in gr.</source>
+          <target>VK P/P/K in gr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VK P/P/K in gr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 1810729299 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VK PE foam in gr.</source>
+          <target>VK PE Schaumstoff in gr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VK PE foam in gr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 2513367085 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VK Styroport in gr.</source>
+          <target>VK Styroport in gr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VK Styroport in gr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 274775867 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Volume in m³</source>
+          <target>Volume in m³</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field Volume in m³ - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3489283019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VPE film in gr.</source>
+          <target>VPE Folie in gr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VPE film in gr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 65286287 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VPE height in cm</source>
+          <target>VPE Höhe in cm</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VPE height in cm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 2530847442 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VPE length in cm</source>
+          <target>VPE Länge in cm</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VPE length in cm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 3047607176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VPE P/P/K in gr.</source>
+          <target>VPE P/P/K in gr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VPE P/P/K in gr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 908282593 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VPE PE foam in gr.</source>
+          <target>VPE PE Schaumstoff in gr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VPE PE foam in gr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 1544672055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VPE Styroport in gr.</source>
+          <target>VPE Styroport in gr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VPE Styroport in gr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 458191466 - Field 1161838160 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>VPE width in cm</source>
+          <target>VPE Breite in cm</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Item - Field VPE width in cm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 4122422461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Estimated time of Arrival</source>
+          <target>Voraussichtliche Ankunftszeit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS ETA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2209332610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Estimated Time of Delivery</source>
+          <target>Geschätzte Lieferzeit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS ETD - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2675081718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Purchase Order Status</source>
+          <target>Bestellstatus kaufen.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Purchase Order Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2675081718 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Pending,Booked,Shipped</source>
+          <target>Ausstehend,gebucht,versandt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Purchase Order Status - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 4122422461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Estimated time of Arrival</source>
+          <target>Voraussichtliche Ankunftszeit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS ETA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2209332610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Estimated Time of Delivery</source>
+          <target>Geschätzte Lieferzeit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS ETD - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2675081718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Purchase Order Status</source>
+          <target>Bestellstatus kaufen.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Purchase Order Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2675081718 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Pending,Booked,Shipped</source>
+          <target>Ausstehend,gebucht,versandt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Purchase Order Status - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 4122422461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Estimated time of Arrival</source>
+          <target>Voraussichtliche Ankunftszeit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS ETA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2209332610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Estimated Time of Delivery</source>
+          <target>Geschätzte Lieferzeit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS ETD - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2675081718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Purchase Order Status</source>
+          <target>Bestellstatus kaufen.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Purchase Order Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2675081718 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Pending,Booked,Shipped</source>
+          <target>Ausstehend,gebucht,versandt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Purchase Order Status - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 4122422461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Estimated time of Arrival</source>
+          <target>Voraussichtliche Ankunftszeit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS ETA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2209332610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Estimated Time of Delivery</source>
+          <target>Geschätzte Lieferzeit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS ETD - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2675081718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Purchase Order Status</source>
+          <target>Bestellstatus kaufen.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Purchase Order Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2675081718 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Pending,Booked,Shipped</source>
+          <target>Ausstehend,gebucht,versandt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Purchase Order Status - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2415158066 - Field 3852350287 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Free Available Stock</source>
+          <target>Menge frei verfügbar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchaseLine - Field Free Available Stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2415158066 - Field 2202585084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Pre-Sold Quantity</source>
+          <target>Vorverkaufte Menge</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchaseLine - Field Pre Sold Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2366670238 - Field 2202585084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 518488723">
+          <source>Pre-Sold Quantity</source>
+          <target>Vorverkaufte Menge</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchCrMemoLine - Field Pre Sold Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2481231468 - Field 2202585084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2575310733">
+          <source>Pre-Sold Quantity</source>
+          <target>Vorverkaufte Menge</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchInvLine - Field Pre Sold Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 4122422461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Estimated time of Arrival</source>
+          <target>Voraussichtliche Ankunftszeit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS ETA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2209332610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Estimated Time of Delivery</source>
+          <target>Geschätzte Lieferzeit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS ETD - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2675081718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Purchase Order Status</source>
+          <target>Bestellstatus kaufen.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Purchase Order Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2675081718 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Pending,Booked,Shipped</source>
+          <target>Ausstehend,gebucht,versandt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Purchase Order Status - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3264532648 - Field 2202585084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
+          <source>Pre-Sold Quantity</source>
+          <target>Vorverkaufte Menge</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptLine - Field Pre Sold Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 536684954 - Field 3960045087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Order Type</source>
+          <target>Auftragsart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySaleCrHeader - Field CCS Order Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 536684954 - Field 3960045087 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source> ,Instant Order,Blocking Order,Disposition order,Backlog order</source>
+          <target> ,Sofortauftrag,Blockungsauftrag,Dispositionsauftrag,Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySaleCrHeader - Field CCS Order Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1702848919 - Field 1802480133 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>BA Number</source>
+          <target>BA-Nummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesArchLine - Field CCS BA Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1702848919 - Field 3577982415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>Cartons</source>
+          <target>Karton</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesArchLine - Field CCS Cartons - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1702848919 - Field 1095481426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>Masterbox Qty</source>
+          <target>Menge VPE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesArchLine - Field CCS Masterbox Qty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1702848919 - Field 107610041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>PO Number</source>
+          <target>Bestellnummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesArchLine - Field CCS PO Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1702848919 - Field 732080838 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>Rebate 1 %</source>
+          <target>Rabatt 1%</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesArchLine - Field CCS Rebate 1 % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1702848919 - Field 1469669243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>Rebate 2 %</source>
+          <target>Rabatt 2%</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesArchLine - Field CCS Rebate 2 % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1702848919 - Field 2824904650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>Unit Cost</source>
+          <target>Kosten pro Einheit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesArchLine - Field CCS Unit Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1702848919 - Field 1340654506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>Order Type</source>
+          <target>Auftragsart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesArchLine - Field Order Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1702848919 - Field 1340654506 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>,Instant Order,Blocking Order,Disposition order,Backlog order</source>
+          <target> ,Sofortauftrag,Blockungsauftrag,Dispositionsauftrag,Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesArchLine - Field Order Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 645339274 - Field 1802480133 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>BA Number</source>
+          <target>BA-Nummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesCrMemoLine - Field CCS BA Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 645339274 - Field 3577982415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Cartons</source>
+          <target>Karton</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesCrMemoLine - Field CCS Cartons - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 645339274 - Field 1095481426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Masterbox Qty</source>
+          <target>Menge VPE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesCrMemoLine - Field CCS Masterbox Qty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 645339274 - Field 107610041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>PO Number</source>
+          <target>Bestellnummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesCrMemoLine - Field CCS PO Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 645339274 - Field 732080838 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Rebate 1 %</source>
+          <target>Rabatt 1%</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesCrMemoLine - Field CCS Rebate 1 % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 645339274 - Field 1469669243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Rebate 2 %</source>
+          <target>Rabatt 2%</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesCrMemoLine - Field CCS Rebate 2 % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 645339274 - Field 2824904650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Unit Cost</source>
+          <target>Kosten pro Einheit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesCrMemoLine - Field CCS Unit Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 645339274 - Field 1340654506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Order Type</source>
+          <target>Auftragsart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesCrMemoLine - Field Order Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 645339274 - Field 1340654506 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source> ,Instant Order,Blocking Order,Disposition order,Backlog order</source>
+          <target> ,Sofortauftrag,Blockungsauftrag,Dispositionsauftrag,Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesCrMemoLine - Field Order Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3075830904 - Field 3960045087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Order Type</source>
+          <target>Auftragsart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesHeader - Field CCS Order Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3075830904 - Field 3960045087 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source> ,Instant Order,Blocking Order,Disposition order,Backlog order</source>
+          <target> ,Sofortauftrag,Blockungsauftrag,Dispositionsauftrag,Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesHeader - Field CCS Order Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 760384525 - Field 3960045087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Order Type</source>
+          <target>Auftragsart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInHeader - Field CCS Order Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 760384525 - Field 3960045087 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source> ,Instant Order,Blocking Order,Disposition order,Backlog order</source>
+          <target> ,Sofortauftrag,Blockungsauftrag,Dispositionsauftrag,Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInHeader - Field CCS Order Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 308376952 - Field 1802480133 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>BA Number</source>
+          <target>BA-Nummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInvLine - Field CCS BA Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 308376952 - Field 3577982415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Cartons</source>
+          <target>Karton</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInvLine - Field CCS Cartons - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 308376952 - Field 1095481426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Masterbox Qty</source>
+          <target>Menge VPE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInvLine - Field CCS Masterbox Qty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 308376952 - Field 107610041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>PO Number</source>
+          <target>Bestellnummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInvLine - Field CCS PO Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 308376952 - Field 732080838 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Rebate 1 %</source>
+          <target>Rabatt 1%</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInvLine - Field CCS Rebate 1 % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 308376952 - Field 1469669243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Rebate 2 %</source>
+          <target>Rabatt 2%</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInvLine - Field CCS Rebate 2 % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 308376952 - Field 2824904650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Unit Cost</source>
+          <target>Kosten pro Einheit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInvLine - Field CCS Unit Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 308376952 - Field 1340654506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Order Type</source>
+          <target>Auftragsart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInvLine - Field Order Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 308376952 - Field 1340654506 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source> ,Instant Order,Blocking Order,Disposition order,Backlog order</source>
+          <target> ,Sofortauftrag,Blockungsauftrag,Dispositionsauftrag,Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesInvLine - Field Order Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 853130175 - Field 1802480133 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>BA Number</source>
+          <target>BA-Nummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesLine - Field CCS BA Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 853130175 - Field 3577982415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Cartons</source>
+          <target>Karton</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesLine - Field CCS Cartons - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 853130175 - Field 1095481426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Masterbox Qty</source>
+          <target>Menge VPE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesLine - Field CCS Masterbox Qty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 853130175 - Field 3960045087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Order Type</source>
+          <target>Auftragsart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesLine - Field CCS Order Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 853130175 - Field 3960045087 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source> ,Instant Order,Blocking Order,Disposition order,Backlog order</source>
+          <target> ,Sofortauftrag,Blockungsauftrag,Dispositionsauftrag,Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesLine - Field CCS Order Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 853130175 - Field 107610041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>PO Number</source>
+          <target>Bestellnummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesLine - Field CCS PO Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 853130175 - Field 732080838 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Rebate 1 %</source>
+          <target>Rabatt 1%</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesLine - Field CCS Rebate 1 % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 853130175 - Field 1469669243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Rebate 2 %</source>
+          <target>Rabatt 2%</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesLine - Field CCS Rebate 2 % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 853130175 - Field 2824904650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Unit Cost</source>
+          <target>Kosten pro Einheit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesLine - Field CCS Unit Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 853130175 - Field 126539030 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Initial Quantity</source>
+          <target>Anfangsmenge.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesLine - Field Initial Qty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2171696577 - Field 1802480133 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>BA Number</source>
+          <target>BA-Nummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesShipLine - Field CCS BA Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2171696577 - Field 3577982415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Cartons</source>
+          <target>Karton</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesShipLine - Field CCS Cartons - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2171696577 - Field 1095481426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Masterbox Qty</source>
+          <target>Menge VPE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesShipLine - Field CCS Masterbox Qty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2171696577 - Field 107610041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>PO Number</source>
+          <target>Bestellnummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesShipLine - Field CCS PO Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2171696577 - Field 732080838 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Rebate 1 %</source>
+          <target>Rabatt 1%</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesShipLine - Field CCS Rebate 1 % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2171696577 - Field 1469669243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Rebate 2 %</source>
+          <target>Rabatt 2%</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesShipLine - Field CCS Rebate 2 % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2171696577 - Field 2824904650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Unit Cost</source>
+          <target>Kosten pro Einheit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesShipLine - Field CCS Unit Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2171696577 - Field 1340654506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Order Type</source>
+          <target>Auftragsart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesShipLine - Field Order Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2171696577 - Field 1340654506 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source> ,Instant Order,Blocking Order,Disposition order,Backlog order</source>
+          <target> ,Sofortauftrag,Blockungsauftrag,Dispositionsauftrag,Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySalesShipLine - Field Order Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1195734965 - Field 3960045087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>Order Type</source>
+          <target>Auftragsart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySarHeadArch - Field CCS Order Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1195734965 - Field 3960045087 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>,Instant Order,Blocking Order,Disposition order,Backlog order</source>
+          <target> ,Sofortauftrag,Blockungsauftrag,Dispositionsauftrag,Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySarHeadArch - Field CCS Order Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3906292088 - Field 3960045087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Order Type</source>
+          <target>Auftragsart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySaShipHeader - Field CCS Order Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3906292088 - Field 3960045087 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source> ,Instant Order,Blocking Order,Disposition order,Backlog order</source>
+          <target> ,Sofortauftrag,Blockungsauftrag,Dispositionsauftrag,Rückstandsauftrag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySaShipHeader - Field CCS Order Type - Property OptionCaption</note>
+        </trans-unit>
+         <trans-unit id="Table 2224537128 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+           <source>Forwarder</source>
+          <target state="translated">Frachtführer</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Forwarder - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2224537128 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target state="translated">Kode</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Forwarder - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2224537128 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Beschreibung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Forwarder - Field Description - Property Caption</note>
+        </trans-unit>       
+        <trans-unit id="Table 3067029697 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inspection Agent</source>
+          <target state="translated">Inspektionsagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Inspection Agent - Property Caption</note>
+        </trans-unit>       
+        <trans-unit id="Table 1630182229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>POD</source>
+          <target state="translated">POD</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table POD - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3722192668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Port Agent</source>
+          <target state="translated">Hafenagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Port Agent - Property Caption</note>
+        </trans-unit>
+          <trans-unit id="TableExtension 297182108 - Field 2898972577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Agent Invoice Amount</source>
+          <target state="translated">Hafenagent RE Betrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Agent Invoice Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2079784896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Agent Invoice No.</source>
+          <target state="translated">Hafenagent RE Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Agent Invoice No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 3419956411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Balance Amount</source>
+          <target state="translated">Restbetrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Balance Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 886389714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Balance Exchange</source>
+          <target state="translated">Restbetrag Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Balance Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2241113021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Balance Payment Date</source>
+          <target state="translated">Restbetrag Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Balance Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2655563861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Balance Payment Status</source>
+          <target state="translated">Restbetrag Status</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Balance Payment Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 1479478635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Bill of Lading Copy Status</source>
+          <target state="translated">Bill of Lading Kopie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Bill of Lading Copy Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2807044225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Bill of Lading No.</source>
+          <target state="translated">Bill of Lading Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Bill of Lading No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2111330614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Commercial Invoice Status</source>
+          <target state="translated">Rechnung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Commercial Invoice Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 1672285909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Container No.</source>
+          <target state="translated">Container Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Container No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 4001267849 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Deposit Amount</source>
+          <target state="translated">Depositbetrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Deposit Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 1144297316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Deposit Exchange</source>
+          <target state="translated">Depsoit Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Deposit Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2273277959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Deposit Payment Date</source>
+          <target state="translated">Deposit Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Deposit Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 3200411775 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Deposit Payment Status</source>
+          <target state="translated">Depsoitbetrag Status</target><note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Deposit Payment Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 680834480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Final Exchange</source>
+          <target state="translated">real Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Final Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 1759173094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Forwarder Code</source>
+          <target state="translated">Frachtführer</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Forwarder Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 1499759935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Inspection</source>
+          <target state="translated">Inspektion</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Inspection - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2024269560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Inspection Agent</source>
+          <target state="translated">Inspektionsagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Inspection Agent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2007724032 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Inspection Report No.</source>
+          <target state="translated">Inspektion Report Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Inspection Report No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2811700392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Packing List Status</source>
+          <target state="translated">Lieferschein</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Packing List Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 1322089967 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>POD Code</source>
+          <target state="translated">POD Kode</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS POD Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2280545813 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Port Agent</source>
+          <target state="translated">Hafenagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Port Agent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 72108834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Release Status</source>
+          <target state="translated">Freigabe</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Release Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 2951272417 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Seal No.</source>
+          <target state="translated">Plomben Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Seal No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 3504475646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Shipping Cost</source>
+          <target state="translated">Frachtrate</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Shipping Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 297182108 - Field 1890109937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Shipping Payment Date</source>
+          <target state="translated">Frachtrate Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchArchieve - Field CCS Shipping Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2898972577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Agent Invoice Amount</source>
+          <target state="translated">Hafenagent RE Betrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Agent Invoice Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2079784896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Agent Invoice No.</source>
+          <target state="translated">Hafenagent RE Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Agent Invoice No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 3419956411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Balance Amount</source>
+          <target state="translated">Restbetrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Balance Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 886389714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Balance Exchange</source>
+          <target state="translated">Restbetrag Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Balance Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2241113021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Balance Payment Date</source>
+          <target state="translated">Restbetrag Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Balance Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2655563861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Balance Payment Status</source>
+          <target state="translated">Restbetrag Status</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Balance Payment Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 1479478635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Bill of Lading Copy Status</source>
+          <target state="translated">Bill of Lading Kopie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Bill of Lading Copy Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2807044225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Bill of Lading No.</source>
+          <target state="translated">Bill of Lading Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Bill of Lading No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2111330614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Commercial Invoice Status</source>
+          <target state="translated">Rechnung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Commercial Invoice Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 1672285909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Container No.</source>
+          <target state="translated">Container Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Container No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 4001267849 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Deposit Amount</source>
+          <target state="translated">Depositbetrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Deposit Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 1144297316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Deposit Exchange</source>
+          <target state="translated">Depsoit Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Deposit Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2273277959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Deposit Payment Date</source>
+          <target state="translated">Deposit Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Deposit Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 3200411775 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Deposit Payment Status</source>
+          <target state="translated">Depsoitbetrag Status</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Deposit Payment Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 680834480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Final Exchange</source>
+          <target state="translated">real Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Final Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 1759173094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Forwarder Code</source>
+          <target state="translated">Frachtführer</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Forwarder Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 1499759935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Inspection</source>
+          <target state="translated">Inspektion</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Inspection - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2024269560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Inspection Agent</source>
+          <target state="translated">Inspektionsagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Inspection Agent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2007724032 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Inspection Report No.</source>
+          <target state="translated">Inspektion Report Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Inspection Report No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2811700392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Packing List Status</source>
+          <target state="translated">Lieferschein</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Packing List Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 1322089967 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>POD Code</source>
+          <target state="translated">POD Kode</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS POD Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2280545813 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Port Agent</source>
+          <target state="translated">Hafenagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Port Agent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 72108834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Release Status</source>
+          <target state="translated">Freigabe</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Release Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 2951272417 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Seal No.</source>
+          <target state="translated">Plomben Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Seal No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 3504475646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Shipping Cost</source>
+          <target state="translated">Frachtrate</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Shipping Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3545671317 - Field 1890109937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Shipping Payment Date</source>
+          <target state="translated">Frachtrate Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurchCrMemoHeader - Field CCS Shipping Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2898972577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Agent Invoice Amount</source>
+          <target state="translated">Hafenagent RE Betrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Agent Invoice Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2079784896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Agent Invoice No.</source>
+          <target state="translated">Hafenagent RE Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Agent Invoice No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 3419956411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Balance Amount</source>
+          <target state="translated">Restbetrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Balance Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 886389714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Balance Exchange</source>
+          <target state="translated">Restbetrag Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Balance Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2241113021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Balance Payment Date</source>
+          <target state="translated">Restbetrag Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Balance Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2655563861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Balance Payment Status</source>
+          <target state="translated">Restbetrag Status</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Balance Payment Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 1479478635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Bill of Lading Copy Status</source>
+          <target state="translated">Bill of Lading Kopie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Bill of Lading Copy Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2807044225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Bill of Lading No.</source>
+          <target state="translated">Bill of Lading Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Bill of Lading No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2111330614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Commercial Invoice Status</source>
+          <target state="translated">Rechnung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Commercial Invoice Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 1672285909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Container No.</source>
+          <target state="translated">Container Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Container No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 4001267849 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Deposit Amount</source>
+          <target state="translated">Depositbetrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Deposit Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 1144297316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Deposit Exchange</source>
+          <target state="translated">Depsoit Kurs</target>
+          
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Deposit Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2273277959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Deposit Payment Date</source>
+          <target state="translated">Deposit Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Deposit Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 3200411775 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Deposit Payment Status</source>
+          <target state="translated">Depsoitbetrag Status</target><note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Deposit Payment Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 4122422461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Estimated time of Arrival</source>
+          
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS ETA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2209332610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Estimated Time of Delivery</source>
+          
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS ETD - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 680834480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Final Exchange</source>
+          <target state="translated">real Kurs</target>
+          
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Final Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 1759173094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Forwarder Code</source>
+          <target state="translated">Frachtführer</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Forwarder Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 1499759935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Inspection</source>
+          <target state="translated">Inspektion</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Inspection - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2024269560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Inspection Agent</source>
+          <target state="translated">Inspektionsagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Inspection Agent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2007724032 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Inspection Report No.</source>
+          <target state="translated">Inspektion Report Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Inspection Report No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2811700392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Packing List Status</source>
+          <target state="translated">Lieferschein</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Packing List Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 1322089967 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>POD Code</source>
+          <target state="translated">POD Kode</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS POD Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2280545813 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Port Agent</source>
+          <target state="translated">Hafenagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Port Agent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 72108834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Release Status</source>
+          <target state="translated">Freigabe</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Release Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 2951272417 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Seal No.</source>
+          <target state="translated">Plomben Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Seal No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 3504475646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Shipping Cost</source>
+          <target state="translated">Frachtrate</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Shipping Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1412306748 - Field 1890109937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Shipping Payment Date</source>
+          <target state="translated">Frachtrate Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify Purchheader - Field CCS Shipping Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2898972577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Agent Invoice Amount</source>
+          <target state="translated">Hafenagent RE Betrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Agent Invoice Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2079784896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Agent Invoice No.</source>
+          <target state="translated">Hafenagent RE Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Agent Invoice No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 3419956411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Balance Amount</source>
+          <target state="translated">Restbetrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Balance Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 886389714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Balance Exchange</source>
+          <target state="translated">Restbetrag Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Balance Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2241113021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Balance Payment Date</source>
+          <target state="translated">Restbetrag Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Balance Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2655563861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Balance Payment Status</source>
+          <target state="translated">Restbetrag Status</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Balance Payment Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 1479478635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Bill of Lading Copy Status</source>
+          <target state="translated">Bill of Lading Kopie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Bill of Lading Copy Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2807044225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Bill of Lading No.</source>
+          <target state="translated">Bill of Lading Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Bill of Lading No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2111330614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Commercial Invoice Status</source>
+          <target state="translated">Rechnung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Commercial Invoice Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 1672285909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Container No.</source>
+          <target state="translated">Container Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Container No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 4001267849 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Deposit Amount</source>
+          <target state="translated">Depositbetrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Deposit Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 1144297316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Deposit Exchange</source>
+          <target state="translated">Depsoit Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Deposit Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2273277959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Deposit Payment Date</source>
+          <target state="translated">Deposit Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Deposit Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 3200411775 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Deposit Payment Status</source>
+          <target state="translated">Depsoitbetrag Status</target><note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Deposit Payment Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 680834480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Final Exchange</source>
+          <target state="translated">real Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Final Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 1759173094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Forwarder Code</source>
+          <target state="translated">Frachtführer</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Forwarder Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 1499759935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Inspection</source>
+          <target state="translated">Inspektion</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Inspection - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2024269560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Inspection Agent</source>
+          <target state="translated">Inspektionsagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Inspection Agent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2007724032 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Inspection Report No.</source>
+          <target state="translated">Inspektion Report Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Inspection Report No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2811700392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Packing List Status</source>
+          <target state="translated">Lieferschein</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Packing List Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 1322089967 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>POD Code</source>
+          <target state="translated">POD Kode</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS POD Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2280545813 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Port Agent</source>
+          <target state="translated">Hafenagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Port Agent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 72108834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Release Status</source>
+          <target state="translated">Freigabe</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Release Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 2951272417 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Seal No.</source>
+          <target state="translated">Plomben Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Seal No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 3504475646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Shipping Cost</source>
+          <target state="translated">Frachtrate</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Shipping Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2466914038 - Field 1890109937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Shipping Payment Date</source>
+          <target state="translated">Frachtrate Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS Modify PurhInvheader - Field CCS Shipping Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2898972577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Agent Invoice Amount</source>
+          <target state="translated">Hafenagent RE Betrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Agent Invoice Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2079784896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Agent Invoice No.</source>
+          <target state="translated">Hafenagent RE Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Agent Invoice No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 3419956411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Balance Amount</source>
+          <target state="translated">Restbetrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Balance Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 886389714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Balance Exchange</source>
+          <target state="translated">Restbetrag Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Balance Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2241113021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Balance Payment Date</source>
+          <target state="translated">Restbetrag Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Balance Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2655563861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Balance Payment Status</source>
+          <target state="translated">Restbetrag Status</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Balance Payment Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 1479478635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Bill of Lading Copy Status</source>
+          <target state="translated">Bill of Lading Kopie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Bill of Lading Copy Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2807044225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Bill of Lading No.</source>
+          <target state="translated">Bill of Lading Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Bill of Lading No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2111330614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Commercial Invoice Status</source>
+          <target state="translated">Rechnung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Commercial Invoice Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 1672285909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Container No.</source>
+          <target state="translated">Container Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Container No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 4001267849 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Deposit Amount</source>
+          <target state="translated">Depositbetrag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Deposit Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 1144297316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Deposit Exchange</source>
+          <target state="translated">Depsoit Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Deposit Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2273277959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Deposit Payment Date</source>
+          <target state="translated">Deposit Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Deposit Payment Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 3200411775 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Deposit Payment Status</source>
+          <target state="translated">Depsoitbetrag Status</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Deposit Payment Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 680834480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Final Exchange</source>
+          <target state="translated">real Kurs</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Final Exchange - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 1759173094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Forwarder Code</source>
+          <target state="translated">Frachtführer</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Forwarder Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 1499759935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Inspection</source>
+          <target state="translated">Inspektion</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Inspection - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2024269560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Inspection Agent</source>
+          <target state="translated">Inspektionsagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Inspection Agent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2007724032 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Inspection Report No.</source>
+          <target state="translated">Inspektion Report Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Inspection Report No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2811700392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Packing List Status</source>
+          <target state="translated">Lieferschein</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Packing List Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 1322089967 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>POD Code</source>
+          <target state="translated">POD Kode</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS POD Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2280545813 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Port Agent</source>
+          <target state="translated">Hafenagent</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Port Agent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 72108834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Release Status</source>
+          <target state="translated">Freigabe</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Release Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 2951272417 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Seal No.</source>
+          <target state="translated">Plomben Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Seal No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 3504475646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Shipping Cost</source>
+          <target state="translated">Frachtrate</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Shipping Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 828496335 - Field 1890109937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Shipping Payment Date</source>
+          <target state="translated">Frachtrate Zahlungsdatum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifyPurchRcptheader - Field CCS Shipping Payment Date - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

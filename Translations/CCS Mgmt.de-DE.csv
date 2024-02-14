@@ -1,0 +1,119 @@
+﻿Id	Source	Target	Developer Note	Max Length	Comment	Xliff Generator Note	NAB AL Tool Refresh Xlf	State	State Qualifier
+Codeunit 1131054391 - NamedType 429708744	Can not select more than %1 stock available - Open SO Quantity %2 for that item %3.	Kann nicht mehr als %1 Lager verfügbar sind - Öffnen Sie so Menge %2 für diesen Punkt %3.				Codeunit CCS EventSubscriber - NamedType QtyError			
+Codeunit 1131054391 - NamedType 4198758746	There is only %1 stock available for that item %2.\Do you want to continue?	Es gibt nur %1 Lager für diesen Artikel %2. \ Wollen Sie fortfahren?				Codeunit CCS EventSubscriber - NamedType QtyWarning			
+Codeunit 1131054391 - NamedType 3845178832	WARNING: You broke the Masterbox Qty.\Next less Qty can be: %1 \Next High Qty can be: %2 \Masterbox Qty: %3 \You want to replace %4 pcs with %5 pcs.	WARNUNG: Sie haben die Masterbox-Qty gebrochen. \ Nächster weniger Menge kann sein:%1 \ Nächste High-Menge kann sein:%2 \ Masterbox Menge:%3 \ Sie möchten%4 PCs durch%5-Stck ersetzen.				Codeunit CCS EventSubscriber - NamedType WarningLabel			
+Page 3884139068 - Property 2879900210	CCS Purchase order Sub List	CCS-Bestell-Unterliste				Page CCS Purchase order Sub List - Property Caption			
+Page 3699566597 - Property 2879900210	CCS Sales order Sub List	CCS-Kundenauftrags-Unterliste				Page CCS Sales order Sub List - Property Caption			
+PageExtension 74569690 - Control 3852350287 - Property 2879900210	Remaining Available Quantity	Verbleibende verfügbare Menge.				PageExtension CCS Modify PO Subform - Control Free Available Stock - Property Caption			
+PageExtension 3699825863 - Control 1785788369 - Property 2879900210	CCS Setups	CCS-Setups.				PageExtension CCS ModifyItems - Control CCSSetups - Property Caption			
+PageExtension 3699825863 - Control 784616729 - Property 2879900210	Backlog Order Inventory	Backlog Bestellbestand				PageExtension CCS ModifyItems - Control CCS Backlog order Invt - Property Caption			
+PageExtension 3699825863 - Control 764369443 - Property 2879900210	Blocking Order Inventory	Bestellbestand blockieren.				PageExtension CCS ModifyItems - Control CCS Blocking Order Invt - Property Caption			
+PageExtension 3699825863 - Control 1807515016 - Property 2879900210	Instant Order Inventory	Sofortiger Bestellbestand.				PageExtension CCS ModifyItems - Control CCS Instant Ord Invt - Property Caption			
+PageExtension 3699825863 - Control 1388507697 - Property 2879900210	Disposition Order Inventory	Dispositionsauftrag Inventar.				PageExtension CCS ModifyItems - Control CCS MRP order Invt - Property Caption			
+PageExtension 3699825863 - Control 3852350287 - Property 2879900210	Free Available Stock	Kostenloser verfügbarer stock.				PageExtension CCS ModifyItems - Control Free Available Stock - Property Caption			
+PageExtension 3699825863 - Control 1340456162 - Property 1295455071	Specifies how many units, such as pieces, boxes, or cans, of the item are in inventory.	Gibt an, wie viele Einheiten, wie Teile, Boxen oder Dosen, des Artikels im Inventar sind.				PageExtension CCS ModifyItems - Control InventoryInhand - Property ToolTip			
+PageExtension 3699825863 - Control 1340456162 - Property 2879900210	Inventory	Inventar				PageExtension CCS ModifyItems - Control InventoryInhand - Property Caption			
+TableExtension 458191466 - Field 784616729 - Property 2879900210	Backlog order Inventory	Backlog Bestellbestand				TableExtension CCS Modify Item - Field CCS Backlog order Invt - Property Caption			
+TableExtension 458191466 - Field 20416754 - Property 2879900210	Battery	Batterie				TableExtension CCS Modify Item - Field CCS Battery - Property Caption			
+TableExtension 458191466 - Field 764369443 - Property 2879900210	Blocking Order Inventory	Bestellbestand blockieren.				TableExtension CCS Modify Item - Field CCS Blocking Order Invt - Property Caption			
+TableExtension 458191466 - Field 1086888668 - Property 2879900210	Brand	Marke				TableExtension CCS Modify Item - Field CCS Brand - Property Caption			
+TableExtension 458191466 - Field 3753273258 - Property 2879900210	Color	Farbe				TableExtension CCS Modify Item - Field CCS Color - Property Caption			
+TableExtension 458191466 - Field 1730661951 - Property 2879900210	Custom Tax	Individuelle Steuer				TableExtension CCS Modify Item - Field CCS Custom Tax - Property Caption			
+TableExtension 458191466 - Field 91125595 - Property 2879900210	EAN	Ean.				TableExtension CCS Modify Item - Field CCS EAN - Property Caption			
+TableExtension 458191466 - Field 1807515016 - Property 2879900210	Instant Order Inventory	Sofortiger Bestellbestand.				TableExtension CCS Modify Item - Field CCS Instant Ord Invt - Property Caption			
+TableExtension 458191466 - Field 4050553958 - Property 2879900210	Item Status	Artikelstatus.				TableExtension CCS Modify Item - Field CCS Item Status - Property Caption			
+TableExtension 458191466 - Field 4050553958 - Property 62802879	S,A,N	S, a, n				TableExtension CCS Modify Item - Field CCS Item Status - Property OptionCaption			
+TableExtension 458191466 - Field 718130158 - Property 2879900210	Masterbox Qty.	Masterbox Menge.				TableExtension CCS Modify Item - Field CCS Masterbox - Property Caption			
+TableExtension 458191466 - Field 752566956 - Property 2879900210	Masterbox EAN	Masterbox EAN.				TableExtension CCS Modify Item - Field CCS Masterbox EAN - Property Caption			
+TableExtension 458191466 - Field 3528478780 - Property 2879900210	Model Status	Modellstatus				TableExtension CCS Modify Item - Field CCS Model Status - Property Caption			
+TableExtension 458191466 - Field 3528478780 - Property 62802879	In assortment,End of Life	Im Sortiment, Ende des Lebens				TableExtension CCS Modify Item - Field CCS Model Status - Property OptionCaption			
+TableExtension 458191466 - Field 1388507697 - Property 2879900210	Disposition order Inventory	Dispositionsauftrag Inventar.				TableExtension CCS Modify Item - Field CCS MRP order Invt - Property Caption			
+TableExtension 458191466 - Field 2777039651 - Property 2879900210	Packsize Unit	Einheit packen				TableExtension CCS Modify Item - Field CCS Packsize Unit - Property Caption			
+TableExtension 458191466 - Field 3175908189 - Property 2879900210	Pallet Info.	Paletteninfo.				TableExtension CCS Modify Item - Field CCS Pallet Info. - Property Caption			
+TableExtension 458191466 - Field 2845552744 - Property 2879900210	Rec. Sales Price	Rep. Verkaufspreis				TableExtension CCS Modify Item - Field CCS Rec. Sales Price - Property Caption			
+TableExtension 458191466 - Field 3873260791 - Property 2879900210	Rec. Street Price	Rep. Straßenpreis				TableExtension CCS Modify Item - Field CCS Rec. Street Price - Property Caption			
+TableExtension 458191466 - Field 3834102155 - Property 2879900210	Unit Qty 20 feet Cont.	Einheit 40 Fuß Cont.				TableExtension CCS Modify Item - Field CCS Unit Qty 20 feet Cont. - Property Caption			
+TableExtension 458191466 - Field 3262623353 - Property 2879900210	Unit Qty 40 feet Cont.	Einheit 40 Fuß Cont.				TableExtension CCS Modify Item - Field CCS Unit Qty 40 feet Cont. - Property Caption			
+TableExtension 458191466 - Field 3206170896 - Property 2879900210	Unit Qty 40 HC feet Cont.	Einheit 40 HC Füße Fortschritt.				TableExtension CCS Modify Item - Field CCS Unit Qty 40 HC feet Cont. - Property Caption			
+TableExtension 458191466 - Field 3852350287 - Property 2879900210	Free Available Stock	Kostenloser verfügbarer stock.				TableExtension CCS Modify Item - Field Free Available Stock - Property Caption			
+TableExtension 297182108 - Field 4122422461 - Property 2879900210	Estimated time of Arrival	Voraussichtliche Ankunftszeit				TableExtension CCS Modify PurchArchieve - Field CCS ETA - Property Caption			
+TableExtension 297182108 - Field 2209332610 - Property 2879900210	Estimated Time of Delivery	Geschätzte Lieferzeit				TableExtension CCS Modify PurchArchieve - Field CCS ETD - Property Caption			
+TableExtension 297182108 - Field 2675081718 - Property 2879900210	Purchase Order Status	Bestellstatus kaufen.				TableExtension CCS Modify PurchArchieve - Field CCS Purchase Order Status - Property Caption			
+TableExtension 297182108 - Field 2675081718 - Property 62802879	Pending,Booked,Shipped	Ausstehend,gebucht,versandt				TableExtension CCS Modify PurchArchieve - Field CCS Purchase Order Status - Property OptionCaption			
+TableExtension 3545671317 - Field 4122422461 - Property 2879900210	Estimated time of Arrival	Voraussichtliche Ankunftszeit				TableExtension CCS Modify PurchCrMemoHeader - Field CCS ETA - Property Caption			
+TableExtension 3545671317 - Field 2209332610 - Property 2879900210	Estimated Time of Delivery	Geschätzte Lieferzeit				TableExtension CCS Modify PurchCrMemoHeader - Field CCS ETD - Property Caption			
+TableExtension 3545671317 - Field 2675081718 - Property 2879900210	Purchase Order Status	Bestellstatus kaufen.				TableExtension CCS Modify PurchCrMemoHeader - Field CCS Purchase Order Status - Property Caption			
+TableExtension 3545671317 - Field 2675081718 - Property 62802879	Pending,Booked,Shipped	Ausstehend,gebucht,versandt				TableExtension CCS Modify PurchCrMemoHeader - Field CCS Purchase Order Status - Property OptionCaption			
+TableExtension 1412306748 - Field 4122422461 - Property 2879900210	Estimated time of Arrival	Voraussichtliche Ankunftszeit				TableExtension CCS Modify Purchheader - Field CCS ETA - Property Caption			
+TableExtension 1412306748 - Field 2209332610 - Property 2879900210	Estimated Time of Delivery	Geschätzte Lieferzeit				TableExtension CCS Modify Purchheader - Field CCS ETD - Property Caption			
+TableExtension 1412306748 - Field 2675081718 - Property 2879900210	Purchase Order Status	Bestellstatus kaufen.				TableExtension CCS Modify Purchheader - Field CCS Purchase Order Status - Property Caption			
+TableExtension 1412306748 - Field 2675081718 - Property 62802879	Pending,Booked,Shipped	Ausstehend,gebucht,versandt				TableExtension CCS Modify Purchheader - Field CCS Purchase Order Status - Property OptionCaption			
+TableExtension 2466914038 - Field 4122422461 - Property 2879900210	Estimated time of Arrival	Voraussichtliche Ankunftszeit				TableExtension CCS Modify PurhInvheader - Field CCS ETA - Property Caption			
+TableExtension 2466914038 - Field 2209332610 - Property 2879900210	Estimated Time of Delivery	Geschätzte Lieferzeit				TableExtension CCS Modify PurhInvheader - Field CCS ETD - Property Caption			
+TableExtension 2466914038 - Field 2675081718 - Property 2879900210	Purchase Order Status	Bestellstatus kaufen.				TableExtension CCS Modify PurhInvheader - Field CCS Purchase Order Status - Property Caption			
+TableExtension 2466914038 - Field 2675081718 - Property 62802879	Pending,Booked,Shipped	Ausstehend,gebucht,versandt				TableExtension CCS Modify PurhInvheader - Field CCS Purchase Order Status - Property OptionCaption			
+TableExtension 2415158066 - Field 3852350287 - Property 2879900210	Free Available Stock	Kostenloser verfügbarer stock.				TableExtension CCS ModifyPurchaseLine - Field Free Available Stock - Property Caption			
+TableExtension 2415158066 - Field 2202585084 - Property 2879900210	Pre-Sold Quantity	Vorverkaufte Menge				TableExtension CCS ModifyPurchaseLine - Field Pre Sold Quantity - Property Caption			
+TableExtension 2366670238 - Field 2202585084 - Property 2879900210	Pre-Sold Quantity	Vorverkaufte Menge				TableExtension CCS ModifyPurchCrMemoLine - Field Pre Sold Quantity - Property Caption			
+TableExtension 2481231468 - Field 2202585084 - Property 2879900210	Pre-Sold Quantity	Vorverkaufte Menge				TableExtension CCS ModifyPurchInvLine - Field Pre Sold Quantity - Property Caption			
+TableExtension 828496335 - Field 4122422461 - Property 2879900210	Estimated time of Arrival	Voraussichtliche Ankunftszeit				TableExtension CCS ModifyPurchRcptheader - Field CCS ETA - Property Caption			
+TableExtension 828496335 - Field 2209332610 - Property 2879900210	Estimated Time of Delivery	Geschätzte Lieferzeit				TableExtension CCS ModifyPurchRcptheader - Field CCS ETD - Property Caption			
+TableExtension 828496335 - Field 2675081718 - Property 2879900210	Purchase Order Status	Bestellstatus kaufen.				TableExtension CCS ModifyPurchRcptheader - Field CCS Purchase Order Status - Property Caption			
+TableExtension 828496335 - Field 2675081718 - Property 62802879	Pending,Booked,Shipped	Ausstehend,gebucht,versandt				TableExtension CCS ModifyPurchRcptheader - Field CCS Purchase Order Status - Property OptionCaption			
+TableExtension 3264532648 - Field 2202585084 - Property 2879900210	Pre-Sold Quantity	Vorverkaufte Menge				TableExtension CCS ModifyPurchRcptLine - Field Pre Sold Quantity - Property Caption			
+TableExtension 536684954 - Field 3960045087 - Property 2879900210	Order Type	Auftragsart				TableExtension CCS ModifySaleCrHeader - Field CCS Order Type - Property Caption			
+TableExtension 536684954 - Field 3960045087 - Property 62802879	 ,Instant Order,Blocking Order,Disposition order,Backlog order	 ,Sofortige Reihenfolge,Sperrbestellung,Displasionsreihenfolge,Backlog-Bestellung				TableExtension CCS ModifySaleCrHeader - Field CCS Order Type - Property OptionCaption			
+TableExtension 1702848919 - Field 1802480133 - Property 2879900210	BA Number	BA-Nummer.				TableExtension CCS ModifySalesArchLine - Field CCS BA Number - Property Caption			
+TableExtension 1702848919 - Field 3577982415 - Property 2879900210	Cartons	Kartons.				TableExtension CCS ModifySalesArchLine - Field CCS Cartons - Property Caption			
+TableExtension 1702848919 - Field 1095481426 - Property 2879900210	Masterbox Qty	Masterbox Menge.				TableExtension CCS ModifySalesArchLine - Field CCS Masterbox Qty - Property Caption			
+TableExtension 1702848919 - Field 107610041 - Property 2879900210	PO Number	Bestellnummer				TableExtension CCS ModifySalesArchLine - Field CCS PO Number - Property Caption			
+TableExtension 1702848919 - Field 732080838 - Property 2879900210	Rebate 1 %	Rabatt 1%				TableExtension CCS ModifySalesArchLine - Field CCS Rebate 1 % - Property Caption			
+TableExtension 1702848919 - Field 1469669243 - Property 2879900210	Rebate 2 %	Rabatt 2%				TableExtension CCS ModifySalesArchLine - Field CCS Rebate 2 % - Property Caption			
+TableExtension 1702848919 - Field 2824904650 - Property 2879900210	Unit Cost	Kosten pro Einheit				TableExtension CCS ModifySalesArchLine - Field CCS Unit Cost - Property Caption			
+TableExtension 1702848919 - Field 1340654506 - Property 2879900210	Order Type	Auftragsart				TableExtension CCS ModifySalesArchLine - Field Order Type - Property Caption			
+TableExtension 1702848919 - Field 1340654506 - Property 62802879	,Instant Order,Blocking Order,Disposition order,Backlog order	 ,Sofortige Reihenfolge,Sperrbestellung,Displasionsreihenfolge,Backlog-Bestellung				TableExtension CCS ModifySalesArchLine - Field Order Type - Property OptionCaption			
+TableExtension 645339274 - Field 1802480133 - Property 2879900210	BA Number	BA-Nummer.				TableExtension CCS ModifySalesCrMemoLine - Field CCS BA Number - Property Caption			
+TableExtension 645339274 - Field 3577982415 - Property 2879900210	Cartons	Kartons.				TableExtension CCS ModifySalesCrMemoLine - Field CCS Cartons - Property Caption			
+TableExtension 645339274 - Field 1095481426 - Property 2879900210	Masterbox Qty	Masterbox Menge.				TableExtension CCS ModifySalesCrMemoLine - Field CCS Masterbox Qty - Property Caption			
+TableExtension 645339274 - Field 107610041 - Property 2879900210	PO Number	Bestellnummer				TableExtension CCS ModifySalesCrMemoLine - Field CCS PO Number - Property Caption			
+TableExtension 645339274 - Field 732080838 - Property 2879900210	Rebate 1 %	Rabatt 1%				TableExtension CCS ModifySalesCrMemoLine - Field CCS Rebate 1 % - Property Caption			
+TableExtension 645339274 - Field 1469669243 - Property 2879900210	Rebate 2 %	Rabatt 2%				TableExtension CCS ModifySalesCrMemoLine - Field CCS Rebate 2 % - Property Caption			
+TableExtension 645339274 - Field 2824904650 - Property 2879900210	Unit Cost	Kosten pro Einheit				TableExtension CCS ModifySalesCrMemoLine - Field CCS Unit Cost - Property Caption			
+TableExtension 645339274 - Field 1340654506 - Property 2879900210	Order Type	Auftragsart				TableExtension CCS ModifySalesCrMemoLine - Field Order Type - Property Caption			
+TableExtension 645339274 - Field 1340654506 - Property 62802879	 ,Instant Order,Blocking Order,Disposition order,Backlog order	 ,Sofortige Reihenfolge,Sperrbestellung,Displasionsreihenfolge,Backlog-Bestellung				TableExtension CCS ModifySalesCrMemoLine - Field Order Type - Property OptionCaption			
+TableExtension 3075830904 - Field 3960045087 - Property 2879900210	Order Type	Auftragsart				TableExtension CCS ModifySalesHeader - Field CCS Order Type - Property Caption			
+TableExtension 3075830904 - Field 3960045087 - Property 62802879	 ,Instant Order,Blocking Order,Disposition order,Backlog order	 ,Sofortige Reihenfolge,Sperrbestellung,Displasionsreihenfolge,Backlog-Bestellung				TableExtension CCS ModifySalesHeader - Field CCS Order Type - Property OptionCaption			
+TableExtension 760384525 - Field 3960045087 - Property 2879900210	Order Type	Auftragsart				TableExtension CCS ModifySalesInHeader - Field CCS Order Type - Property Caption			
+TableExtension 760384525 - Field 3960045087 - Property 62802879	 ,Instant Order,Blocking Order,Disposition order,Backlog order	 ,Sofortige Reihenfolge,Sperrbestellung,Displasionsreihenfolge,Backlog-Bestellung				TableExtension CCS ModifySalesInHeader - Field CCS Order Type - Property OptionCaption			
+TableExtension 308376952 - Field 1802480133 - Property 2879900210	BA Number	BA-Nummer.				TableExtension CCS ModifySalesInvLine - Field CCS BA Number - Property Caption			
+TableExtension 308376952 - Field 3577982415 - Property 2879900210	Cartons	Kartons.				TableExtension CCS ModifySalesInvLine - Field CCS Cartons - Property Caption			
+TableExtension 308376952 - Field 1095481426 - Property 2879900210	Masterbox Qty	Masterbox Menge.				TableExtension CCS ModifySalesInvLine - Field CCS Masterbox Qty - Property Caption			
+TableExtension 308376952 - Field 107610041 - Property 2879900210	PO Number	Bestellnummer				TableExtension CCS ModifySalesInvLine - Field CCS PO Number - Property Caption			
+TableExtension 308376952 - Field 732080838 - Property 2879900210	Rebate 1 %	Rabatt 1%				TableExtension CCS ModifySalesInvLine - Field CCS Rebate 1 % - Property Caption			
+TableExtension 308376952 - Field 1469669243 - Property 2879900210	Rebate 2 %	Rabatt 2%				TableExtension CCS ModifySalesInvLine - Field CCS Rebate 2 % - Property Caption			
+TableExtension 308376952 - Field 2824904650 - Property 2879900210	Unit Cost	Kosten pro Einheit				TableExtension CCS ModifySalesInvLine - Field CCS Unit Cost - Property Caption			
+TableExtension 308376952 - Field 1340654506 - Property 2879900210	Order Type	Auftragsart				TableExtension CCS ModifySalesInvLine - Field Order Type - Property Caption			
+TableExtension 308376952 - Field 1340654506 - Property 62802879	 ,Instant Order,Blocking Order,Disposition order,Backlog order	 ,Sofortige Reihenfolge,Sperrbestellung,Displasionsreihenfolge,Backlog-Bestellung				TableExtension CCS ModifySalesInvLine - Field Order Type - Property OptionCaption			
+TableExtension 853130175 - Field 1802480133 - Property 2879900210	BA Number	BA-Nummer.				TableExtension CCS ModifySalesLine - Field CCS BA Number - Property Caption			
+TableExtension 853130175 - Field 3577982415 - Property 2879900210	Cartons	Kartons.				TableExtension CCS ModifySalesLine - Field CCS Cartons - Property Caption			
+TableExtension 853130175 - Field 1095481426 - Property 2879900210	Masterbox Qty	Masterbox Menge.				TableExtension CCS ModifySalesLine - Field CCS Masterbox Qty - Property Caption			
+TableExtension 853130175 - Field 3960045087 - Property 2879900210	Order Type	Auftragsart				TableExtension CCS ModifySalesLine - Field CCS Order Type - Property Caption			
+TableExtension 853130175 - Field 3960045087 - Property 62802879	 ,Instant Order,Blocking Order,Disposition order,Backlog order	 ,Sofortige Reihenfolge,Sperrbestellung,Displasionsreihenfolge,Backlog-Bestellung				TableExtension CCS ModifySalesLine - Field CCS Order Type - Property OptionCaption			
+TableExtension 853130175 - Field 107610041 - Property 2879900210	PO Number	Bestellnummer				TableExtension CCS ModifySalesLine - Field CCS PO Number - Property Caption			
+TableExtension 853130175 - Field 732080838 - Property 2879900210	Rebate 1 %	Rabatt 1%				TableExtension CCS ModifySalesLine - Field CCS Rebate 1 % - Property Caption			
+TableExtension 853130175 - Field 1469669243 - Property 2879900210	Rebate 2 %	Rabatt 2%				TableExtension CCS ModifySalesLine - Field CCS Rebate 2 % - Property Caption			
+TableExtension 853130175 - Field 2824904650 - Property 2879900210	Unit Cost	Kosten pro Einheit				TableExtension CCS ModifySalesLine - Field CCS Unit Cost - Property Caption			
+TableExtension 853130175 - Field 126539030 - Property 2879900210	Initial Quantity	Anfangsmenge.				TableExtension CCS ModifySalesLine - Field Initial Qty - Property Caption			
+TableExtension 2171696577 - Field 1802480133 - Property 2879900210	BA Number	BA-Nummer.				TableExtension CCS ModifySalesShipLine - Field CCS BA Number - Property Caption			
+TableExtension 2171696577 - Field 3577982415 - Property 2879900210	Cartons	Kartons.				TableExtension CCS ModifySalesShipLine - Field CCS Cartons - Property Caption			
+TableExtension 2171696577 - Field 1095481426 - Property 2879900210	Masterbox Qty	Masterbox Menge.				TableExtension CCS ModifySalesShipLine - Field CCS Masterbox Qty - Property Caption			
+TableExtension 2171696577 - Field 107610041 - Property 2879900210	PO Number	Bestellnummer				TableExtension CCS ModifySalesShipLine - Field CCS PO Number - Property Caption			
+TableExtension 2171696577 - Field 732080838 - Property 2879900210	Rebate 1 %	Rabatt 1%				TableExtension CCS ModifySalesShipLine - Field CCS Rebate 1 % - Property Caption			
+TableExtension 2171696577 - Field 1469669243 - Property 2879900210	Rebate 2 %	Rabatt 2%				TableExtension CCS ModifySalesShipLine - Field CCS Rebate 2 % - Property Caption			
+TableExtension 2171696577 - Field 2824904650 - Property 2879900210	Unit Cost	Kosten pro Einheit				TableExtension CCS ModifySalesShipLine - Field CCS Unit Cost - Property Caption			
+TableExtension 2171696577 - Field 1340654506 - Property 2879900210	Order Type	Auftragsart				TableExtension CCS ModifySalesShipLine - Field Order Type - Property Caption			
+TableExtension 2171696577 - Field 1340654506 - Property 62802879	 ,Instant Order,Blocking Order,Disposition order,Backlog order	 ,Sofortige Reihenfolge,Sperrbestellung,Displasionsreihenfolge,Backlog-Bestellung				TableExtension CCS ModifySalesShipLine - Field Order Type - Property OptionCaption			
+TableExtension 1195734965 - Field 3960045087 - Property 2879900210	Order Type	Auftragsart				TableExtension CCS ModifySarHeadArch - Field CCS Order Type - Property Caption			
+TableExtension 1195734965 - Field 3960045087 - Property 62802879	,Instant Order,Blocking Order,Disposition order,Backlog order	 ,Sofortige Reihenfolge,Sperrbestellung,Displasionsreihenfolge,Backlog-Bestellung				TableExtension CCS ModifySarHeadArch - Field CCS Order Type - Property OptionCaption			
+TableExtension 3906292088 - Field 3960045087 - Property 2879900210	Order Type	Auftragsart				TableExtension CCS ModifySaShipHeader - Field CCS Order Type - Property Caption			
+TableExtension 3906292088 - Field 3960045087 - Property 62802879	 ,Instant Order,Blocking Order,Disposition order,Backlog order	 ,Sofortige Reihenfolge,Sperrbestellung,Displasionsreihenfolge,Backlog-Bestellung				TableExtension CCS ModifySaShipHeader - Field CCS Order Type - Property OptionCaption			
