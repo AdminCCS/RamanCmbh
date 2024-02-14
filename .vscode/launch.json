@@ -1,0 +1,43 @@
+{
+    "version": "0.2.0",
+    "configurations": [        
+        {
+        
+            "name": "DEV sandbox",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            // "environmentName": "Raman_Dev_Sandbox",
+            "environmentName": "Raman_UAT_Sandbox",            
+            "tenant": "e325ae97-54e7-470a-a3eb-b31d0c67859d",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": true,
+            "launchBrowser": false,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "schemaUpdateMode":"Synchronize"
+            
+        },
+        {
+        
+            "name": "UAT sandbox",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "Raman_Dev_Sandbox",
+            // "environmentName": "Raman_UAT_Sandbox",            
+            "tenant": "e325ae97-54e7-470a-a3eb-b31d0c67859d",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": true,
+            "launchBrowser": false,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "schemaUpdateMode":"Synchronize"
+            
+        }
+        
+    ]
+    
+}
