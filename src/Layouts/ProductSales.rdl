@@ -2548,8 +2548,6 @@ End Function
         <Field Name="Item__Picture">
           <DataField>Item__Picture</DataField>
         </Field>
-<<<<<<< HEAD
-=======
         <Field Name="Inventory">
           <DataField>Inventory</DataField>
         </Field>
@@ -2568,7 +2566,6 @@ End Function
         <Field Name="Free_Available_StockFormat">
           <DataField>Free_Available_StockFormat</DataField>
         </Field>
->>>>>>> 6178b60cd0277ed8173b0ad65331f9105fe5581a
         <Field Name="ToYear">
           <DataField>ToYear</DataField>
         </Field>
