@@ -15,6 +15,14 @@ report 66008 "CCS PO Shipping"
                 DataItemTableView = sorting("Document Type", "Receipt No.", "Receipt Line No.") where(Type = const(Item));
                 DataItemLinkReference = PurchaseHeader;
                 DataItemLink = "Document Type" = field("Document Type"), "Document No." = field("No.");
+                column(shipmentMethod; PurchaseHeader."Shipment Method Code")
+                { }
+                column(PaymentTerms; PurchaseHeader."Payment Terms Code")
+                { }
+                column(Prepayment; PurchaseHeader."Prepayment Due Date")
+                { }
+                column(Currency_Code; PurchaseHeader."Currency Code")
+                { }
                 column(CCSPurchaseOrderStatus_PurchaseHeader; PurchaseHeader."CCS Purchase Order Status")
                 {
                 }
@@ -123,7 +131,7 @@ report 66008 "CCS PO Shipping"
                 begin
                     TotalCarton := 0;
                     item.get("Purchase Line"."No.");
-                    if vendor.get(item."Vendor No.") then;
+                    if vendor.get("Purchase Line"."Buy-from Vendor No.") then;
                     if Item."CCS Masterbox" <> 0 then
                         TotalCarton := Quantity / item."CCS Masterbox";
                 end;
@@ -131,7 +139,6 @@ report 66008 "CCS PO Shipping"
             trigger OnPreDataItem()
             begin
                 SetCurrentKey("CCS Container No.");
-                SetFilter("CCS Container No.", '<>%1', '');
             end;
 
         }

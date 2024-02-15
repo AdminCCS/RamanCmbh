@@ -1356,7 +1356,7 @@
                       <GroupExpression>=Fields!CCS_Container_No_.Value</GroupExpression>
                     </GroupExpressions>
                     <PageBreak>
-                      <BreakLocation>Between</BreakLocation>
+                      <BreakLocation>End</BreakLocation>
                     </PageBreak>
                   </Group>
                   <SortExpressions>
@@ -1637,6 +1637,18 @@ End Function
   <DataSets>
     <DataSet Name="DataSet_Result">
       <Fields>
+        <Field Name="shipmentMethod">
+          <DataField>shipmentMethod</DataField>
+        </Field>
+        <Field Name="PaymentTerms">
+          <DataField>PaymentTerms</DataField>
+        </Field>
+        <Field Name="Prepayment">
+          <DataField>Prepayment</DataField>
+        </Field>
+        <Field Name="Currency_Code">
+          <DataField>Currency_Code</DataField>
+        </Field>
         <Field Name="CCSPurchaseOrderStatus_PurchaseHeader">
           <DataField>CCSPurchaseOrderStatus_PurchaseHeader</DataField>
         </Field>

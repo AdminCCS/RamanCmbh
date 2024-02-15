@@ -100,11 +100,38 @@ End Function
         <Field Name="Margin__Format">
           <DataField>Margin__Format</DataField>
         </Field>
-        <Field Name="custno">
-          <DataField>custno</DataField>
+        <Field Name="itemno">
+          <DataField>itemno</DataField>
         </Field>
         <Field Name="custpostgrpfilter">
           <DataField>custpostgrpfilter</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Goods_Group">
+          <DataField>Goods_Group</DataField>
+        </Field>
+        <Field Name="Unit_Qty_40_HC_feet">
+          <DataField>Unit_Qty_40_HC_feet</DataField>
+        </Field>
+        <Field Name="Unit_Qty_40_HC_feetFormat">
+          <DataField>Unit_Qty_40_HC_feetFormat</DataField>
+        </Field>
+        <Field Name="Rec_Sales_Price">
+          <DataField>Rec_Sales_Price</DataField>
+        </Field>
+        <Field Name="Rec_Sales_PriceFormat">
+          <DataField>Rec_Sales_PriceFormat</DataField>
+        </Field>
+        <Field Name="Vendor_No">
+          <DataField>Vendor_No</DataField>
+        </Field>
+        <Field Name="Vendor_Item_No">
+          <DataField>Vendor_Item_No</DataField>
+        </Field>
+        <Field Name="Item__Picture">
+          <DataField>Item__Picture</DataField>
         </Field>
         <Field Name="ToYear">
           <DataField>ToYear</DataField>
