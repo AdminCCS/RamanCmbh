@@ -7,7 +7,11 @@
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
+<<<<<<< HEAD
             "environmentName": "Raman_Dev_Sandbox",
+=======
+             "environmentName": "Raman_Dev_Sandbox",
+>>>>>>> 6178b60cd0277ed8173b0ad65331f9105fe5581a
             "tenant": "e325ae97-54e7-470a-a3eb-b31d0c67859d",
             "startupObjectId": 22,
             "startupObjectType": "Page",
@@ -24,7 +28,11 @@
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
+<<<<<<< HEAD
             "environmentName": "Raman_UAT_Sandbox",            
+=======
+          "environmentName": "Raman_UAT_Sandbox",            
+>>>>>>> 6178b60cd0277ed8173b0ad65331f9105fe5581a
             "tenant": "e325ae97-54e7-470a-a3eb-b31d0c67859d",
             "startupObjectId": 22,
             "startupObjectType": "Page",

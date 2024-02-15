@@ -1639,7 +1639,7 @@ report 66006 "General Sales"
 
         dataitem("General Sales"; "General Sales")
         {
-            DataItemTableView = sorting(Year) where(FY_Options = const(FromYear));
+            DataItemTableView = sorting(Year) where(FY_Options = const(FromYear), MonthSort = filter(< 15));
             column(Year; Year)
             { }
             column(Month; Month)
@@ -1663,7 +1663,7 @@ report 66006 "General Sales"
         }
         dataitem("To_General_Sales"; "General Sales")
         {
-            DataItemTableView = sorting(Year) where(FY_Options = const(ToYear), Year = filter(<> '3000'));
+            DataItemTableView = sorting(Year) where(FY_Options = const(ToYear), Year = filter(<> '3000'), MonthSort = filter(< 15));
             column(ToYear; Year)
             { }
             column(ToMonth; Month)
@@ -1700,6 +1700,39 @@ report 66006 "General Sales"
             // { }
             // column(ToMargin__; "Margin %")
             // { }
+        }
+        dataitem(ToTFrom; "General Sales")
+        {
+            DataItemTableView = sorting(Year) where(FY_Options = const(FromYear), MonthSort = filter(>= 15));
+            column(ToTFromYear; Year)
+            { }
+            column(ToTFromMonth; Month)
+            { }
+            column(ToTFromCustomer_Posting_Group; "Customer Posting Group")
+            { }
+            column(ToTFromSale_Amount; "Sale Amount")
+            { }
+            column(ToTFromTotalSales; TotalSales)
+            { }
+            column(ToTFromMonthSort; MonthSort)
+            { }
+
+        }
+        dataitem(ToT_To; "General Sales")
+        {
+            DataItemTableView = sorting(Year) where(FY_Options = const(ToYear), Year = filter(<> '3000'), MonthSort = filter(>= 15));
+            column(ToT_ToToYear; Year)
+            { }
+            column(ToT_ToToMonth; Month)
+            { }
+            column(ToT_ToToCustomer_Posting_Group; "Customer Posting Group")
+            { }
+            column(ToT_ToToSale_Amount; "Sale Amount")
+            { }
+            column(ToT_ToToTotalSales; TotalSales)
+            { }
+            column(ToT_ToToMonthSort; MonthSort)
+            { }
         }
     }
 
