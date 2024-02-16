@@ -18,28 +18,28 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.4468in</Width>
+                  <Width>1.24541in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.13431in</Width>
+                  <Width>0.93291in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.17597in</Width>
+                  <Width>1.20374in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.95794in</Width>
+                  <Width>1.18291in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.17597in</Width>
+                  <Width>1.16208in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.09469in</Width>
+                  <Width>0.87041in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.04402in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.86347in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -707,7 +707,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSETD_PurchaseHeader</rd:DefaultName>
@@ -783,7 +785,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -859,7 +861,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -909,10 +913,6 @@
                               <Style>Solid</Style>
                               <Width>1pt</Width>
                             </TopBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -933,7 +933,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSReleaseStatus_PurchaseHeader</rd:DefaultName>
@@ -957,7 +959,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.18056in</Height>
+                  <Height>0.19444in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1007,7 +1009,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSPODCode_PurchaseHeader</rd:DefaultName>
@@ -1072,7 +1076,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1137,7 +1141,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSFinalExchange_PurchaseHeader</rd:DefaultName>
@@ -1177,10 +1183,6 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -1201,7 +1203,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSPortAgent_PurchaseHeader</rd:DefaultName>
@@ -1220,7 +1224,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.1875in</Height>
+                  <Height>0.19444in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1270,7 +1274,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSPurchaseOrderStatus_PurchaseHeader</rd:DefaultName>
@@ -1336,7 +1342,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1351,7 +1357,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1402,7 +1407,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSInspection_PurchaseHeader</rd:DefaultName>
@@ -1489,7 +1496,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.18055in</Height>
+                  <Height>0.19444in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1539,7 +1546,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>sealNo</rd:DefaultName>
@@ -1604,7 +1613,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1669,7 +1678,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSInspectionAgent_PurchaseHeader</rd:DefaultName>
@@ -1730,13 +1741,14 @@
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>arial</FontFamily>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Normal</FontWeight>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>=Fields!Unit_Price__LCY_Format.Value</Format>
                                     <TextDecoration>None</TextDecoration>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1756,7 +1768,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.21528in</Height>
+                  <Height>0.19444in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1806,7 +1818,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>forwarder</rd:DefaultName>
@@ -1871,7 +1885,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1936,7 +1950,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSInspectionReportNo_PurchaseHeader</rd:DefaultName>
@@ -1954,7 +1970,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox133">
+                        <Textbox Name="Textbox139">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1985,14 +2001,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox134">
+                        <Textbox Name="Textbox140">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!TotalCarton.Value</Value>
+                                  <Value>=Last(Fields!SubTotalCarton.Value)</Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>arial</FontFamily>
@@ -2024,7 +2040,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.18055in</Height>
+                  <Height>0.19444in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -2075,7 +2091,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>shipcost</rd:DefaultName>
@@ -2141,7 +2159,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -2206,7 +2224,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSCommercialInvoiceStatus_PurchaseHeader</rd:DefaultName>
@@ -2244,7 +2264,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox131</rd:DefaultName>
+                          <rd:DefaultName>Textbox82</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2262,7 +2282,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!TotalCBM.Value</Value>
+                                  <Value>=Last(Fields!SubTotalCbm.Value)</Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>arial</FontFamily>
@@ -2278,7 +2298,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox132</rd:DefaultName>
+                          <rd:DefaultName>Textbox83</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2294,7 +2314,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.21528in</Height>
+                  <Height>0.19444in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -2345,7 +2365,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>shipPaymentDate</rd:DefaultName>
@@ -2410,7 +2432,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -2475,7 +2497,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSPackingListStatus_PurchaseHeader</rd:DefaultName>
@@ -2608,7 +2632,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>shipmentMethod</rd:DefaultName>
@@ -2673,7 +2699,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -2738,7 +2764,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSBillofLadingCopyStatus_PurchaseHeader</rd:DefaultName>
@@ -2821,7 +2849,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.18056in</Height>
+                  <Height>0.19444in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -2876,7 +2904,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>PaymentTerms</rd:DefaultName>
@@ -3026,7 +3056,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CCSBillofLadingNo_PurchaseHeader</rd:DefaultName>
@@ -3353,54 +3385,52 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox251">
+                        <Textbox Name="Textbox135">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>Carton:</Value>
                                   <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontFamily>arial</FontFamily>
                                     <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox251</rd:DefaultName>
+                          <rd:DefaultName>Textbox82</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
                             </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox272">
+                        <Textbox Name="Textbox136">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!TotalCarton.Value</Value>
                                   <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontFamily>arial</FontFamily>
                                     <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                    <Format>=Fields!Unit_Price__LCY_Format.Value</Format>
+                                    <TextDecoration>None</TextDecoration>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3409,16 +3439,11 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox272</rd:DefaultName>
+                          <rd:DefaultName>Textbox83</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
                             </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3567,49 +3592,52 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox252">
+                        <Textbox Name="Textbox147">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>CBM:</Value>
                                   <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontFamily>arial</FontFamily>
                                     <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox252</rd:DefaultName>
+                          <rd:DefaultName>Textbox131</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
                             </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox275">
+                        <Textbox Name="Textbox148">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!TotalCBM.Value</Value>
                                   <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontFamily>arial</FontFamily>
                                     <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                    <Format>=Fields!Unit_Price__LCY_Format.Value</Format>
+                                    <TextDecoration>None</TextDecoration>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3618,7 +3646,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox275</rd:DefaultName>
+                          <rd:DefaultName>Textbox132</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -3748,7 +3776,7 @@
                                   <Value>=Fields!volume.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <Format>=Fields!volumeFormat.Value</Format>
+                                    <Format>f4</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3894,7 +3922,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -4147,6 +4175,285 @@
                     </TablixCell>
                   </TablixCells>
                 </TablixRow>
+                <TablixRow>
+                  <Height>0.20139in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox25">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Balance Amount:</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>2</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox28">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Total_Container_Amt.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>=Fields!Unit_Price__LCY_Format.Value</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>2</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox199">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Deposit Amount:</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox199</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox4">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!CCSDepositAmount_PurchaseHeader.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>=Fields!Unit_Price__LCY_Format.Value</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox14">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox14</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox20">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox20</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
@@ -4245,13 +4552,14 @@
                         </TablixMember>
                       </TablixMembers>
                     </TablixMember>
+                    <TablixMember />
                   </TablixMembers>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Height>2.91943in</Height>
-            <Width>8.98568in</Width>
+            <Height>3.14162in</Height>
+            <Width>8.50495in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -4259,10 +4567,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.91943in</Height>
+        <Height>3.14162in</Height>
         <Style />
       </Body>
-      <Width>8.98568in</Width>
+      <Width>8.54818in</Width>
       <Page>
         <PageHeader>
           <Height>0.79167in</Height>
@@ -4328,7 +4636,7 @@
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
               <Top>0.25in</Top>
-              <Left>7.92317in</Left>
+              <Left>7.54817in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>1</ZIndex>
@@ -4362,7 +4670,7 @@
               </Paragraphs>
               <rd:DefaultName>UserID</rd:DefaultName>
               <Top>0.5in</Top>
-              <Left>6.81901in</Left>
+              <Left>6.44401in</Left>
               <Height>0.25in</Height>
               <Width>2.10417in</Width>
               <ZIndex>2</ZIndex>
@@ -4397,7 +4705,7 @@
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
               <Top>0.00003cm</Top>
-              <Left>6.81901in</Left>
+              <Left>6.44401in</Left>
               <Height>0.25in</Height>
               <Width>2.10417in</Width>
               <ZIndex>3</ZIndex>
@@ -4497,6 +4805,120 @@ End Function
         <Field Name="CCS_Container_No_">
           <DataField>CCS_Container_No_</DataField>
         </Field>
+        <Field Name="CCSDepositExchange_PurchaseHeader">
+          <DataField>CCSDepositExchange_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSDepositExchange_PurchaseHeaderFormat">
+          <DataField>CCSDepositExchange_PurchaseHeaderFormat</DataField>
+        </Field>
+        <Field Name="CCSDepositPaymentDate_PurchaseHeader">
+          <DataField>CCSDepositPaymentDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSDepositPaymentStatus_PurchaseHeader">
+          <DataField>CCSDepositPaymentStatus_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSBalanceExchange_PurchaseHeader">
+          <DataField>CCSBalanceExchange_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSBalanceExchange_PurchaseHeaderFormat">
+          <DataField>CCSBalanceExchange_PurchaseHeaderFormat</DataField>
+        </Field>
+        <Field Name="CCSBalancePaymentDate_PurchaseHeader">
+          <DataField>CCSBalancePaymentDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSBalancePaymentStatus_PurchaseHeader">
+          <DataField>CCSBalancePaymentStatus_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSCommercialInvoiceStatus_PurchaseHeader">
+          <DataField>CCSCommercialInvoiceStatus_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSInspection_PurchaseHeader">
+          <DataField>CCSInspection_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSInspectionAgent_PurchaseHeader">
+          <DataField>CCSInspectionAgent_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSInspectionReportNo_PurchaseHeader">
+          <DataField>CCSInspectionReportNo_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSPackingListStatus_PurchaseHeader">
+          <DataField>CCSPackingListStatus_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSBillofLadingCopyStatus_PurchaseHeader">
+          <DataField>CCSBillofLadingCopyStatus_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSBillofLadingNo_PurchaseHeader">
+          <DataField>CCSBillofLadingNo_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSReleaseStatus_PurchaseHeader">
+          <DataField>CCSReleaseStatus_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSPortAgent_PurchaseHeader">
+          <DataField>CCSPortAgent_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="totalOrderAmt">
+          <DataField>totalOrderAmt</DataField>
+        </Field>
+        <Field Name="totalOrderAmtFormat">
+          <DataField>totalOrderAmtFormat</DataField>
+        </Field>
+        <Field Name="CCSFinalExchange_PurchaseHeader">
+          <DataField>CCSFinalExchange_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSFinalExchange_PurchaseHeaderFormat">
+          <DataField>CCSFinalExchange_PurchaseHeaderFormat</DataField>
+        </Field>
+        <Field Name="sealNo">
+          <DataField>sealNo</DataField>
+        </Field>
+        <Field Name="forwarder">
+          <DataField>forwarder</DataField>
+        </Field>
+        <Field Name="shipcost">
+          <DataField>shipcost</DataField>
+        </Field>
+        <Field Name="shipcostFormat">
+          <DataField>shipcostFormat</DataField>
+        </Field>
+        <Field Name="shipPaymentDate">
+          <DataField>shipPaymentDate</DataField>
+        </Field>
+        <Field Name="CCSDepositAmount_PurchaseHeader">
+          <DataField>CCSDepositAmount_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSDepositAmount_PurchaseHeaderFormat">
+          <DataField>CCSDepositAmount_PurchaseHeaderFormat</DataField>
+        </Field>
+        <Field Name="CCSBalanceAmount_PurchaseHeader">
+          <DataField>CCSBalanceAmount_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CCSBalanceAmount_PurchaseHeaderFormat">
+          <DataField>CCSBalanceAmount_PurchaseHeaderFormat</DataField>
+        </Field>
+        <Field Name="Total_Container_Amt">
+          <DataField>Total_Container_Amt</DataField>
+        </Field>
+        <Field Name="Total_Container_AmtFormat">
+          <DataField>Total_Container_AmtFormat</DataField>
+        </Field>
+        <Field Name="CCS_Total_Deposit_Amt">
+          <DataField>CCS_Total_Deposit_Amt</DataField>
+        </Field>
+        <Field Name="CCS_Total_Deposit_AmtFormat">
+          <DataField>CCS_Total_Deposit_AmtFormat</DataField>
+        </Field>
+        <Field Name="SubTotalCarton">
+          <DataField>SubTotalCarton</DataField>
+        </Field>
+        <Field Name="SubTotalCartonFormat">
+          <DataField>SubTotalCartonFormat</DataField>
+        </Field>
+        <Field Name="SubTotalCbm">
+          <DataField>SubTotalCbm</DataField>
+        </Field>
+        <Field Name="SubTotalCbmFormat">
+          <DataField>SubTotalCbmFormat</DataField>
+        </Field>
         <Field Name="No_PurchaseLine">
           <DataField>No_PurchaseLine</DataField>
         </Field>
@@ -4553,96 +4975,6 @@ End Function
         </Field>
         <Field Name="Unit_Price__LCY_Format">
           <DataField>Unit_Price__LCY_Format</DataField>
-        </Field>
-        <Field Name="sealNo">
-          <DataField>sealNo</DataField>
-        </Field>
-        <Field Name="forwarder">
-          <DataField>forwarder</DataField>
-        </Field>
-        <Field Name="shipcost">
-          <DataField>shipcost</DataField>
-        </Field>
-        <Field Name="shipcostFormat">
-          <DataField>shipcostFormat</DataField>
-        </Field>
-        <Field Name="shipPaymentDate">
-          <DataField>shipPaymentDate</DataField>
-        </Field>
-        <Field Name="CCSDepositAmount_PurchaseHeader">
-          <DataField>CCSDepositAmount_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSDepositAmount_PurchaseHeaderFormat">
-          <DataField>CCSDepositAmount_PurchaseHeaderFormat</DataField>
-        </Field>
-        <Field Name="CCSDepositExchange_PurchaseHeader">
-          <DataField>CCSDepositExchange_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSDepositExchange_PurchaseHeaderFormat">
-          <DataField>CCSDepositExchange_PurchaseHeaderFormat</DataField>
-        </Field>
-        <Field Name="CCSDepositPaymentDate_PurchaseHeader">
-          <DataField>CCSDepositPaymentDate_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSDepositPaymentStatus_PurchaseHeader">
-          <DataField>CCSDepositPaymentStatus_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSBalanceAmount_PurchaseHeader">
-          <DataField>CCSBalanceAmount_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSBalanceAmount_PurchaseHeaderFormat">
-          <DataField>CCSBalanceAmount_PurchaseHeaderFormat</DataField>
-        </Field>
-        <Field Name="CCSBalanceExchange_PurchaseHeader">
-          <DataField>CCSBalanceExchange_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSBalanceExchange_PurchaseHeaderFormat">
-          <DataField>CCSBalanceExchange_PurchaseHeaderFormat</DataField>
-        </Field>
-        <Field Name="CCSBalancePaymentDate_PurchaseHeader">
-          <DataField>CCSBalancePaymentDate_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSBalancePaymentStatus_PurchaseHeader">
-          <DataField>CCSBalancePaymentStatus_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSCommercialInvoiceStatus_PurchaseHeader">
-          <DataField>CCSCommercialInvoiceStatus_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSInspection_PurchaseHeader">
-          <DataField>CCSInspection_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSInspectionAgent_PurchaseHeader">
-          <DataField>CCSInspectionAgent_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSInspectionReportNo_PurchaseHeader">
-          <DataField>CCSInspectionReportNo_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSPackingListStatus_PurchaseHeader">
-          <DataField>CCSPackingListStatus_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSBillofLadingCopyStatus_PurchaseHeader">
-          <DataField>CCSBillofLadingCopyStatus_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSBillofLadingNo_PurchaseHeader">
-          <DataField>CCSBillofLadingNo_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSReleaseStatus_PurchaseHeader">
-          <DataField>CCSReleaseStatus_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSPortAgent_PurchaseHeader">
-          <DataField>CCSPortAgent_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="totalOrderAmt">
-          <DataField>totalOrderAmt</DataField>
-        </Field>
-        <Field Name="totalOrderAmtFormat">
-          <DataField>totalOrderAmtFormat</DataField>
-        </Field>
-        <Field Name="CCSFinalExchange_PurchaseHeader">
-          <DataField>CCSFinalExchange_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CCSFinalExchange_PurchaseHeaderFormat">
-          <DataField>CCSFinalExchange_PurchaseHeaderFormat</DataField>
         </Field>
       </Fields>
       <Query>
