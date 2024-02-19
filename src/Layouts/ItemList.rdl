@@ -11,193 +11,6 @@
       <rd:DataSourceID>2728b8bd-735d-49b2-a36e-3e2ca1285295</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Text000">
-          <DataField>Text000</DataField>
-        </Field>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="TIME">
-          <DataField>TIME</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="Item__No__">
-          <DataField>Item__No__</DataField>
-        </Field>
-        <Field Name="Item_Description">
-          <DataField>Item_Description</DataField>
-        </Field>
-        <Field Name="Item__Unit_Cost_">
-          <DataField>Item__Unit_Cost_</DataField>
-        </Field>
-        <Field Name="Item__Unit_Cost_Format">
-          <DataField>Item__Unit_Cost_Format</DataField>
-        </Field>
-        <Field Name="Item__Picture">
-          <DataField>Item__Picture</DataField>
-        </Field>
-        <Field Name="Item__Base_Unit_of_Measure_">
-          <DataField>Item__Base_Unit_of_Measure_</DataField>
-        </Field>
-        <Field Name="Item_Inventory">
-          <DataField>Item_Inventory</DataField>
-        </Field>
-        <Field Name="Item_InventoryFormat">
-          <DataField>Item_InventoryFormat</DataField>
-        </Field>
-        <Field Name="IncludeImage">
-          <DataField>IncludeImage</DataField>
-        </Field>
-        <Field Name="Gen_Prod_Posting_Group">
-          <DataField>Gen_Prod_Posting_Group</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Item__No__Caption">
-          <DataField>Item__No__Caption</DataField>
-        </Field>
-        <Field Name="Item_DescriptionCaption">
-          <DataField>Item_DescriptionCaption</DataField>
-        </Field>
-        <Field Name="Item__Unit_Cost_Caption">
-          <DataField>Item__Unit_Cost_Caption</DataField>
-        </Field>
-        <Field Name="Model_Status">
-          <DataField>Model_Status</DataField>
-        </Field>
-        <Field Name="Tarrif_No">
-          <DataField>Tarrif_No</DataField>
-        </Field>
-        <Field Name="BDA_Languages">
-          <DataField>BDA_Languages</DataField>
-        </Field>
-        <Field Name="Cabel_Length_in_m">
-          <DataField>Cabel_Length_in_m</DataField>
-        </Field>
-        <Field Name="Cabel_Length_in_mFormat">
-          <DataField>Cabel_Length_in_mFormat</DataField>
-        </Field>
-        <Field Name="Connector_shape">
-          <DataField>Connector_shape</DataField>
-        </Field>
-        <Field Name="Goods_Group">
-          <DataField>Goods_Group</DataField>
-        </Field>
-        <Field Name="CCS_EAN">
-          <DataField>CCS_EAN</DataField>
-        </Field>
-        <Field Name="CCS_Masterbox_EAN">
-          <DataField>CCS_Masterbox_EAN</DataField>
-        </Field>
-        <Field Name="Net_Weight">
-          <DataField>Net_Weight</DataField>
-        </Field>
-        <Field Name="Net_WeightFormat">
-          <DataField>Net_WeightFormat</DataField>
-        </Field>
-        <Field Name="Gross_Weight">
-          <DataField>Gross_Weight</DataField>
-        </Field>
-        <Field Name="Gross_WeightFormat">
-          <DataField>Gross_WeightFormat</DataField>
-        </Field>
-        <Field Name="CCS_Unit_Qty_40_HC">
-          <DataField>CCS_Unit_Qty_40_HC</DataField>
-        </Field>
-        <Field Name="CCS_Unit_Qty_40_HCFormat">
-          <DataField>CCS_Unit_Qty_40_HCFormat</DataField>
-        </Field>
-        <Field Name="Unit_Volume">
-          <DataField>Unit_Volume</DataField>
-        </Field>
-        <Field Name="Unit_VolumeFormat">
-          <DataField>Unit_VolumeFormat</DataField>
-        </Field>
-        <Field Name="Product_HLW">
-          <DataField>Product_HLW</DataField>
-        </Field>
-        <Field Name="Product_HLWFormat">
-          <DataField>Product_HLWFormat</DataField>
-        </Field>
-        <Field Name="VPE_HLW">
-          <DataField>VPE_HLW</DataField>
-        </Field>
-        <Field Name="VPE_HLWFormat">
-          <DataField>VPE_HLWFormat</DataField>
-        </Field>
-        <Field Name="Pal_Location_Krt">
-          <DataField>Pal_Location_Krt</DataField>
-        </Field>
-        <Field Name="Pallet_height_220">
-          <DataField>Pallet_height_220</DataField>
-        </Field>
-        <Field Name="Pallet_height_220Format">
-          <DataField>Pallet_height_220Format</DataField>
-        </Field>
-        <Field Name="Rec_Street_Price">
-          <DataField>Rec_Street_Price</DataField>
-        </Field>
-        <Field Name="Rec_Street_PriceFormat">
-          <DataField>Rec_Street_PriceFormat</DataField>
-        </Field>
-        <Field Name="Rec_Sales_Price">
-          <DataField>Rec_Sales_Price</DataField>
-        </Field>
-        <Field Name="Rec_Sales_PriceFormat">
-          <DataField>Rec_Sales_PriceFormat</DataField>
-        </Field>
-        <Field Name="Item_Category_Code">
-          <DataField>Item_Category_Code</DataField>
-        </Field>
-        <Field Name="Free_Available_Stock">
-          <DataField>Free_Available_Stock</DataField>
-        </Field>
-        <Field Name="Free_Available_StockFormat">
-          <DataField>Free_Available_StockFormat</DataField>
-        </Field>
-        <Field Name="Technical_1_Val">
-          <DataField>Technical_1_Val</DataField>
-        </Field>
-        <Field Name="Technical_2_Val">
-          <DataField>Technical_2_Val</DataField>
-        </Field>
-        <Field Name="Technical_3_Val">
-          <DataField>Technical_3_Val</DataField>
-        </Field>
-        <Field Name="Technical_4_Val">
-          <DataField>Technical_4_Val</DataField>
-        </Field>
-        <Field Name="Technical_5_Val">
-          <DataField>Technical_5_Val</DataField>
-        </Field>
-        <Field Name="Cust_Price">
-          <DataField>Cust_Price</DataField>
-        </Field>
-        <Field Name="Cust_PriceFormat">
-          <DataField>Cust_PriceFormat</DataField>
-        </Field>
-        <Field Name="Customer_No">
-          <DataField>Customer_No</DataField>
-        </Field>
-        <Field Name="Customer_Curr">
-          <DataField>Customer_Curr</DataField>
-        </Field>
-        <Field Name="HideCustomer">
-          <DataField>HideCustomer</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2610,12 +2423,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -2655,4 +2462,191 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>a581b3e3-8787-4225-9ec2-83fb3f60378e</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Text000">
+          <DataField>Text000</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="TIME">
+          <DataField>TIME</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Item__No__">
+          <DataField>Item__No__</DataField>
+        </Field>
+        <Field Name="Item_Description">
+          <DataField>Item_Description</DataField>
+        </Field>
+        <Field Name="Item__Unit_Cost_">
+          <DataField>Item__Unit_Cost_</DataField>
+        </Field>
+        <Field Name="Item__Unit_Cost_Format">
+          <DataField>Item__Unit_Cost_Format</DataField>
+        </Field>
+        <Field Name="Item__Picture">
+          <DataField>Item__Picture</DataField>
+        </Field>
+        <Field Name="Item__Base_Unit_of_Measure_">
+          <DataField>Item__Base_Unit_of_Measure_</DataField>
+        </Field>
+        <Field Name="Item_Inventory">
+          <DataField>Item_Inventory</DataField>
+        </Field>
+        <Field Name="Item_InventoryFormat">
+          <DataField>Item_InventoryFormat</DataField>
+        </Field>
+        <Field Name="IncludeImage">
+          <DataField>IncludeImage</DataField>
+        </Field>
+        <Field Name="Gen_Prod_Posting_Group">
+          <DataField>Gen_Prod_Posting_Group</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Item__No__Caption">
+          <DataField>Item__No__Caption</DataField>
+        </Field>
+        <Field Name="Item_DescriptionCaption">
+          <DataField>Item_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="Item__Unit_Cost_Caption">
+          <DataField>Item__Unit_Cost_Caption</DataField>
+        </Field>
+        <Field Name="Model_Status">
+          <DataField>Model_Status</DataField>
+        </Field>
+        <Field Name="Tarrif_No">
+          <DataField>Tarrif_No</DataField>
+        </Field>
+        <Field Name="BDA_Languages">
+          <DataField>BDA_Languages</DataField>
+        </Field>
+        <Field Name="Cabel_Length_in_m">
+          <DataField>Cabel_Length_in_m</DataField>
+        </Field>
+        <Field Name="Cabel_Length_in_mFormat">
+          <DataField>Cabel_Length_in_mFormat</DataField>
+        </Field>
+        <Field Name="Connector_shape">
+          <DataField>Connector_shape</DataField>
+        </Field>
+        <Field Name="Goods_Group">
+          <DataField>Goods_Group</DataField>
+        </Field>
+        <Field Name="CCS_EAN">
+          <DataField>CCS_EAN</DataField>
+        </Field>
+        <Field Name="CCS_Masterbox_EAN">
+          <DataField>CCS_Masterbox_EAN</DataField>
+        </Field>
+        <Field Name="Net_Weight">
+          <DataField>Net_Weight</DataField>
+        </Field>
+        <Field Name="Net_WeightFormat">
+          <DataField>Net_WeightFormat</DataField>
+        </Field>
+        <Field Name="Gross_Weight">
+          <DataField>Gross_Weight</DataField>
+        </Field>
+        <Field Name="Gross_WeightFormat">
+          <DataField>Gross_WeightFormat</DataField>
+        </Field>
+        <Field Name="CCS_Unit_Qty_40_HC">
+          <DataField>CCS_Unit_Qty_40_HC</DataField>
+        </Field>
+        <Field Name="CCS_Unit_Qty_40_HCFormat">
+          <DataField>CCS_Unit_Qty_40_HCFormat</DataField>
+        </Field>
+        <Field Name="Unit_Volume">
+          <DataField>Unit_Volume</DataField>
+        </Field>
+        <Field Name="Unit_VolumeFormat">
+          <DataField>Unit_VolumeFormat</DataField>
+        </Field>
+        <Field Name="Product_HLW">
+          <DataField>Product_HLW</DataField>
+        </Field>
+        <Field Name="Product_HLWFormat">
+          <DataField>Product_HLWFormat</DataField>
+        </Field>
+        <Field Name="VPE_HLW">
+          <DataField>VPE_HLW</DataField>
+        </Field>
+        <Field Name="VPE_HLWFormat">
+          <DataField>VPE_HLWFormat</DataField>
+        </Field>
+        <Field Name="Pal_Location_Krt">
+          <DataField>Pal_Location_Krt</DataField>
+        </Field>
+        <Field Name="Pallet_height_220">
+          <DataField>Pallet_height_220</DataField>
+        </Field>
+        <Field Name="Pallet_height_220Format">
+          <DataField>Pallet_height_220Format</DataField>
+        </Field>
+        <Field Name="Rec_Street_Price">
+          <DataField>Rec_Street_Price</DataField>
+        </Field>
+        <Field Name="Rec_Street_PriceFormat">
+          <DataField>Rec_Street_PriceFormat</DataField>
+        </Field>
+        <Field Name="Rec_Sales_Price">
+          <DataField>Rec_Sales_Price</DataField>
+        </Field>
+        <Field Name="Rec_Sales_PriceFormat">
+          <DataField>Rec_Sales_PriceFormat</DataField>
+        </Field>
+        <Field Name="Item_Category_Code">
+          <DataField>Item_Category_Code</DataField>
+        </Field>
+        <Field Name="Free_Available_Stock">
+          <DataField>Free_Available_Stock</DataField>
+        </Field>
+        <Field Name="Free_Available_StockFormat">
+          <DataField>Free_Available_StockFormat</DataField>
+        </Field>
+        <Field Name="Technical_1_Val">
+          <DataField>Technical_1_Val</DataField>
+        </Field>
+        <Field Name="Technical_2_Val">
+          <DataField>Technical_2_Val</DataField>
+        </Field>
+        <Field Name="Technical_3_Val">
+          <DataField>Technical_3_Val</DataField>
+        </Field>
+        <Field Name="Technical_4_Val">
+          <DataField>Technical_4_Val</DataField>
+        </Field>
+        <Field Name="Technical_5_Val">
+          <DataField>Technical_5_Val</DataField>
+        </Field>
+        <Field Name="Cust_Price">
+          <DataField>Cust_Price</DataField>
+        </Field>
+        <Field Name="Cust_PriceFormat">
+          <DataField>Cust_PriceFormat</DataField>
+        </Field>
+        <Field Name="Customer_No">
+          <DataField>Customer_No</DataField>
+        </Field>
+        <Field Name="Customer_Curr">
+          <DataField>Customer_Curr</DataField>
+        </Field>
+        <Field Name="HideCustomer">
+          <DataField>HideCustomer</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

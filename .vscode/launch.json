@@ -24,7 +24,7 @@
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "Raman_UAT_Sandbox",            
+            "environmentName": "Sandbox_UAT_190224",            
             "tenant": "e325ae97-54e7-470a-a3eb-b31d0c67859d",
             "startupObjectId": 22,
             "startupObjectType": "Page",
