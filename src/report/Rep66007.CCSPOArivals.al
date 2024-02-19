@@ -15,6 +15,14 @@ report 66007 "CCS PO Arivals"
                 DataItemTableView = sorting("Document Type", "Receipt No.", "Receipt Line No.") where(Type = const(Item));
                 DataItemLinkReference = PurchaseHeader;
                 DataItemLink = "Document Type" = field("Document Type"), "Document No." = field("No.");
+                column(shipmentMethod; PurchaseHeader."Shipment Method Code")
+                { }
+                column(PaymentTerms; PurchaseHeader."Payment Terms Code")
+                { }
+                column(Prepayment; PurchaseHeader."Prepayment Due Date")
+                { }
+                column(Currency_Code; PurchaseHeader."Currency Code")
+                { }
                 column(CCSPurchaseOrderStatus_PurchaseHeader; PurchaseHeader."CCS Purchase Order Status")
                 {
                 }
@@ -59,7 +67,6 @@ report 66007 "CCS PO Arivals"
             trigger OnPreDataItem()
             begin
                 SetCurrentKey("CCS Container No.");
-                SetFilter("CCS Container No.", '<>%1', '');
             end;
 
         }

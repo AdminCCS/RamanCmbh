@@ -26,6 +26,8 @@ report 66009 "Product Sales"
                 fromEndDate := DMY2Date(31, 12, fromYear);
                 toStartDate := DMY2Date(01, 01, toyear);
                 toEndDate := DMY2Date(31, 12, toyear);
+                if itemno = '' then
+                    Error('Please select the Item.');
             end;
 
             trigger OnAfterGetRecord()
@@ -199,7 +201,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -228,7 +231,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -258,7 +262,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -288,7 +293,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -317,7 +323,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -346,7 +353,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -375,7 +383,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -404,7 +413,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -433,7 +443,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -462,7 +473,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -491,7 +503,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -520,7 +533,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -573,7 +587,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -602,7 +617,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -632,7 +648,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -662,7 +679,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -691,7 +709,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -720,7 +739,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -749,7 +769,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -778,7 +799,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -807,7 +829,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -836,7 +859,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -865,7 +889,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -895,7 +920,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -951,7 +977,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -980,7 +1007,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1010,7 +1038,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1040,7 +1069,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1069,7 +1099,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1098,7 +1129,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1127,7 +1159,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1156,7 +1189,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1185,7 +1219,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1214,7 +1249,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1243,7 +1279,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1272,7 +1309,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1325,7 +1363,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1354,7 +1393,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1384,7 +1424,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1414,7 +1455,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1443,7 +1485,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1472,7 +1515,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1501,7 +1545,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1530,7 +1575,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1559,7 +1605,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1588,7 +1635,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1617,7 +1665,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1647,7 +1696,8 @@ report 66009 "Product Sales"
                                                 if ProdSales.findfirst then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                                    if ProdSales.TotalSales <> 0 then
+                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                                     ProdSales.Modify()
                                                 end;
                                             end;
@@ -1692,16 +1742,16 @@ report 66009 "Product Sales"
                             ProdSales."Sale Amount" := ProdSalesNew."Sale Amount";
                             ProdSales.TotalSales := ProdSalesNew.TotalSales;
                             ProdSales.Margin := ProdSalesNew.Margin;
-
-                            ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                            if ProdSales.TotalSales <> 0 then
+                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                             ProdSales.MonthSort := 13;
                             ProdSales.Insert();
                         end else begin
                             ProdSales."Sale Amount" += ProdSalesNew."Sale Amount";
                             ProdSales.TotalSales += ProdSalesNew.TotalSales;
                             ProdSales.Margin += ProdSalesNew.Margin;
-
-                            ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                            if ProdSales.TotalSales <> 0 then
+                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                             ProdSales.Modify();
                         end;
                     until ProdSalesNew.Next() = 0;
@@ -1755,6 +1805,7 @@ report 66009 "Product Sales"
                     ProdSales."Sale Amount" := 0;
                     toTotalSale := ProdSalesNew.TotalSales;
                     ProdSales.MonthSort := 15;
+                    j := ProdSales.MonthSort;
                     ProdSales.Insert();
                 end;
                 ProdSalesNew.Reset();
@@ -1764,6 +1815,7 @@ report 66009 "Product Sales"
                 ProdSalesNew.SetFilter("Sale Amount", '<>%1', 0);
                 if ProdSalesNew.FindFirst() then
                     repeat
+
                         ProdSales.Reset();
                         ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                         ProdSales.SetRange(Year, Format(toyear));
@@ -1776,10 +1828,11 @@ report 66009 "Product Sales"
                             ProdSales.Month := ProdSalesNew."Customer Posting Group" + ' %';
                             ProdSales."Customer Posting Group" := ProdSalesNew."Customer Posting Group";
                             //ProdSales."Sale Amount" := ProdSalesNew."Sale Amount" / 12;
-                            ProdSales.TotalSales := (ProdSalesNew."Sale Amount" * 100) / toTotalSale;
-                            ProdSales.MonthSort := 16;
+                            if toTotalSale <> 0 then
+                                ProdSales.TotalSales := (ProdSalesNew."Sale Amount" * 100) / toTotalSale;
+                            ProdSales.MonthSort := j + 1;
                             ProdSales.Insert();
-
+                            j := ProdSales.MonthSort;
                         end;
                     until ProdSalesNew.Next() = 0;
                 //-----------from year totals   
@@ -1804,7 +1857,8 @@ report 66009 "Product Sales"
                             ProdSales."Sale Amount" := ProdSalesNew."Sale Amount";
                             ProdSales.TotalSales := ProdSalesNew.TotalSales;
                             ProdSales.Margin := ProdSalesNew.Margin;
-                            ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                            if ProdSales.TotalSales <> 0 then
+                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                             ProdSales.MonthSort := 13;
                             ProdSales.Insert();
                         end else begin
@@ -1812,7 +1866,8 @@ report 66009 "Product Sales"
                             ProdSales.TotalSales += ProdSalesNew.TotalSales;
                             ProdSales.Margin += ProdSalesNew.Margin;
                             //ProdSales."Margin %" += ProdSalesNew."Margin %";
-                            ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                            if ProdSales.TotalSales <> 0 then
+                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                             ProdSales.Modify();
                         end;
                     until ProdSalesNew.Next() = 0;
@@ -1881,7 +1936,8 @@ report 66009 "Product Sales"
                             ProdSales.Month := ProdSalesNew."Customer Posting Group" + ' %';
                             ProdSales."Customer Posting Group" := ProdSalesNew."Customer Posting Group";
                             //ProdSales."Sale Amount" := ProdSalesNew."Sale Amount" / 12;
-                            ProdSales.TotalSales := (ProdSalesNew."Sale Amount" * 100) / fromTotalSale;
+                            if fromTotalSale <> 0 then
+                                ProdSales.TotalSales := (ProdSalesNew."Sale Amount" * 100) / fromTotalSale;
                             ProdSales.MonthSort := j + 1;
                             ProdSales.Insert();
                             j := ProdSales.MonthSort;
@@ -2394,7 +2450,7 @@ report 66009 "Product Sales"
 
         dataitem("Product Sales"; "Product Sales")
         {
-            DataItemTableView = sorting(Year) where(FY_Options = const(FromYear));
+            DataItemTableView = sorting(Year) where(FY_Options = const(FromYear), MonthSort = filter(< 15));
             column(Year; Year)
             { }
             column(Month; Month)
@@ -2429,16 +2485,23 @@ report 66009 "Product Sales"
             { }
             column(Item__Picture; ItemRec.Picture)
             { }
+            column(Inventory; ItemRec.Inventory)
+            { }
+            column(Blocking_Order_Invt; ItemRec."CCS Blocking Order Invt")
+            { }
+            column(Free_Available_Stock; ItemRec."Free Available Stock")
+            { }
             trigger OnPreDataItem()
 
             begin
                 if itemno <> '' then
                     ItemRec.Get(itemno);
+                ItemRec.CalcFields(Inventory, "CCS Backlog order Invt");
             end;
         }
         dataitem("To_Product_Sales"; "Product Sales")
         {
-            DataItemTableView = sorting(Year) where(FY_Options = const(ToYear), Year = filter(<> '3000'));
+            DataItemTableView = sorting(Year) where(FY_Options = const(ToYear), Year = filter(<> '3000'), MonthSort = filter(< 15));
             column(ToYear; Year)
             { }
             column(ToMonth; Month)
@@ -2475,6 +2538,39 @@ report 66009 "Product Sales"
             // { }
             // column(ToMargin__; "Margin %")
             // { }
+        }
+        dataitem(ToTFrom; "Product Sales")
+        {
+            DataItemTableView = sorting(Year) where(FY_Options = const(FromYear), MonthSort = filter(>= 15));
+            column(ToTFromYear; Year)
+            { }
+            column(ToTFromMonth; Month)
+            { }
+            column(ToTFromCustomer_Posting_Group; "Customer Posting Group")
+            { }
+            column(ToTFromSale_Amount; "Sale Amount")
+            { }
+            column(ToTFromTotalSales; TotalSales)
+            { }
+            column(ToTFromMonthSort; MonthSort)
+            { }
+
+        }
+        dataitem(ToT_To; "Product Sales")
+        {
+            DataItemTableView = sorting(Year) where(FY_Options = const(ToYear), Year = filter(<> '3000'), MonthSort = filter(>= 15));
+            column(ToT_ToToYear; Year)
+            { }
+            column(ToT_ToToMonth; Month)
+            { }
+            column(ToT_ToToCustomer_Posting_Group; "Customer Posting Group")
+            { }
+            column(ToT_ToToSale_Amount; "Sale Amount")
+            { }
+            column(ToT_ToToTotalSales; TotalSales)
+            { }
+            column(ToT_ToToMonthSort; MonthSort)
+            { }
         }
     }
 

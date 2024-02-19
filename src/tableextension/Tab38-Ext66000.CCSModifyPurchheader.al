@@ -160,6 +160,22 @@ tableextension 66000 "CCS Modify Purchheader" extends "Purchase Header" //38
             Caption = 'Inspection Report No.';
             DataClassification = CustomerContent;
         }
+        field(66029; "CCS Total Balance Amt"; Decimal)
+        {
+            FieldClass = FlowField;
+            CalcFormula = sum("Purchase Header"."CCS Balance Amount" where("CCS Container No." = field("CCS Container No.")));
+        }
+        field(66030; "CCS Total Deposit Amt"; Decimal)
+        {
+            FieldClass = FlowField;
+            CalcFormula = sum("Purchase Header"."CCS Deposit Amount" where("CCS Container No." = field("CCS Container No.")));
+        }
+        field(66031; "CCS Total Shipping Cost"; Decimal)
+        {
+            Caption = 'Total Shipping Cost';
+            FieldClass = FlowField;
+            CalcFormula = sum("Purchase Header"."CCS Shipping Cost" where("CCS Container No." = field("CCS Container No.")));
+        }
     }
     trigger OnDelete()
     var
