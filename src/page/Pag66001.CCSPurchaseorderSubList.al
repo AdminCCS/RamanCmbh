@@ -19,22 +19,27 @@ page 66001 "CCS Purchase order Sub List"
                 field("Document No."; Rec."Document No.")
                 {
                     ApplicationArea = all;
+                    ToolTip = 'Specifies the value of the Document No. field.';
                 }
                 field("No."; Rec."No.")
                 {
                     ApplicationArea = all;
+                    ToolTip = 'Specifies the value of the No. field.';
                 }
                 field(Quantity; Rec.Quantity)
                 {
                     ApplicationArea = all;
+                    ToolTip = 'Specifies the value of the Quantity field.';
                 }
                 field("Pre Sold Quantity"; Rec."Pre Sold Quantity")
                 {
                     ApplicationArea = all;
+                    ToolTip = 'Specifies the value of the Pre-Sold Quantity field.';
                 }
                 field("Free Available Stock"; Rec."Free Available Stock")
                 {
                     ApplicationArea = all;
+                    ToolTip = 'Specifies the value of the Free Available Stock field.';
                 }
 
             }

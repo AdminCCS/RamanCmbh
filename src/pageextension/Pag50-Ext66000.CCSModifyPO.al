@@ -7,14 +7,17 @@ pageextension 66000 "CCS Modify PO" extends "Purchase Order" //50
             field("Purchase Order Status"; rec."CCS Purchase Order Status")
             {
                 ApplicationArea = all;
+                ToolTip = 'Specifies the value of the Purchase Order Status field.';
             }
             field("CCS ETD"; rec."CCS ETD")
             {
                 ApplicationArea = all;
+                ToolTip = 'Specifies the value of the Estimated Time of Delivery field.';
             }
             field("CCS ETA"; rec."CCS ETA")
             {
                 ApplicationArea = all;
+                ToolTip = 'Specifies the value of the Estimated time of Arrival field.';
             }
         }
         addafter(PurchLines)

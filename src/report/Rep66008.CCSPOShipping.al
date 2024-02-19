@@ -177,22 +177,22 @@ report 66008 "CCS PO Shipping"
 
             trigger OnAfterGetRecord()
             begin
-                TotalBalanceAmt += "CCS Total Balance Amt";
-                TotalDepoAmt += "CCS Total Deposit Amt";
-                TotalShipCost += "CCS Total Shipping Cost";
+                TotalBalanceAmt += "ccs balance amount";
+                TotalDepoAmt += "CCS Deposit Amount";
+                TotalShipCost += "CCS Shipping Cost";
                 TotalOrderAmt := "CCS Balance Amount" + "CCS Deposit Amount";
             end;
         }
     }
     var
         Item: Record Item;
-        TotalCarton: Decimal;
-        SubTotalCarton: Decimal;
-        TotalCbm: Decimal;
         Vendor: Record Vendor;
-        TotalShipCost: Decimal;
+        SubTotalCarton: Decimal;
         TotalBalanceAmt: Decimal;
+        TotalCarton: Decimal;
+        TotalCbm: Decimal;
         TotalDepoAmt: Decimal;
         TotalOrderAmt: Decimal;
+        TotalShipCost: Decimal;
 
 }

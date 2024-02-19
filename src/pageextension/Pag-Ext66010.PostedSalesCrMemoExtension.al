@@ -9,6 +9,7 @@ pageextension 66010 "Posted Sales CrMemo Extension" extends "Posted Sales Credit
             {
                 ApplicationArea = all;
                 Caption = 'Credit Memo Print Option';
+                ToolTip = 'Specifies the value of the Credit Memo Print Option field.';
             }
         }
     }

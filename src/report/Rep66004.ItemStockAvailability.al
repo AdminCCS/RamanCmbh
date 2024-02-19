@@ -16,7 +16,7 @@ report 66004 "Item Stock Availability"
             //PrintOnlyIfDetail = true;
             RequestFilterFields = "No.", "Search Description";
             CalcFields = Inventory, "CCS Instant Ord Invt", "CCS Blocking Order Invt", "CCS Backlog order Invt";
-            column(CompanyName; COMPANYPROPERTY.DisplayName)
+            column(CompanyName; COMPANYPROPERTY.DisplayName())
             {
             }
             column(ItemTableCaptItemFilter; TableCaption + ': ' + ItemFilter)
@@ -53,8 +53,8 @@ report 66004 "Item Stock Availability"
             dataitem("Purchase Line"; "Purchase Line")
             {
                 //PrintOnlyIfDetail = true;
-                DataItemLink = "No." = FIELD("No.");
-                DataItemTableView = SORTING("Document Type", Type, "No.") WHERE(Type = CONST(Item), "Document Type" = CONST(Order));
+                DataItemLink = "No." = field("No.");
+                DataItemTableView = sorting("Document Type", Type, "No.") where(Type = const(Item), "Document Type" = const(Order));
                 column(PONo_; "Document No.")
                 { }
                 column(EDD; EDD)
@@ -70,7 +70,6 @@ report 66004 "Item Stock Availability"
 
                 trigger OnAfterGetRecord()
                 var
-                    SalesLine: Record "Sales Line";
                     PurchHeader: Record "Purchase Header";
                 begin
                     if Quantity = "Qty. Invoiced (Base)" then
@@ -127,10 +126,10 @@ report 66004 "Item Stock Availability"
     end;
 
     var
-        ItemFilter: Text;
+        ImageInclude: Boolean;
+        EDD: Date;
         FreeAvailableStock: Decimal;
         RemainingAvalQty: Decimal;
+        ItemFilter: Text;
         POstatus: Text;
-        EDD: Date;
-        ImageInclude: Boolean;
 }

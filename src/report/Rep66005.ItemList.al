@@ -21,7 +21,7 @@ report 66005 "Item List"
         dataitem(Item; Item)
         {
             //DataItemLink = "No." = FIELD("Item No.");
-            DataItemTableView = SORTING("Gen. Prod. Posting Group");
+            DataItemTableView = sorting("Gen. Prod. Posting Group");
             //PrintOnlyIfDetail = true;
             RequestFilterFields = "No.", "Technical 1", "Technical 2", "Technical 3", "Technical 4", "Technical 5", "CCS Brand";
 
@@ -83,7 +83,7 @@ report 66005 "Item List"
             column(BDA_Languages; item."BDA Languages")
             {
             }
-            column(Cabel_Length_in_m; item."Cable length in m")
+            column(Cabel_Length_in_m; item."CCS Masterbox")
             {
             }
             column(Connector_shape; item."Connector shape")
@@ -176,23 +176,21 @@ report 66005 "Item List"
             begin
                 SalesPrice := 0;
                 if CustCode <> '' then begin
-                    if RecCustomer.Get(CustCode) then begin
+                    if RecCustomer.Get(CustCode) then
                         if RecCustomer."Customer Price Group" <> '' then begin
                             RecSalesPrice.Reset();
                             RecSalesPrice.SetRange("Sales Code", RecCustomer."Customer Price Group");
                             //RecSalesPrice.SetRange("Sales Type", "Sales Price"."Sales Type");
                             RecSalesPrice.SetRange("Item No.", "No.");
-                            IF RecSalesPrice.FindSet() then
+                            if RecSalesPrice.FindSet() then
                                 repeat
                                     if (RecSalesPrice."Starting Date" <= Today) and ((RecSalesPrice."Ending Date" >= Today) or (RecSalesPrice."Ending Date" = 0D)) then
                                         SalesPrice := RecSalesPrice."Unit Price";
                                 until RecSalesPrice.Next() = 0;
                         end;
-
-                    end;
-                    if SalesPrice <> 0 then begin
-                        custcurr := RecCustomer."Currency Code";
-                    end else
+                    if SalesPrice <> 0 then
+                        custcurr := RecCustomer."Currency Code"
+                    else
                         CurrReport.Skip();
                 end;
 
@@ -225,14 +223,14 @@ report 66005 "Item List"
                     {
                         ApplicationArea = All;
                         Caption = 'Include Image';
-
+                        ToolTip = 'Specifies the value of the Include Image field.';
                     }
                     field(CustCode; CustCode)
                     {
                         ApplicationArea = All;
                         Caption = 'Customer No.';
                         TableRelation = Customer."No.";
-
+                        ToolTip = 'Specifies the value of the Customer No. field.';
                     }
 
                 }
@@ -249,18 +247,15 @@ report 66005 "Item List"
     end;
 
     var
-        Item2: Record Item;
-        NonstockItem: Record "Nonstock Item";
-        UnitCost: Decimal;
-        Text000Lbl: Label 'Item List';
-        CurrReport_PAGENOCaptionLbl: Label 'Page';
         RecCustomer: Record Customer;
-        SalesPrice: Decimal;
         RecSalesPrice: Record "Sales Price";
-        IncludeImage: Boolean;
         HideCustomer: Boolean;
-        CustCode: Code[20];
+        IncludeImage: Boolean;
         custcurr: Code[10];
+        CustCode: Code[20];
+        SalesPrice: Decimal;
+        CurrReport_PAGENOCaptionLbl: Label 'Page';
+        Text000Lbl: Label 'Item List';
 
 
 }

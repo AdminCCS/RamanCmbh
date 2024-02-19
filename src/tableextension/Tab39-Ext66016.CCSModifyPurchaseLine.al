@@ -9,8 +9,8 @@ tableextension 66016 "CCS ModifyPurchaseLine" extends "Purchase Line" //39
         {
             Caption = 'Pre-Sold Quantity';
             FieldClass = FlowField;
-            CalcFormula = Sum("Sales Line".Quantity WHERE(Type = const(Item), "No." = FIELD("No."),
-                                                                "CCS PO Number" = FIELD("Document No.")));
+            CalcFormula = sum("Sales Line".Quantity where(Type = const(Item), "No." = field("No."),
+                                                                "CCS PO Number" = field("Document No.")));
             Editable = false;
         }
         field(66001; "Free Available Stock"; Decimal)
@@ -24,8 +24,8 @@ tableextension 66016 "CCS ModifyPurchaseLine" extends "Purchase Line" //39
     }
     trigger OnDelete()
     var
-        salesLine: record "Sales Line";
-        SalesHeader: record "Sales Header";
+        SalesHeader: Record "Sales Header";
+        salesLine: Record "Sales Line";
         docNos: Text;
     begin
         if rec."Document No." <> '' then begin
@@ -36,7 +36,7 @@ tableextension 66016 "CCS ModifyPurchaseLine" extends "Purchase Line" //39
                 repeat
                     if docNos = '' then
                         docNos := salesLine."Document No." else
-                        if NOT (salesLine."Document No." IN [docNos]) then
+                        if not (salesLine."Document No." in [docNos]) then
                             docNos := docNos + ',' + salesLine."Document No.";
                 until salesLine.Next() = 0;
             if docNos <> '' then begin
@@ -47,14 +47,14 @@ tableextension 66016 "CCS ModifyPurchaseLine" extends "Purchase Line" //39
                     salesLine.DeleteAll(true);
 
                 SalesHeader.SetFilter("No.", docNos);
-                if SalesHeader.FindSet then
+                if SalesHeader.FindSet() then
                     repeat
                         salesLine.Reset();
                         salesLine.SetRange("Document No.", SalesHeader."No.");
                         salesLine.SetFilter("No.", '<>%1', '');
                         if not salesLine.FindFirst() then
                             SalesHeader.Delete(true);
-                    until SalesHeader.next = 0;
+                    until SalesHeader.next() = 0;
             end;
         end;
     end;
