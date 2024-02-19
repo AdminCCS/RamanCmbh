@@ -7,15 +7,16 @@ report 66001 "CCS Sales Invoice"
     Caption = 'Sales - Invoice';
     DefaultLayout = RDLC;
     EnableHyperlinks = true;
-    Permissions = TableData "Sales Shipment Buffer" = rimd;
+    Permissions = tabledata "Sales Shipment Buffer" = rimd;
     PreviewMode = PrintLayout;
     WordMergeDataItem = Header;
+    ApplicationArea = All;
 
     dataset
     {
         dataitem(Header; "Sales Invoice Header")
         {
-            DataItemTableView = SORTING("No.");
+            DataItemTableView = sorting("No.");
             RequestFilterFields = "No.", "Sell-to Customer No.", "No. Printed";
             RequestFilterHeading = 'Posted Sales Invoice';
             column(CompanyInfo_Details; CompanyInfo.Name + '. ' + CompanyInfo.Address + '. ' + CompanyInfo."Country/Region Code" + '. ' + CompanyInfo."Post Code" + '. ' + CompanyInfo.City) { }
@@ -97,37 +98,37 @@ report 66001 "CCS Sales Invoice"
             column(CompanyLogoPosition; CompanyLogoPosition)
             {
             }
-            column(CompanyRegistrationNumber; CompanyInfo.GetRegistrationNumber)
+            column(CompanyRegistrationNumber; CompanyInfo.GetRegistrationNumber())
             {
             }
-            column(CompanyRegistrationNumber_Lbl; CompanyInfo.GetRegistrationNumberLbl)
+            column(CompanyRegistrationNumber_Lbl; CompanyInfo.GetRegistrationNumberLbl())
             {
             }
-            column(CompanyVATRegNo; CompanyInfo.GetVATRegistrationNumber)
+            column(CompanyVATRegNo; CompanyInfo.GetVATRegistrationNumber())
             {
             }
-            column(CompanyVATRegNo_Lbl; CompanyInfo.GetVATRegistrationNumberLbl)
+            column(CompanyVATRegNo_Lbl; CompanyInfo.GetVATRegistrationNumberLbl())
             {
             }
-            column(CompanyVATRegistrationNo; CompanyInfo.GetVATRegistrationNumber)
+            column(CompanyVATRegistrationNo; CompanyInfo.GetVATRegistrationNumber())
             {
             }
-            column(CompanyVATRegistrationNo_Lbl; CompanyInfo.GetVATRegistrationNumberLbl)
+            column(CompanyVATRegistrationNo_Lbl; CompanyInfo.GetVATRegistrationNumberLbl())
             {
             }
-            column(CompanyLegalOffice; CompanyInfo.GetLegalOffice)
+            column(CompanyLegalOffice; CompanyInfo.GetLegalOffice())
             {
             }
-            column(CompanyLegalOffice_Lbl; CompanyInfo.GetLegalOfficeLbl)
+            column(CompanyLegalOffice_Lbl; CompanyInfo.GetLegalOfficeLbl())
             {
             }
-            column(CompanyCustomGiro; CompanyInfo.GetCustomGiro)
+            column(CompanyCustomGiro; CompanyInfo.GetCustomGiro())
             {
             }
-            column(CompanyCustomGiro_Lbl; CompanyInfo.GetCustomGiroLbl)
+            column(CompanyCustomGiro_Lbl; CompanyInfo.GetCustomGiroLbl())
             {
             }
-            column(CompanyLegalStatement; GetLegalStatement)
+            column(CompanyLegalStatement; GetLegalStatement())
             {
             }
             column(DisplayAdditionalFeeNote; DisplayAdditionalFeeNote)
@@ -317,25 +318,25 @@ report 66001 "CCS Sales Invoice"
             column(SelltoCustomerNo_Lbl; FieldCaption("Sell-to Customer No."))
             {
             }
-            column(VATRegistrationNo; GetCustomerVATRegistrationNumber)
+            column(VATRegistrationNo; GetCustomerVATRegistrationNumber())
             {
             }
-            column(VATRegistrationNo_Lbl; GetCustomerVATRegistrationNumberLbl)
+            column(VATRegistrationNo_Lbl; GetCustomerVATRegistrationNumberLbl())
             {
             }
-            column(GlobalLocationNumber; GetCustomerGlobalLocationNumber)
+            column(GlobalLocationNumber; GetCustomerGlobalLocationNumber())
             {
             }
-            column(GlobalLocationNumber_Lbl; GetCustomerGlobalLocationNumberLbl)
+            column(GlobalLocationNumber_Lbl; GetCustomerGlobalLocationNumberLbl())
             {
             }
-            column(SellToFaxNo; GetSellToCustomerFaxNo)
+            column(SellToFaxNo; GetSellToCustomerFaxNo())
             {
             }
             column(SellToPhoneNo; "Sell-to Phone No.")
             {
             }
-            column(PaymentReference; GetPaymentReference)
+            column(PaymentReference; GetPaymentReference())
             {
             }
             column(From_Lbl; FromLbl)
@@ -347,13 +348,13 @@ report 66001 "CCS Sales Invoice"
             column(ChecksPayable_Lbl; ChecksPayableText)
             {
             }
-            column(PaymentReference_Lbl; GetPaymentReferenceLbl)
+            column(PaymentReference_Lbl; GetPaymentReferenceLbl())
             {
             }
-            column(LegalEntityType; Cust.GetLegalEntityType)
+            column(LegalEntityType; Cust.GetLegalEntityType())
             {
             }
-            column(LegalEntityType_Lbl; Cust.GetLegalEntityTypeLbl)
+            column(LegalEntityType_Lbl; Cust.GetLegalEntityTypeLbl())
             {
             }
             column(Copy_Lbl; CopyLbl)
@@ -389,10 +390,10 @@ report 66001 "CCS Sales Invoice"
             column(Questions_Lbl; QuestionsLbl)
             {
             }
-            column(Contact_Lbl; CompanyInfo.GetContactUsText)
+            column(Contact_Lbl; CompanyInfo.GetContactUsText())
             {
             }
-            column(DocumentTitle_Lbl; DocumentCaption)
+            column(DocumentTitle_Lbl; DocumentCaption())
             {
             }
             column(YourDocumentTitle_Lbl; YourSalesInvoiceLbl)
@@ -466,9 +467,9 @@ report 66001 "CCS Sales Invoice"
             { }
             dataitem(Line; "Sales Invoice Line")
             {
-                DataItemLink = "Document No." = FIELD("No.");
+                DataItemLink = "Document No." = field("No.");
                 DataItemLinkReference = Header;
-                DataItemTableView = SORTING("Document No.", "Line No.");
+                DataItemTableView = sorting("Document No.", "Line No.");
                 column(LineNo_Line; "Line No.")
                 {
                 }
@@ -622,7 +623,7 @@ report 66001 "CCS Sales Invoice"
 
                 dataitem(ShipmentLine; "Sales Shipment Buffer")
                 {
-                    DataItemTableView = SORTING("Document No.", "Line No.", "Entry No.");
+                    DataItemTableView = sorting("Document No.", "Line No.", "Entry No.");
                     UseTemporary = true;
                     column(DocumentNo_ShipmentLine; "Document No.")
                     {
@@ -648,7 +649,7 @@ report 66001 "CCS Sales Invoice"
                 }
                 dataitem(AssemblyLine; "Posted Assembly Line")
                 {
-                    DataItemTableView = SORTING("Document No.", "Line No.");
+                    DataItemTableView = sorting("Document No.", "Line No.");
                     UseTemporary = true;
                     column(LineNo_AssemblyLine; "No.")
                     {
@@ -682,7 +683,7 @@ report 66001 "CCS Sales Invoice"
 
                 trigger OnAfterGetRecord()
                 begin
-                    InitializeShipmentLine;
+                    InitializeShipmentLine();
                     if Type = Type::"G/L Account" then
                         "No." := '';
 
@@ -773,7 +774,7 @@ report 66001 "CCS Sales Invoice"
             }
             dataitem(WorkDescriptionLines; "Integer")
             {
-                DataItemTableView = SORTING(Number) WHERE(Number = FILTER(1 .. 99999));
+                DataItemTableView = sorting(Number) where(Number = filter(1 .. 99999));
                 column(WorkDescriptionLineNumber; Number)
                 {
                 }
@@ -787,7 +788,7 @@ report 66001 "CCS Sales Invoice"
                 begin
                     if WorkDescriptionInstream.EOS then
                         CurrReport.Break();
-                    WorkDescriptionLine := TypeHelper.ReadAsTextWithSeparator(WorkDescriptionInstream, TypeHelper.LFSeparator);
+                    WorkDescriptionLine := TypeHelper.ReadAsTextWithSeparator(WorkDescriptionInstream, TypeHelper.LFSeparator());
                 end;
 
                 trigger OnPostDataItem()
@@ -804,7 +805,7 @@ report 66001 "CCS Sales Invoice"
             }
             dataitem(VATAmountLine; "VAT Amount Line")
             {
-                DataItemTableView = SORTING("VAT Identifier", "VAT Calculation Type", "Tax Group Code", "Use Tax", Positive);
+                DataItemTableView = sorting("VAT Identifier", "VAT Calculation Type", "Tax Group Code", "Use Tax", Positive);
                 UseTemporary = true;
                 column(InvoiceDiscountAmount_VATAmountLine; "Invoice Discount Amount")
                 {
@@ -906,7 +907,7 @@ report 66001 "CCS Sales Invoice"
             }
             dataitem(VATClauseLine; "VAT Amount Line")
             {
-                DataItemTableView = SORTING("VAT Identifier", "VAT Calculation Type", "Tax Group Code", "Use Tax", Positive);
+                DataItemTableView = sorting("VAT Identifier", "VAT Calculation Type", "Tax Group Code", "Use Tax", Positive);
                 UseTemporary = true;
                 column(VATClausesHeader; VATClausesText)
                 {
@@ -954,7 +955,7 @@ report 66001 "CCS Sales Invoice"
             }
             dataitem(ReportTotalsLine; "Report Totals Buffer")
             {
-                DataItemTableView = SORTING("Line No.");
+                DataItemTableView = sorting("Line No.");
                 UseTemporary = true;
                 column(Description_ReportTotalsLine; Description)
                 {
@@ -978,12 +979,12 @@ report 66001 "CCS Sales Invoice"
 
                 trigger OnPreDataItem()
                 begin
-                    CreateReportTotalLines;
+                    CreateReportTotalLines();
                 end;
             }
             dataitem(LineFee; "Integer")
             {
-                DataItemTableView = SORTING(Number) ORDER(Ascending) WHERE(Number = FILTER(1 ..));
+                DataItemTableView = sorting(Number) order(ascending) where(Number = filter(1 ..));
                 column(LineFeeCaptionText; TempLineFeeNoteOnReportHist.ReportText)
                 {
                 }
@@ -994,8 +995,8 @@ report 66001 "CCS Sales Invoice"
                         CurrReport.Break();
 
                     if Number = 1 then begin
-                        if not TempLineFeeNoteOnReportHist.FindSet then
-                            CurrReport.Break
+                        if not TempLineFeeNoteOnReportHist.FindSet() then
+                            CurrReport.Break()
                     end else
                         if TempLineFeeNoteOnReportHist.Next() = 0 then
                             CurrReport.Break();
@@ -1005,7 +1006,7 @@ report 66001 "CCS Sales Invoice"
             dataitem(PaymentReportingArgument; "Payment Reporting Argument")
 #pragma warning restore AL0432
             {
-                DataItemTableView = SORTING(Key);
+                DataItemTableView = sorting(Key);
                 UseTemporary = true;
                 column(PaymentServiceLogo; Logo)
                 {
@@ -1013,19 +1014,19 @@ report 66001 "CCS Sales Invoice"
                 column(PaymentServiceLogo_UrlText; "URL Caption")
                 {
                 }
-                column(PaymentServiceLogo_Url; GetTargetURL)
+                column(PaymentServiceLogo_Url; GetTargetURL())
                 {
                 }
                 column(PaymentServiceText_UrlText; "URL Caption")
                 {
                 }
-                column(PaymentServiceText_Url; GetTargetURL)
+                column(PaymentServiceText_Url; GetTargetURL())
                 {
                 }
             }
             dataitem(LeftHeader; "Name/Value Buffer")
             {
-                DataItemTableView = SORTING(ID);
+                DataItemTableView = sorting(ID);
                 UseTemporary = true;
                 column(LeftHeaderName; Name)
                 {
@@ -1036,7 +1037,7 @@ report 66001 "CCS Sales Invoice"
             }
             dataitem(RightHeader; "Name/Value Buffer")
             {
-                DataItemTableView = SORTING(ID);
+                DataItemTableView = sorting(ID);
                 UseTemporary = true;
                 column(RightHeaderName; Name)
                 {
@@ -1047,7 +1048,7 @@ report 66001 "CCS Sales Invoice"
             }
             dataitem(LetterText; "Integer")
             {
-                DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
+                DataItemTableView = sorting(Number) where(Number = const(1));
                 column(GreetingText; GreetingLbl)
                 {
                 }
@@ -1070,7 +1071,7 @@ report 66001 "CCS Sales Invoice"
             }
             dataitem(Totals; "Integer")
             {
-                DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
+                DataItemTableView = sorting(Number) where(Number = const(1));
                 column(TotalWeight; TotalWeight)
                 { }
                 column(TotalCarton; TotalCarton)
@@ -1098,7 +1099,7 @@ report 66001 "CCS Sales Invoice"
                 column(TotalPaymentDiscountOnVAT; TotalPaymentDiscOnVAT)
                 {
                 }
-                column(TotalVATAmountText; VATAmountLine.VATAmountText)
+                column(TotalVATAmountText; VATAmountLine.VATAmountText())
                 {
                 }
                 column(TotalExcludingVATText; TotalExclVATText)
@@ -1144,7 +1145,7 @@ report 66001 "CCS Sales Invoice"
             begin
                 CurrReport.Language := Language1.GetLanguageIdOrDefault("Language Code");
 
-                if not IsReportInPreviewMode then
+                if not IsReportInPreviewMode() then
                     CODEUNIT.Run(CODEUNIT::"Sales Inv.-Printed", Header);
 
                 CalcFields("Work Description");
@@ -1165,8 +1166,8 @@ report 66001 "CCS Sales Invoice"
                 if SellToContact.Get("Sell-to Contact No.") then;
                 if BillToContact.Get("Bill-to Contact No.") then;
 
-                FillLeftHeader;
-                FillRightHeader;
+                FillLeftHeader();
+                FillRightHeader();
 
                 if not Cust.Get("Bill-to Customer No.") then
                     Clear(Cust);
@@ -1183,7 +1184,7 @@ report 66001 "CCS Sales Invoice"
                 PaymentServiceSetup.CreateReportingArgs(PaymentReportingArgument, Header);
 
                 CalcFields("Amount Including VAT");
-                RemainingAmount := GetRemainingAmount;
+                RemainingAmount := GetRemainingAmount();
                 if RemainingAmount = 0 then
                     RemainingAmountTxt := AlreadyPaidLbl
                 else
@@ -1266,7 +1267,7 @@ report 66001 "CCS Sales Invoice"
 
         trigger OnOpenPage()
         begin
-            InitLogInteraction;
+            InitLogInteraction();
             LogInteractionEnable := LogInteraction;
         end;
     }
@@ -1281,13 +1282,13 @@ report 66001 "CCS Sales Invoice"
         CompanyInfo.SetAutoCalcFields(Picture);
         CompanyInfo.Get();
         SalesSetup.Get();
-        CompanyInfo.VerifyAndSetPaymentInfo;
+        CompanyInfo.VerifyAndSetPaymentInfo();
     end;
 
     trigger OnPostReport()
     begin
-        if LogInteraction and not IsReportInPreviewMode then
-            if Header.FindSet then
+        if LogInteraction and not IsReportInPreviewMode() then
+            if Header.FindSet() then
                 repeat
                     if Header."Bill-to Contact No." <> '' then
                         SegManagement.LogDocument(
@@ -1308,7 +1309,7 @@ report 66001 "CCS Sales Invoice"
             Error(NoFilterSetErr);
 
         if not CurrReport.UseRequestPage then
-            InitLogInteraction;
+            InitLogInteraction();
 
         CompanyLogoPosition := SalesSetup."Logo Position on Documents";
     end;
@@ -1451,7 +1452,7 @@ report 66001 "CCS Sales Invoice"
         TotalWeight: Decimal;
         TotalCarton: Decimal;
         VolumeN: Decimal;
-        Pos: integer;
+        Pos: Integer;
         ItemEAN: Text;
 
 
@@ -1465,8 +1466,8 @@ report 66001 "CCS Sales Invoice"
 
     local procedure InitializeShipmentLine()
     var
-        SalesShipmentHeader: Record "Sales Shipment Header";
         SalesShipmentBuffer2: Record "Sales Shipment Buffer";
+        SalesShipmentHeader: Record "Sales Shipment Header";
     begin
         if Line.Type = Line.Type::" " then
             exit;
@@ -1479,7 +1480,7 @@ report 66001 "CCS Sales Invoice"
 
         ShipmentLine.Reset();
         ShipmentLine.SetRange("Line No.", Line."Line No.");
-        if ShipmentLine.FindFirst then begin
+        if ShipmentLine.FindFirst() then begin
             SalesShipmentBuffer2 := ShipmentLine;
             if not DisplayShipmentInformation then
                 if ShipmentLine.Next() = 0 then begin
@@ -1520,7 +1521,7 @@ report 66001 "CCS Sales Invoice"
     var
         MailManagement: Codeunit "Mail Management";
     begin
-        exit(CurrReport.Preview or MailManagement.IsHandlingGetEmailBody);
+        exit(CurrReport.Preview or MailManagement.IsHandlingGetEmailBody());
     end;
 
     local procedure GetUOMText(UOMCode: Code[10]): Text[50]
@@ -1546,19 +1547,19 @@ report 66001 "CCS Sales Invoice"
                     ReportTotalsLine.Add(TotalExclVATText, TotalAmount, true, false, false);
         end;
         if TotalAmountVAT <> 0 then
-            ReportTotalsLine.Add(VATAmountLine.VATAmountText, TotalAmountVAT, false, true, false);
+            ReportTotalsLine.Add(VATAmountLine.VATAmountText(), TotalAmountVAT, false, true, false);
     end;
 
     local procedure GetLineFeeNoteOnReportHist(SalesInvoiceHeaderNo: Code[20])
     var
-        LineFeeNoteOnReportHist: Record "Line Fee Note on Report Hist.";
         CustLedgerEntry: Record "Cust. Ledger Entry";
         Customer: Record Customer;
+        LineFeeNoteOnReportHist: Record "Line Fee Note on Report Hist.";
     begin
         TempLineFeeNoteOnReportHist.DeleteAll();
         CustLedgerEntry.SetRange("Document Type", CustLedgerEntry."Document Type"::Invoice);
         CustLedgerEntry.SetRange("Document No.", SalesInvoiceHeaderNo);
-        if not CustLedgerEntry.FindFirst then
+        if not CustLedgerEntry.FindFirst() then
             exit;
 
         if not Customer.Get(CustLedgerEntry."Customer No.") then
@@ -1566,15 +1567,15 @@ report 66001 "CCS Sales Invoice"
 
         LineFeeNoteOnReportHist.SetRange("Cust. Ledger Entry No", CustLedgerEntry."Entry No.");
         LineFeeNoteOnReportHist.SetRange("Language Code", Customer."Language Code");
-        if LineFeeNoteOnReportHist.FindSet then begin
+        if LineFeeNoteOnReportHist.FindSet() then
             repeat
                 TempLineFeeNoteOnReportHist.Init();
                 TempLineFeeNoteOnReportHist.Copy(LineFeeNoteOnReportHist);
                 TempLineFeeNoteOnReportHist.Insert();
-            until LineFeeNoteOnReportHist.Next() = 0;
-        end else begin
-            LineFeeNoteOnReportHist.SetRange("Language Code", Language1.GetUserLanguageCode);
-            if LineFeeNoteOnReportHist.FindSet then
+            until LineFeeNoteOnReportHist.Next() = 0
+        else begin
+            LineFeeNoteOnReportHist.SetRange("Language Code", Language1.GetUserLanguageCode());
+            if LineFeeNoteOnReportHist.FindSet() then
                 repeat
                     TempLineFeeNoteOnReportHist.Init();
                     TempLineFeeNoteOnReportHist.Copy(LineFeeNoteOnReportHist);
@@ -1589,15 +1590,15 @@ report 66001 "CCS Sales Invoice"
 
         FillNameValueTable(LeftHeader, Header.FieldCaption("External Document No."), Header."External Document No.");
         FillNameValueTable(LeftHeader, Header.FieldCaption("Bill-to Customer No."), Header."Bill-to Customer No.");
-        FillNameValueTable(LeftHeader, Header.GetCustomerVATRegistrationNumberLbl, Header.GetCustomerVATRegistrationNumber);
-        FillNameValueTable(LeftHeader, Header.GetCustomerGlobalLocationNumberLbl, Header.GetCustomerGlobalLocationNumber);
+        FillNameValueTable(LeftHeader, Header.GetCustomerVATRegistrationNumberLbl(), Header.GetCustomerVATRegistrationNumber());
+        FillNameValueTable(LeftHeader, Header.GetCustomerGlobalLocationNumberLbl(), Header.GetCustomerGlobalLocationNumber());
         FillNameValueTable(LeftHeader, InvNoLbl, Header."No.");
         FillNameValueTable(LeftHeader, Header.FieldCaption("Order No."), Header."Order No.");
         FillNameValueTable(LeftHeader, Header.FieldCaption("Document Date"), Format(Header."Document Date", 0, 4));
         FillNameValueTable(LeftHeader, Header.FieldCaption("Due Date"), Format(Header."Due Date", 0, 4));
         FillNameValueTable(LeftHeader, PaymentTermsDescLbl, PaymentTerms.Description);
         FillNameValueTable(LeftHeader, PaymentMethodDescLbl, PaymentMethod.Description);
-        FillNameValueTable(LeftHeader, Cust.GetLegalEntityTypeLbl, Cust.GetLegalEntityType);
+        FillNameValueTable(LeftHeader, Cust.GetLegalEntityTypeLbl(), Cust.GetLegalEntityType());
         FillNameValueTable(LeftHeader, ShptMethodDescLbl, ShipmentMethod.Description);
 
         OnAfterFillLeftHeader(LeftHeader, Header);
@@ -1610,12 +1611,12 @@ report 66001 "CCS Sales Invoice"
         FillNameValueTable(RightHeader, EMailLbl, CompanyInfo."E-Mail");
         FillNameValueTable(RightHeader, HomePageLbl, CompanyInfo."Home Page");
         FillNameValueTable(RightHeader, CompanyInfoPhoneNoLbl, CompanyInfo."Phone No.");
-        FillNameValueTable(RightHeader, CompanyInfo.GetRegistrationNumberLbl, CompanyInfo.GetRegistrationNumber);
+        FillNameValueTable(RightHeader, CompanyInfo.GetRegistrationNumberLbl(), CompanyInfo.GetRegistrationNumber());
         FillNameValueTable(RightHeader, CompanyInfoBankNameLbl, CompanyInfo."Bank Name");
         FillNameValueTable(RightHeader, CompanyInfoGiroNoLbl, CompanyInfo."Giro No.");
         FillNameValueTable(RightHeader, CompanyInfo.FieldCaption(IBAN), CompanyInfo.IBAN);
         FillNameValueTable(RightHeader, CompanyInfo.FieldCaption("SWIFT Code"), CompanyInfo."SWIFT Code");
-        FillNameValueTable(RightHeader, Header.GetPaymentReferenceLbl, Header.GetPaymentReference);
+        FillNameValueTable(RightHeader, Header.GetPaymentReferenceLbl(), Header.GetPaymentReference());
 
         OnAfterFillRightHeader(RightHeader, Header);
     end;
@@ -1626,7 +1627,7 @@ report 66001 "CCS Sales Invoice"
     begin
         if Value <> '' then begin
             Clear(NameValueBuffer);
-            if NameValueBuffer.FindLast then
+            if NameValueBuffer.FindLast() then
                 KeyIndex := NameValueBuffer.ID + 1;
 
             NameValueBuffer.Init();
@@ -1646,7 +1647,7 @@ report 66001 "CCS Sales Invoice"
 
     local procedure FormatDocumentFields(SalesInvoiceHeader: Record "Sales Invoice Header")
     begin
-        FormatDocument.SetTotalLabels(SalesInvoiceHeader.GetCurrencySymbol, TotalText, TotalInclVATText, TotalExclVATText);
+        FormatDocument.SetTotalLabels(SalesInvoiceHeader.GetCurrencySymbol(), TotalText, TotalInclVATText, TotalExclVATText);
         FormatDocument.SetSalesPerson(SalespersonPurchaser, SalesInvoiceHeader."Salesperson Code", SalesPersonText);
         FormatDocument.SetPaymentTerms(PaymentTerms, SalesInvoiceHeader."Payment Terms Code", SalesInvoiceHeader."Language Code");
         FormatDocument.SetPaymentMethod(PaymentMethod, SalesInvoiceHeader."Payment Method Code", SalesInvoiceHeader."Language Code");
@@ -1659,7 +1660,7 @@ report 66001 "CCS Sales Invoice"
     begin
         JobTask.SetRange("Job No.", JobNo);
         JobTask.SetRange("Job Task No.", JobTaskNo);
-        if JobTask.FindFirst then
+        if JobTask.FindFirst() then
             exit(JobTask.Description);
 
         exit('');
@@ -1690,7 +1691,7 @@ report 66001 "CCS Sales Invoice"
     begin
     end;
 
-    [IntegrationEvent(TRUE, FALSE)]
+    [IntegrationEvent(true, false)]
     local procedure OnAfterGetSalesHeader(SalesInvoiceHeader: Record "Sales Invoice Header")
     begin
     end;

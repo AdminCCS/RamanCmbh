@@ -186,13 +186,13 @@ report 66008 "CCS PO Shipping"
     }
     var
         Item: Record Item;
-        TotalCarton: Decimal;
-        SubTotalCarton: Decimal;
-        TotalCbm: Decimal;
         Vendor: Record Vendor;
-        TotalShipCost: Decimal;
+        SubTotalCarton: Decimal;
         TotalBalanceAmt: Decimal;
+        TotalCarton: Decimal;
+        TotalCbm: Decimal;
         TotalDepoAmt: Decimal;
         TotalOrderAmt: Decimal;
+        TotalShipCost: Decimal;
 
 }

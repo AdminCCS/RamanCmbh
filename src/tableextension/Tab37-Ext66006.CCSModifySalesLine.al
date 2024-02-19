@@ -47,7 +47,7 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
                 Validate("Line Discount %", CalcRebateDisc("CCS Rebate 2 %"));
             end;
         }
-        field(66006; "CCS BA Number"; code[20])
+        field(66006; "CCS BA Number"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'BA Number';
@@ -63,7 +63,7 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
                 SalesLine.SetRange("CCS Order Type", rec."CCS Order Type"::"Blocking Order");
                 SalesLine.SetRange("No.", rec."No.");
                 SalesLine.SetFilter(Quantity, '>%1', 0);
-                if page.RunModal(page::"CCS Sales order Sub List", SalesLine) = ACTION::LookupOK THEN begin
+                if page.RunModal(page::"CCS Sales order Sub List", SalesLine) = ACTION::LookupOK then begin
                     "CCS BA Number" := SalesLine."Document No.";
                     if ("CCS Order Type" = "CCS Order Type"::"Instant Order") and ("CCS BA Number" <> '') then begin
                         ConsumeQty := 0;
@@ -74,7 +74,7 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
                         if SalesLine.FindFirst() then
                             repeat
                                 ConsumeQty += SalesLine.Quantity;
-                            until SalesLine.next = 0;
+                            until SalesLine.next() = 0;
 
                         SalesLine.Reset();
                         SalesLine.SetRange("CCS BA Number", Rec."CCS BA Number");
@@ -84,7 +84,7 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
                         if SalesLine.FindFirst() then
                             repeat
                                 ConsumeQty += SalesLine.Quantity;
-                            until SalesLine.next = 0;
+                            until SalesLine.next() = 0;
                         SalesLine.Reset();
                         SalesLine.SetRange("Document No.", "CCS BA Number");
                         SalesLine.SetRange("No.", "No.");
@@ -129,7 +129,7 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
                     if SalesLine.FindFirst() then
                         repeat
                             ConsumeQty += SalesLine.Quantity;
-                        until SalesLine.next = 0;
+                        until SalesLine.next() = 0;
 
                     SalesLine.Reset();
                     SalesLine.SetRange("CCS BA Number", Rec."CCS BA Number");
@@ -139,7 +139,7 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
                     if SalesLine.FindFirst() then
                         repeat
                             ConsumeQty += SalesLine.Quantity;
-                        until SalesLine.next = 0;
+                        until SalesLine.next() = 0;
 
 
 
@@ -173,20 +173,19 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
 
             end;
         }
-        field(66007; "CCS PO Number"; code[20])
+        field(66007; "CCS PO Number"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'PO Number';
             trigger OnLookup()
             var
-                PurchaseHeader: Record "Purchase Header";
                 PurchaseLine: Record "Purchase Line";
             begin
                 //PurchaseHeader.SetRange("Document Type", PurchaseHeader."Document Type"::Order);
                 PurchaseLine.SetRange("Document Type", PurchaseLine."Document Type"::Order);
                 PurchaseLine.SetRange("No.", rec."No.");
                 PurchaseLine.SetFilter(Quantity, '>%1', 0);
-                if page.RunModal(66001, PurchaseLine) = ACTION::LookupOK THEN begin
+                if page.RunModal(66001, PurchaseLine) = ACTION::LookupOK then begin
                     "CCS PO Number" := PurchaseLine."Document No.";
                     if ("CCS PO Number" <> '') and (Quantity > 0) then begin
                         PurchaseLine.SetRange("Document Type", PurchaseLine."Document Type"::Order);

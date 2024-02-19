@@ -33,7 +33,4 @@ pageextension 66007 "CCS PostedSalesShipment" extends "Posted Sales Shipment" //
             }
         }
     }
-
-    var
-        myInt: Integer;
 }

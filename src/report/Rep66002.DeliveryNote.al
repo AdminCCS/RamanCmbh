@@ -236,7 +236,7 @@ report 66002 "Delivery Note"
                 action(ActionName)
                 {
                     ApplicationArea = All;
-
+                    ToolTip = 'Executes the ActionName action.';
                 }
             }
         }
@@ -255,42 +255,41 @@ report 66002 "Delivery Note"
 
     var
         CompanyInfo: Record "Company Information";
-        Language1: Codeunit Language;
-        ShipToAddr: array[8] of Text[100];
-
-        ReportTitle: Label 'Lieferschein'; //Lieferschein //Delivery Note
-        Pos_Lbl: Label 'Pos.';
-
-        ArticleNo_Lbl: Label 'Artikelnr.'; // Artikelnr. //Article No.
-        Qty_Lbl: Label 'Menge';//Menge //Quantity
-        Unit_Lbl: Label 'Einheit';//Einheit //Unit
-        PU_Lbl: Label 'VPE';//VPE //PU
-        Carton_Lbl: Label 'Karton';//Karton //Carton
-        ArticleDescription_Lbl: Label 'Artikelbezeichnung / EAN'; //Artikelbezeichnung / EAN  //Article Description/EAN
-        ItemDescription_Lbl: Label 'Artikelbeschreibung';//Artikelbeschreibung // Item Description
-        DeliveryNoteNo_Lbl: Label 'Lieferscheinnr.'; //Lieferscheinnr. //Delivery Note No.
-        DateofIssue_Lbl: Label 'Austell-Datum';//Austell-Datum //Date of issue
-        Referance_Lbl: Label 'Referenz';//Referenz //Reference
-        Debtor_Lbl: Label 'Debitor/Kd.-Nr.';//Debitor/Kd.-Nr. //Debtor/Kd.-Nr.
-        KdUstidNo_Lbl: Label 'Kd. Ust-Id Nr.';//Kd. Ust-Id Nr.//Kd. Ust-Id No.
-        OrderNumber_Lbl: Label 'Auftragsnr.';//Auftragsnr. //Order Number.
-        DeliveryCondition_Lbl: Label 'Lieferbedingung'; //Lieferbedingung //Delivery Condition
-        VertrNr_Lbl: Label 'Vertr.-Nr.';//Vertr.-Nr. //Vertr.-Nr.
-        ContactPerson_Lbl: Label 'Ansprechpartner/Sachbearbeiter';//Ansprechpartner/Sachbearbeiter //Contact Person/Clerk
-        ShippingDeliveryAddress_Lbl: Label 'Lieferanschrift'; //Versand / Lieferanschrift  // Shipping/delivery address
-        ShortLine_Lbl: Label 'Bei Rückfragen bitte angeben!'; //Bei Rückfragen bitte angeben!  //Please specify when making inquiries!
-
-        SrNo: Integer;
-        VolumeN: Decimal;
-        TotalWeight: Decimal;
-        TotalCarton: Decimal;
-        ItemEAN: Text;
-        item: Record Item;
-        PaymentInstructions_Txt: Text;
+        Customer: Record Customer;
         PaymentTerms: Record "Payment Terms";
+        SalespersonPurchaser2: Record "Salesperson/Purchaser";
         ShipmentMethod: Record "Shipment Method";
+        Language1: Codeunit Language;
         eanVpe: Code[20];
         Tarrif: Code[20];
-        Customer: Record Customer;
-        SalespersonPurchaser2: Record "Salesperson/Purchaser";
+        TotalCarton: Decimal;
+        TotalWeight: Decimal;
+        VolumeN: Decimal;
+
+        SrNo: Integer;
+        ArticleDescription_Lbl: Label 'Artikelbezeichnung / EAN'; //Artikelbezeichnung / EAN  //Article Description/EAN
+
+        ArticleNo_Lbl: Label 'Artikelnr.'; // Artikelnr. //Article No.
+        Carton_Lbl: Label 'Karton';//Karton //Carton
+        ContactPerson_Lbl: Label 'Ansprechpartner/Sachbearbeiter';//Ansprechpartner/Sachbearbeiter //Contact Person/Clerk
+        DateofIssue_Lbl: Label 'Austell-Datum';//Austell-Datum //Date of issue
+        Debtor_Lbl: Label 'Debitor/Kd.-Nr.';//Debitor/Kd.-Nr. //Debtor/Kd.-Nr.
+        DeliveryCondition_Lbl: Label 'Lieferbedingung'; //Lieferbedingung //Delivery Condition
+        DeliveryNoteNo_Lbl: Label 'Lieferscheinnr.'; //Lieferscheinnr. //Delivery Note No.
+        ItemDescription_Lbl: Label 'Artikelbeschreibung';//Artikelbeschreibung // Item Description
+        KdUstidNo_Lbl: Label 'Kd. Ust-Id Nr.';//Kd. Ust-Id Nr.//Kd. Ust-Id No.
+        OrderNumber_Lbl: Label 'Auftragsnr.';//Auftragsnr. //Order Number.
+        Pos_Lbl: Label 'Pos.';
+        PU_Lbl: Label 'VPE';//VPE //PU
+        Qty_Lbl: Label 'Menge';//Menge //Quantity
+        Referance_Lbl: Label 'Referenz';//Referenz //Reference
+
+        ReportTitle: Label 'Lieferschein'; //Lieferschein //Delivery Note
+        ShippingDeliveryAddress_Lbl: Label 'Lieferanschrift'; //Versand / Lieferanschrift  // Shipping/delivery address
+        ShortLine_Lbl: Label 'Bei Rückfragen bitte angeben!'; //Bei Rückfragen bitte angeben!  //Please specify when making inquiries!
+        Unit_Lbl: Label 'Einheit';//Einheit //Unit
+        VertrNr_Lbl: Label 'Vertr.-Nr.';//Vertr.-Nr. //Vertr.-Nr.
+        ItemEAN: Text;
+        PaymentInstructions_Txt: Text;
+        ShipToAddr: array[8] of Text[100];
 }

@@ -13,10 +13,10 @@ tableextension 66011 "CCS ModifySalesHeader" extends "Sales Header" //36
 
             trigger OnValidate()
             var
-                salesLine: record "Sales Line";
+                salesLine: Record "Sales Line";
             begin
                 SalesLine.SetRange("Document No.", rec."No.");
-                if Not SalesLine.IsEmpty then
+                if not SalesLine.IsEmpty then
                     error('Please delete lines before changing the Order Type.');
             end;
         }

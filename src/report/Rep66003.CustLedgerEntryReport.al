@@ -40,6 +40,5 @@ report 66003 "CustLedgerEntryReport"
     }
 
     var
-        Cust: Record Customer;
         BalanceTotal: Decimal;
 }

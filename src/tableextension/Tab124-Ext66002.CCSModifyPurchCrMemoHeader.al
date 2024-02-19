@@ -5,7 +5,7 @@ tableextension 66002 "CCS Modify PurchCrMemoHeader" extends "Purch. Cr. Memo Hdr
         field(66000; "CCS Purchase Order Status"; Option)
         {
             OptionMembers = "Pending",Booked,Shipped;
-            dataClassification = CustomerContent;
+            DataClassification = CustomerContent;
             Caption = 'Purchase Order Status';
         }
         field(66001; "CCS ETD"; Date)
@@ -121,12 +121,6 @@ tableextension 66002 "CCS Modify PurchCrMemoHeader" extends "Purch. Cr. Memo Hdr
             Caption = 'Release Status';
             DataClassification = CustomerContent;
         }
-        field(66028; "CCS Port Agent"; code[20])
-        {
-            Caption = 'Port Agent';
-            TableRelation = "Port Agent";
-            DataClassification = CustomerContent;
-        }
         field(66023; "CCS Agent Invoice Amount"; Decimal)
         {
             Caption = 'Agent Invoice Amount';
@@ -143,15 +137,21 @@ tableextension 66002 "CCS Modify PurchCrMemoHeader" extends "Purch. Cr. Memo Hdr
             OptionMembers = "No","Yes";
             OptionCaption = 'No,Yes';
         }
-        field(66027; "CCS Inspection Agent"; code[20])
+        field(66026; "CCS Inspection Report No."; Text[50])
+        {
+            Caption = 'Inspection Report No.';
+            DataClassification = CustomerContent;
+        }
+        field(66027; "CCS Inspection Agent"; Code[20])
         {
             Caption = 'Inspection Agent';
             TableRelation = "Inspection Agent";
             DataClassification = CustomerContent;
         }
-        field(66026; "CCS Inspection Report No."; Text[50])
+        field(66028; "CCS Port Agent"; Code[20])
         {
-            Caption = 'Inspection Report No.';
+            Caption = 'Port Agent';
+            TableRelation = "Port Agent";
             DataClassification = CustomerContent;
         }
     }

@@ -7,12 +7,12 @@ codeunit 66000 "CCS EventSubscriber"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnBeforePostSalesDoc', '', false, false)]
     local procedure OnBeforePostSalesDoc(var SalesHeader: Record "Sales Header")
     var
-        SalesLine: record "Sales Line";
+        SalesLine: Record "Sales Line";
     begin
         SalesLine.SetRange("Document Type", SalesHeader."Document Type");
         SalesLine.SetRange("Document No.", SalesHeader."No.");
         SalesLine.SetFilter("CCS Order Type", '%1|%2|%3', SalesLine."CCS Order Type"::"Backlog order", SalesLine."CCS Order Type"::"Blocking Order", SalesLine."CCS Order Type"::"Disposition order");
-        if SalesLine.FindFirst then
+        if SalesLine.FindFirst() then
             Error('Order Type must be Instant Order in all Lines to post.');
         //SalesHeader.TestField("CCS Order Type", SalesHeader."CCS Order Type"::"Instant Order");
     end;
@@ -20,15 +20,13 @@ codeunit 66000 "CCS EventSubscriber"
     [EventSubscriber(ObjectType::page, page::"Sales Order Subform", 'OnAfterValidateEvent', 'Quantity', false, false)]
     local procedure OnAfterValidateEventQtySalesLine(var Rec: Record "Sales Line"; var xRec: Record "Sales Line")
     var
-        SalesHeader: Record "Sales Header";
-        Qty: Decimal;
-        HQty: Decimal;
-        LQty: Decimal;
         Item: Record Item;
-        SalesLine: Record "Sales Line";
         PurchaseLine: Record "Purchase Line";
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
         ConsumeQty: Decimal;
         OpenQty: Decimal;
+        Qty: Decimal;
         RemQty: Decimal;
     begin
         if rec."CCS Order Type" = rec."CCS Order Type"::"Blocking Order" then begin
@@ -54,9 +52,8 @@ codeunit 66000 "CCS EventSubscriber"
                 if (Qty mod 1) <> 0 then
                     Error('Quantity must not be in decimal.');
                 if (qty mod rec."CCS Masterbox Qty") > 0 then begin
-                    while (qty mod rec."CCS Masterbox Qty") <> 0 do begin
+                    while (qty mod rec."CCS Masterbox Qty") <> 0 do
                         qty += 1;
-                    end;
                     if confirm(StrSubstNo(WarningLabel, Qty - rec."CCS Masterbox Qty", qty, rec."CCS Masterbox Qty", rec.Quantity, qty), false) then begin
                         Rec.validate(Quantity, qty);
                         rec."CCS Cartons" := rec.Quantity / rec."CCS Masterbox Qty";
@@ -73,7 +70,7 @@ codeunit 66000 "CCS EventSubscriber"
             if SalesLine.FindFirst() then
                 repeat
                     ConsumeQty += SalesLine.Quantity;
-                until SalesLine.next = 0;
+                until SalesLine.next() = 0;
             SalesLine.Reset();
             SalesLine.SetRange("CCS BA Number", Rec."CCS BA Number");
             SalesLine.SetRange("Document No.", rec."Document No.");
@@ -82,7 +79,7 @@ codeunit 66000 "CCS EventSubscriber"
             if SalesLine.FindFirst() then
                 repeat
                     ConsumeQty += SalesLine.Quantity;
-                until SalesLine.next = 0;
+                until SalesLine.next() = 0;
 
             //if (xRec."CCS BA Number" <> '') and (xRec.Quantity < rec.Quantity) and (xRec.Quantity <> 0) then begin
             SalesLine.Reset();
@@ -102,7 +99,7 @@ codeunit 66000 "CCS EventSubscriber"
 
         end;
         SalesHeader.get(rec."Document Type", rec."Document No.");
-        if (SalesHeader."CCS Order Type" = SalesHeader."CCS Order Type"::"Instant Order") or ((SalesHeader."CCS Order Type" = SalesHeader."CCS Order Type"::"Blocking Order")) then begin
+        if (SalesHeader."CCS Order Type" = SalesHeader."CCS Order Type"::"Instant Order") or ((SalesHeader."CCS Order Type" = SalesHeader."CCS Order Type"::"Blocking Order")) then
             if Item.get(rec."No.") then begin
                 item.CalcFields(Inventory);
                 OpenQty := 0;
@@ -113,7 +110,7 @@ codeunit 66000 "CCS EventSubscriber"
                 if SalesLine.FindFirst() then
                     repeat
                         OpenQty += SalesLine.Quantity;
-                    until SalesLine.next = 0;
+                    until SalesLine.next() = 0;
                 SalesLine.Reset();
                 SalesLine.SetRange("Document No.", rec."Document No.");
                 SalesLine.SetFilter("CCS Order Type", '%1|%2', rec."CCS Order Type"::"Blocking Order", rec."CCS Order Type"::"Instant Order");
@@ -122,7 +119,7 @@ codeunit 66000 "CCS EventSubscriber"
                 if SalesLine.FindFirst() then
                     repeat
                         OpenQty += SalesLine.Quantity;
-                    until SalesLine.next = 0;
+                    until SalesLine.next() = 0;
                 item.CalcFields("CCS Instant Ord Invt", "CCS Blocking Order Invt");
                 RemQty := item.Inventory - (OpenQty);
                 if rec.Quantity > (RemQty) then
@@ -130,9 +127,8 @@ codeunit 66000 "CCS EventSubscriber"
                 //if not Confirm(StrSubstNo(QtyWarning, Item.Inventory, Item."No."), false) then
                 //  Error('');
             end;
-        end;
         if (Rec."CCS Order Type" = Rec."CCS Order Type"::"Disposition order") and (rec."CCS PO Number" <> '') and (rec.Quantity > 0) then begin
-            PurchaseLine.Reset;
+            PurchaseLine.Reset();
             PurchaseLine.SetRange("Document Type", PurchaseLine."Document Type"::Order);
             PurchaseLine.SetRange("Document No.", rec."CCS PO Number");
             PurchaseLine.SetRange("No.", rec."No.");
@@ -224,40 +220,39 @@ codeunit 66000 "CCS EventSubscriber"
     var
         SalesLine: Record "Sales Line";
         docNos: Text;
-        SalesHeader: Record "Sales Header";
     begin
-        if Not rec.IsTemporary then begin
-            SalesLine.RESET;
+        if not rec.IsTemporary then begin
+            SalesLine.RESET();
             SalesLine.SetRange("Document Type", Rec."Document Type");
             SalesLine.SetRange("Document No.", Rec."No.");
             SalesLine.SetFilter("CCS PO Number", '<>%1', '');
             SalesLine.SetRange("Quantity Shipped", 0);
-            if SalesLine.FindFirst then
+            if SalesLine.FindFirst() then
                 Error('PO Number must be blank on Lines to delete.');
 
-            SalesLine.RESET;
+            SalesLine.RESET();
             SalesLine.SetRange("Document Type", Rec."Document Type");
             SalesLine.SetRange("Document No.", Rec."No.");
             SalesLine.SetFilter("CCS BA Number", '<>%1', '');
             SalesLine.SetRange("Quantity Shipped", 0);
-            if SalesLine.FindFirst then
+            if SalesLine.FindFirst() then
                 Error('BA Number must be blank on Lines to delete.');
 
             docNos := '';
-            SalesLine.RESET;
+            SalesLine.RESET();
             SalesLine.SetRange("Document Type", Rec."Document Type");
             SalesLine.SetRange("CCS BA Number", Rec."No.");
             SalesLine.SetRange("Quantity Shipped", 0);
-            if SalesLine.Findset then
+            if SalesLine.Findset() then
                 repeat
                     if docNos = '' then
                         docNos := SalesLine."Document No." else
-                        if NOT (SalesLine."Document No." IN [docNos]) then
+                        if not (SalesLine."Document No." in [docNos]) then
                             docNos := docNos + ',' + SalesLine."Document No.";
                 until SalesLine.Next() = 0;
             if docNos <> '' then
                 if Dialog.Confirm('This Sales order is attached with Other SO. Do you want to remove the BA Number from other SO?', false, true) then begin
-                    SalesLine.RESET;
+                    SalesLine.RESET();
                     SalesLine.SetRange("Document Type", Rec."Document Type");
                     SalesLine.SetRange("CCS BA Number", Rec."No.");
                     SalesLine.SetRange("Quantity Shipped", 0);
@@ -287,12 +282,12 @@ codeunit 66000 "CCS EventSubscriber"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", 'OnAfterPostPurchaseDoc', '', false, false)]
     local procedure OnAfterPostPurchaseDoc(var PurchaseHeader: Record "Purchase Header")
     var
-        SalesLine: record "Sales Line";
+        SalesLine: Record "Sales Line";
     begin
 
         SalesLine.SetRange(SalesLine."CCS PO Number", PurchaseHeader."No.");
         SalesLine.SetFilter("CCS Order Type", '%1', SalesLine."CCS Order Type"::"Disposition order");
-        if SalesLine.FindFirst then
+        if SalesLine.FindFirst() then
             repeat
                 SalesLine.Validate("CCS Order Type", SalesLine."CCS Order Type"::"Blocking Order");
                 SalesLine.VALIDATE("CCS PO Number", '');
@@ -305,14 +300,14 @@ codeunit 66000 "CCS EventSubscriber"
     [EventSubscriber(ObjectType::page, page::"Purchase Order", 'OnDeleteRecordEvent', '', false, false)]
     local procedure OnBeforeDeleteEventPurchHeader(var Rec: Record "Purchase Header");
     var
-        salesLine: record "Sales Line";
-        SalesHeader: record "Sales Header";
-        purchLineRec: record "Purchase Line";
+        purchLineRec: Record "Purchase Line";
+        SalesHeader: Record "Sales Header";
+        salesLine: Record "Sales Line";
         docNos: Text;
     begin
-        if Not Rec.IsTemporary then begin
+        if not Rec.IsTemporary then
             if rec."No." <> '' then begin
-                purchLineRec.Reset;
+                purchLineRec.Reset();
                 purchLineRec.SetRange("Document Type", rec."Document Type");
                 purchLineRec.SetRange("Document No.", Rec."No.");
                 purchLineRec.SetFilter("No.", '<>%1', '');
@@ -325,13 +320,13 @@ codeunit 66000 "CCS EventSubscriber"
                             repeat
                                 if docNos = '' then
                                     docNos := salesLine."Document No." else
-                                    if NOT (salesLine."Document No." IN [docNos]) then
+                                    if not (salesLine."Document No." in [docNos]) then
                                         docNos := docNos + ',' + salesLine."Document No.";
                             until salesLine.Next() = 0;
                     until purchLineRec.Next() = 0;
                 if docNos <> '' then
                     if Dialog.Confirm('Sales orders attached with this PO. Do you want to delete the PO and SO?', false, true) then begin
-                        purchLineRec.Reset;
+                        purchLineRec.Reset();
                         purchLineRec.SetRange("Document No.", rec."No.");
                         purchLineRec.SetFilter("No.", '<>%1', '');
                         if purchLineRec.FindSet() then
@@ -343,18 +338,17 @@ codeunit 66000 "CCS EventSubscriber"
                                 salesLine.DeleteAll(true);
                             until purchLineRec.Next() = 0;
                         SalesHeader.SetFilter("No.", docNos);
-                        if SalesHeader.FindSet then
+                        if SalesHeader.FindSet() then
                             repeat
                                 salesLine.Reset();
                                 salesLine.SetRange("Document No.", SalesHeader."No.");
                                 salesLine.SetFilter("No.", '<>%1', '');
                                 if salesLine.IsEmpty then
                                     SalesHeader.Delete(true);
-                            until SalesHeader.next = 0;
+                            until SalesHeader.next() = 0;
                     end else
                         error('');
             end;
-        end;
     end;
 
     [EventSubscriber(ObjectType::Table, database::"Sales Header", 'OnAfterValidateEvent', 'Sell-to Customer No.', false, false)]
@@ -375,8 +369,8 @@ codeunit 66000 "CCS EventSubscriber"
     var
         "Field": Record "Field";
         Language: Codeunit Language;
-        LanguageIdToSet: Integer;
         CurrentLanguageId: Integer;
+        LanguageIdToSet: Integer;
     begin
         CurrentLanguageId := GlobalLanguage;
         LanguageIdToSet := Language.GetLanguageIdOrDefault(LanguageCode);
@@ -392,8 +386,6 @@ codeunit 66000 "CCS EventSubscriber"
     end;
 
     var
-        WarningLabel: label 'WARNING: You broke the Masterbox Qty.\Next less Qty can be: %1 \Next High Qty can be: %2 \Masterbox Qty: %3 \You want to replace %4 pcs with %5 pcs.';
-        QtyWarning: label 'There is only %1 stock available for that item %2.\Do you want to continue?';
-        QtyError: label 'Can not select more than %1 remaining stock available for that item %2.';
-        TranslationHelper: Codeunit "Translation Helper";
+        QtyError: Label 'Can not select more than %1 remaining stock available for that item %2.';
+        WarningLabel: Label 'WARNING: You broke the Masterbox Qty.\Next less Qty can be: %1 \Next High Qty can be: %2 \Masterbox Qty: %3 \You want to replace %4 pcs with %5 pcs.';
 }
