@@ -4340,7 +4340,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!CCSDepositAmount_PurchaseHeader.Value</Value>
+                                                    <Value>=Fields!CCS_Total_Deposit_Amt.Value</Value>
                                                     <Style>
                                                       <FontSize>8pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
@@ -4758,7 +4758,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!TotalBalanceAmt.Value</Value>
+                                                <Value>=Last(Fields!TotalBalanceAmt.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -4849,7 +4849,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!TotalDepoAmt.Value</Value>
+                                                <Value>=Last(Fields!TotalDepoAmt.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -4941,7 +4941,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!TotalShipCost.Value</Value>
+                                                <Value>=Last(Fields!TotalShipCost.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
