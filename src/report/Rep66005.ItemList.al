@@ -83,7 +83,7 @@ report 66005 "Item List"
             column(BDA_Languages; item."BDA Languages")
             {
             }
-            column(Cabel_Length_in_m; item."Cable length in m")
+            column(Cabel_Length_in_m; item."CCS Masterbox")
             {
             }
             column(Connector_shape; item."Connector shape")
