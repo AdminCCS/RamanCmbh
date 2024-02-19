@@ -10,7 +10,7 @@ report 66008 "CCS PO Shipping"
         {
             DataItemTableView = sorting("Document Type", "No.") where("Document Type" = const(order));
             RequestFilterFields = "No.", "CCS ETD", "CCS Container No.";
-            CalcFields = "CCS Total Balance Amt", "CCS Total Deposit Amt";
+            CalcFields = "CCS Total Balance Amt", "CCS Total Deposit Amt", "CCS Total Shipping Cost";
             column(shipmentMethod;
             PurchaseHeader."Shipment Method Code")
             { }
@@ -80,7 +80,7 @@ report 66008 "CCS PO Shipping"
             column(CCSPortAgent_PurchaseHeader; PurchaseHeader."CCS Port Agent")
             {
             }
-            column(totalOrderAmt; PurchaseHeader."CCS Total Balance Amt" + PurchaseHeader."CCS Total Deposit Amt")
+            column(totalOrderAmt; TotalOrderAmt)
             { }
             column(CCSFinalExchange_PurchaseHeader; PurchaseHeader."CCS Final Exchange")
             { }
@@ -105,6 +105,16 @@ report 66008 "CCS PO Shipping"
             column(SubTotalCarton; SubTotalCarton)
             { }
             column(SubTotalCbm; TotalCbm)
+            { }
+            column(CCS_Shipping_Cost; purchaseheader."CCS Total Shipping Cost")
+            { }
+            column(TotalBalanceAmt; TotalBalanceAmt)
+            {
+
+            }
+            column(TotalDepoAmt; TotalDepoAmt)
+            { }
+            column(TotalShipCost; TotalShipCost)
             { }
             dataitem("Purchase Line"; "Purchase Line")
             {
@@ -162,14 +172,16 @@ report 66008 "CCS PO Shipping"
             trigger OnPreDataItem()
             begin
                 SetCurrentKey("CCS Container No.");
+                TotalOrderAmt := 0;
             end;
 
             trigger OnAfterGetRecord()
             begin
-
+                TotalBalanceAmt += "CCS Total Balance Amt";
+                TotalDepoAmt += "CCS Total Deposit Amt";
+                TotalShipCost += "CCS Total Shipping Cost";
+                TotalOrderAmt := "CCS Balance Amount" + "CCS Deposit Amount";
             end;
-
-
         }
     }
     var
@@ -178,5 +190,9 @@ report 66008 "CCS PO Shipping"
         SubTotalCarton: Decimal;
         TotalCbm: Decimal;
         Vendor: Record Vendor;
+        TotalShipCost: Decimal;
+        TotalBalanceAmt: Decimal;
+        TotalDepoAmt: Decimal;
+        TotalOrderAmt: Decimal;
 
 }
