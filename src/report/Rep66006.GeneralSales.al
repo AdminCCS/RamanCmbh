@@ -30,8 +30,6 @@ report 66006 "General Sales"
 
             trigger OnAfterGetRecord()
             var
-                ArrFromSales: array[12] of Decimal;
-                ArrtoSales: array[12] of Decimal;
                 i: Integer;
             begin
                 if Code = '' then
@@ -91,8 +89,8 @@ report 66006 "General Sales"
                     Gensales."Customer Posting Group" := Code;
                     Gensales."Sale Amount" := 0;
                     Gensales.Insert();
-                    IF i = 11 then
-                        completed := True;
+                    if i = 11 then
+                        completed := true;
                     i += 1;
                 end;
                 i := 0;
@@ -151,8 +149,8 @@ report 66006 "General Sales"
                     Gensales."Customer Posting Group" := Code;
                     Gensales."Sale Amount" := 0;
                     Gensales.Insert();
-                    IF i = 11 then
-                        completed := True;
+                    if i = 11 then
+                        completed := true;
                     i += 1;
                 end;
                 fromCLE.Reset();
@@ -188,7 +186,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'JANUARY');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -217,7 +215,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'FEBRUARY');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -247,7 +245,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'MARCH');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -277,7 +275,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'APRIL');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -306,7 +304,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'MAY');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -335,7 +333,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'JUNE');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -364,7 +362,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'JULY');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -393,7 +391,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'AUGUST');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -422,7 +420,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'SEPTEMBER');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -451,7 +449,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'OCTOBER');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -480,7 +478,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'NOVEMBER');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -509,7 +507,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                                     Gensales.SetRange(Year, Format(fromYear));
                                     Gensales.SetRange(Month, 'DECEMBER');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += fromCLE."Sales (LCY)";
                                         Gensales.Margin += fromCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -554,7 +552,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'JANUARY');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -583,7 +581,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'FEBRUARY');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -613,7 +611,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'MARCH');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -643,7 +641,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'APRIL');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -672,7 +670,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'MAY');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -701,7 +699,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'JUNE');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -730,7 +728,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'JULY');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -759,7 +757,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'AUGUST');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -788,7 +786,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'SEPTEMBER');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -817,7 +815,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'OCTOBER');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -846,7 +844,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'NOVEMBER');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -876,7 +874,7 @@ report 66006 "General Sales"
                                     Gensales.SetRange(FY_Options, Gensales.FY_Options::ToYear);
                                     Gensales.SetRange(Year, Format(toYear));
                                     Gensales.SetRange(Month, 'DECEMBER');
-                                    if Gensales.findfirst then begin
+                                    if Gensales.findfirst() then begin
                                         Gensales.TotalSales += toCLE."Sales (LCY)";
                                         Gensales.Margin += toCLE."Profit (LCY)";
                                         Gensales."Margin %" := (Gensales.Margin * 100) / Gensales.TotalSales;
@@ -1145,7 +1143,7 @@ report 66006 "General Sales"
                     if i = 0 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'JANUARY');
@@ -1153,7 +1151,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'JANUARY');
@@ -1184,7 +1182,7 @@ report 66006 "General Sales"
                     if i = 1 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'FEBRUARY');
@@ -1192,7 +1190,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'FEBRUARY');
@@ -1222,7 +1220,7 @@ report 66006 "General Sales"
                     if i = 2 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'MARCH');
@@ -1230,7 +1228,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'MARCH');
@@ -1261,7 +1259,7 @@ report 66006 "General Sales"
                     if i = 3 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'APRIL');
@@ -1269,7 +1267,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'APRIL');
@@ -1299,7 +1297,7 @@ report 66006 "General Sales"
                     if i = 4 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'MAY');
@@ -1307,7 +1305,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'MAY');
@@ -1336,7 +1334,7 @@ report 66006 "General Sales"
                     if i = 5 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'JUNE');
@@ -1344,7 +1342,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'JUNE');
@@ -1373,7 +1371,7 @@ report 66006 "General Sales"
                     if i = 6 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'JULY');
@@ -1381,7 +1379,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'JULY');
@@ -1410,7 +1408,7 @@ report 66006 "General Sales"
                     if i = 7 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'AUGUST');
@@ -1418,7 +1416,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'AUGUST');
@@ -1448,7 +1446,7 @@ report 66006 "General Sales"
 
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'SEPTEMBER');
@@ -1456,7 +1454,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'SEPTEMBER');
@@ -1485,7 +1483,7 @@ report 66006 "General Sales"
                     if i = 9 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'OCTOBER');
@@ -1493,7 +1491,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'OCTOBER');
@@ -1523,7 +1521,7 @@ report 66006 "General Sales"
 
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'NOVEMBER');
@@ -1531,7 +1529,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'NOVEMBER');
@@ -1560,7 +1558,7 @@ report 66006 "General Sales"
                     if i = 11 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'DECEMBER');
@@ -1568,7 +1566,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'DECEMBER');
@@ -1597,7 +1595,7 @@ report 66006 "General Sales"
                     if i = 12 then begin
                         fromTurnOver := 0;
                         toTurnOver := 0;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::FromYear);
                         GensalesNew.SetRange(Year, Format(fromYear));
                         GensalesNew.SetRange(Month, 'TOTAL');
@@ -1605,7 +1603,7 @@ report 66006 "General Sales"
                             fromTurnOver := GensalesNew.TotalSales;
                             fromMargin := GensalesNew.Margin;
                         end;
-                        GensalesNew.RESET;
+                        GensalesNew.RESET();
                         GensalesNew.SetRange(FY_Options, GensalesNew.FY_Options::ToYear);
                         GensalesNew.SetRange(Year, Format(toYear));
                         GensalesNew.SetRange(Month, 'TOTAL');
@@ -1748,27 +1746,26 @@ report 66006 "General Sales"
                     {
                         ApplicationArea = All;
                         Caption = 'From Year';
-
+                        ToolTip = 'Specifies the value of the From Year field.';
                     }
                     field(ToYear; varToYear)
                     {
                         ApplicationArea = All;
                         Caption = 'To Year';
+                        ToolTip = 'Specifies the value of the To Year field.';
                     }
                     field(custno; custno)
                     {
                         ApplicationArea = All;
                         Caption = 'Customer No.';
                         TableRelation = Customer."No.";
-
+                        ToolTip = 'Specifies the value of the Customer No. field.';
                     }
                 }
             }
         }
 
         trigger OnOpenPage()
-        var
-            myInt: Integer;
         begin
             yearint := Date2DMY(Today, 3);
             Evaluate(varToYear, Format(yearint));
@@ -1785,27 +1782,27 @@ report 66006 "General Sales"
     end;
 
     var
-        varFromYear: Option " ","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030";
-        varToYear: Option " ","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030";
-        fromStartDate: Date;
-        fromEndDate: Date;
-        toStartDate: Date;
-        toEndDate: Date;
-        fromYear: Integer;
-        toyear: Integer;
         fromCLE: Record "Cust. Ledger Entry";
         toCLE: Record "Cust. Ledger Entry";
         Gensales: Record "General Sales";
         Gensales2: Record "General Sales";
         completed: Boolean;
-        fromTotalSale: Decimal;
-        toTotalSale: Decimal;
-        yearint: Integer;
         custno: Code[20];
-        custpostgrpfilter: Text;
-        fromTurnOver: Decimal;
-        toTurnOver: Decimal;
+        fromEndDate: Date;
+        fromStartDate: Date;
+        toEndDate: Date;
+        toStartDate: Date;
         fromMargin: Decimal;
+        fromTotalSale: Decimal;
+        fromTurnOver: Decimal;
         toMargin: Decimal;
+        toTotalSale: Decimal;
+        toTurnOver: Decimal;
+        fromYear: Integer;
         j: Integer;
+        toyear: Integer;
+        yearint: Integer;
+        varFromYear: Option " ","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030";
+        varToYear: Option " ","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030";
+        custpostgrpfilter: Text;
 }

@@ -89,7 +89,7 @@ tableextension 66005 "CCS Modify Item" extends Item //27
 
             Caption = 'Instant Order Inventory';
             FieldClass = FlowField;
-            CalcFormula = Sum("Sales Line".Quantity WHERE(Type = const(Item), "No." = FIELD("No."),
+            CalcFormula = sum("Sales Line".Quantity where(Type = const(Item), "No." = field("No."),
                                                                  "CCS Order Type" = const("Instant Order")));
 
             DecimalPlaces = 0 : 5;
@@ -100,7 +100,7 @@ tableextension 66005 "CCS Modify Item" extends Item //27
         {
             Caption = 'Blocking Order Inventory';
             FieldClass = FlowField;
-            CalcFormula = Sum("Sales Line".Quantity WHERE(Type = const(Item), "No." = FIELD("No."),
+            CalcFormula = sum("Sales Line".Quantity where(Type = const(Item), "No." = field("No."),
                                                                  "CCS Order Type" = const("Blocking Order")));
             DecimalPlaces = 0 : 5;
             Editable = false;
@@ -109,7 +109,7 @@ tableextension 66005 "CCS Modify Item" extends Item //27
         {
             Caption = 'Disposition order Inventory';
             FieldClass = FlowField;
-            CalcFormula = Sum("Sales Line".Quantity WHERE(Type = const(Item), "No." = FIELD("No."),
+            CalcFormula = sum("Sales Line".Quantity where(Type = const(Item), "No." = field("No."),
                                                                  "CCS Order Type" = const("Disposition order")));
             DecimalPlaces = 0 : 5;
             Editable = false;
@@ -118,7 +118,7 @@ tableextension 66005 "CCS Modify Item" extends Item //27
         {
             Caption = 'Backlog order Inventory';
             FieldClass = FlowField;
-            CalcFormula = Sum("Sales Line".Quantity WHERE(Type = const(Item), "No." = FIELD("No."),
+            CalcFormula = sum("Sales Line".Quantity where(Type = const(Item), "No." = field("No."),
                                                                  "CCS Order Type" = const("Backlog order")));
             DecimalPlaces = 0 : 5;
             Editable = false;
@@ -261,7 +261,7 @@ tableextension 66005 "CCS Modify Item" extends Item //27
             DataClassification = CustomerContent;
         }
 
-        Field(66047; "CCS Image Included"; Boolean)
+        field(66047; "CCS Image Included"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Image Included';

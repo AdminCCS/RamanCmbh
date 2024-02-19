@@ -33,12 +33,12 @@ tableextension 66008 "CCS ModifySalesCrMemoLine" extends "Sales Cr.Memo Line" //
             DataClassification = CustomerContent;
             Caption = 'Rebate 2 %';
         }
-        field(66006; "CCS BA Number"; code[20])
+        field(66006; "CCS BA Number"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'BA Number';
         }
-        field(66007; "CCS PO Number"; code[20])
+        field(66007; "CCS PO Number"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'PO Number';

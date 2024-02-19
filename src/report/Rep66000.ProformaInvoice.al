@@ -6,12 +6,13 @@ report 66000 "ProformaInvoice"
     DefaultLayout = RDLC;
     RDLCLayout = 'Src\Layouts\ProInv.rdl';
     Caption = 'Pro Forma Invoice';
+    ApplicationArea = All;
 
     dataset
     {
         dataitem(Header; "Sales Header")
         {
-            DataItemTableView = SORTING("Document Type", "No.");
+            DataItemTableView = sorting("Document Type", "No.");
             RequestFilterFields = "No.", "Sell-to Customer No.", "No. Printed";
             RequestFilterHeading = 'Pro Forma Invoice';
             column(DocumentDate; "Document Date")
@@ -120,7 +121,7 @@ report 66000 "ProformaInvoice"
             column(DocumentNo; "No.")
             {
             }
-            column(CompanyLegalOffice; CompanyInformation.GetLegalOffice)
+            column(CompanyLegalOffice; CompanyInformation.GetLegalOffice())
             {
             }
             column(SalesPersonName; SalespersonPurchaserName)
@@ -152,7 +153,7 @@ report 66000 "ProformaInvoice"
             column(ExternalDocumentNoLbl; FieldCaption("External Document No."))
             {
             }
-            column(CompanyLegalOfficeLbl; CompanyInformation.GetLegalOfficeLbl)
+            column(CompanyLegalOfficeLbl; CompanyInformation.GetLegalOfficeLbl())
             {
             }
             column(SalesPersonLbl; SalesPersonLblText)
@@ -198,7 +199,7 @@ report 66000 "ProformaInvoice"
             column(VATPctLbl; Line.FieldCaption("VAT %"))
             {
             }
-            column(VATAmountLbl; DummyVATAmountLine.VATAmountText)
+            column(VATAmountLbl; DummyVATAmountLine.VATAmountText())
             {
             }
             column(TotalWeightLbl; TotalWeightLbl)
@@ -248,9 +249,9 @@ report 66000 "ProformaInvoice"
 
             dataitem(Line; "Sales Line")
             {
-                DataItemLink = "Document Type" = FIELD("Document Type"), "Document No." = FIELD("No.");
+                DataItemLink = "Document Type" = field("Document Type"), "Document No." = field("No.");
                 DataItemLinkReference = Header;
-                DataItemTableView = SORTING("Document No.", "Line No.");
+                DataItemTableView = sorting("Document No.", "Line No.");
                 column(No_; "No.")
                 {
                 }
@@ -423,71 +424,71 @@ report 66000 "ProformaInvoice"
 
     var
         CompanyInformation: Record "Company Information";
-        DocumentTitleLbl: Label 'Pro Forma Invoice';
-        PageLbl: Label 'Page';
-        Item: Record Item;
-        DummyVATAmountLine: Record "VAT Amount Line";
-        DummyShipmentMethod: Record "Shipment Method";
-        DummyCurrency: Record Currency;
-        Currency: Record Currency;
-        Language1: Codeunit Language;
-        SellToContact: Record Contact;
         BillToContact: Record Contact;
+        SellToContact: Record Contact;
+        RecCountry: Record "Country/Region";
+        Currency: Record Currency;
+        DummyCurrency: Record Currency;
+        Item: Record Item;
+        DummyShipmentMethod: Record "Shipment Method";
+        DummyVATAmountLine: Record "VAT Amount Line";
         AutoFormat: Codeunit "Auto Format";
-        CompanyAddress: array[8] of Text[100];
-        CustomerAddress: array[8] of Text[100];
-        SalesPersonLblText: Text[50];
-        CountryOfManufactuctureLbl: Label 'Country';
-        TotalWeightLbl: Label 'Total Weight';
-        SalespersonPurchaserName: Text;
-        ShipmentMethodDescription: Text;
-        TotalAmountLbl: Text[50];
-        TotalAmountInclVATLbl: Text[50];
-        FormattedLinePrice: Text;
-        FormattedLineAmount: Text;
-        FormattedVATAmount: Text;
-        FormattedTotalAmount: Text;
-        FormattedTotalVATAmount: Text;
-        FormattedTotalAmountInclVAT: Text;
+        Language1: Codeunit Language;
         CurrencyCode: Code[10];
-        TotalWeight: Decimal;
-        TotalCarton: Decimal;
-        VolumeN: Decimal;
+        LineAmount: Decimal;
+        LinePrice: Decimal;
         TotalAmount: Decimal;
+        TotalAmountInclVAT: Decimal;
+        TotalCarton: Decimal;
+        TotalVATAmount: Decimal;
+        TotalWeight: Decimal;
+        VATAmount: Decimal;
+        VolumeN: Decimal;
+        BillToContactEmailLbl: Label 'Bill-to Contact E-Mail';
+        BillToContactMobilePhoneNoLbl: Label 'Bill-to Contact Mobile Phone No.';
+        BillToContactPhoneNoLbl: Label 'Bill-to Contact Phone No.';
+        CountryOfManufactuctureLbl: Label 'Country';
         DeclartionLbl: Label 'This document does not entitle you to deduct input tax.';
+        DocumentTitleLbl: Label 'Pro Forma Invoice';
+        ItemLbl: Label 'Item No.';
+        PageLbl: Label 'Page';
+        SellToContactEmailLbl: Label 'Sell-to Contact E-Mail';
+        SellToContactMobilePhoneNoLbl: Label 'Sell-to Contact Mobile Phone No.';
+        SellToContactPhoneNoLbl: Label 'Sell-to Contact Phone No.';
         SignatureLbl: Label 'For and on behalf of the above named company:';
         SignatureNameLbl: Label 'Name (in print) Signature';
         SignaturePositionLbl: Label 'Position in company';
-        SellToContactPhoneNoLbl: Label 'Sell-to Contact Phone No.';
-        SellToContactMobilePhoneNoLbl: Label 'Sell-to Contact Mobile Phone No.';
-        SellToContactEmailLbl: Label 'Sell-to Contact E-Mail';
-        BillToContactPhoneNoLbl: Label 'Bill-to Contact Phone No.';
-        BillToContactMobilePhoneNoLbl: Label 'Bill-to Contact Mobile Phone No.';
-        BillToContactEmailLbl: Label 'Bill-to Contact E-Mail';
-        TotalVATAmount: Decimal;
-        TotalAmountInclVAT: Decimal;
-        LinePrice: Decimal;
-        LineAmount: Decimal;
-        VATAmount: Decimal;
-        ItemLbl: Label 'Item No.';
+        TotalWeightLbl: Label 'Total Weight';
+        FormattedLineAmount: Text;
+        FormattedLinePrice: Text;
+        FormattedTotalAmount: Text;
+        FormattedTotalAmountInclVAT: Text;
+        FormattedTotalVATAmount: Text;
+        FormattedVATAmount: Text;
+        SalespersonPurchaserName: Text;
+        ShipmentMethodDescription: Text;
         ShipToAdd1: Text;
         ShiptoAdd2: Text;
-        ShiptoName: Text;
-        ShiptoCity: text;
-        ShipToPostCode: text;
+        ShiptoCity: Text;
         ShipToCountry: Text;
-        RecCountry: Record "Country/Region";
-        EAN: text[50];
+        ShiptoName: Text;
+        ShipToPostCode: Text;
+        EAN: Text[50];
+        SalesPersonLblText: Text[50];
+        TotalAmountInclVATLbl: Text[50];
+        TotalAmountLbl: Text[50];
+        CompanyAddress: array[8] of Text[100];
+        CustomerAddress: array[8] of Text[100];
 
     local procedure FormatDocumentFields(SalesHeader: Record "Sales Header")
     var
+        Customer: Record Customer;
         GeneralLedgerSetup: Record "General Ledger Setup";
+        ResponsibilityCenter: Record "Responsibility Center";
         SalespersonPurchaser: Record "Salesperson/Purchaser";
         ShipmentMethod: Record "Shipment Method";
-        ResponsibilityCenter: Record "Responsibility Center";
-        Customer: Record Customer;
-        FormatDocument: Codeunit "Format Document";
         FormatAddress: Codeunit "Format Address";
+        FormatDocument: Codeunit "Format Document";
         TotalAmounExclVATLbl: Text[50];
     begin
 
@@ -505,7 +506,7 @@ report 66000 "ProformaInvoice"
             GeneralLedgerSetup.Get();
             GeneralLedgerSetup.TestField("LCY Code");
             CurrencyCode := GeneralLedgerSetup."LCY Code";
-            Currency.InitRoundingPrecision;
+            Currency.InitRoundingPrecision();
         end else begin
             CurrencyCode := SalesHeader."Currency Code";
             Currency.Get(SalesHeader."Currency Code");

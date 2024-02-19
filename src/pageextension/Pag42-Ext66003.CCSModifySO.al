@@ -10,6 +10,7 @@ pageextension 66003 "CCS ModifySO" extends "Sales Order" //42
             field("Order Type"; rec."ccs Order Type")
             {
                 ApplicationArea = all;
+                ToolTip = 'Specifies the value of the Order Type field.';
             }
         }
     }

@@ -33,12 +33,12 @@ tableextension 66007 "CCS ModifySalesInvLine" extends "Sales Invoice Line" //113
             DataClassification = CustomerContent;
             Caption = 'Rebate 2 %';
         }
-        field(66006; "CCS BA Number"; code[20])
+        field(66006; "CCS BA Number"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'BA Number';
         }
-        field(66007; "CCS PO Number"; code[20])
+        field(66007; "CCS PO Number"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'PO Number';

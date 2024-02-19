@@ -10,12 +10,14 @@ pageextension 66004 "CCS Modify PO Subform" extends "Purchase Order Subform" //5
             field("Pre Sold Quantity"; rec."Pre Sold Quantity")
             {
                 ApplicationArea = all;
+                ToolTip = 'Specifies the value of the Pre-Sold Quantity field.';
             }
             field("Free Available Stock"; rec."Free Available Stock")
             {
                 Caption = 'Remaining Available Quantity';
                 ApplicationArea = all;
                 Editable = false;
+                ToolTip = 'Specifies the value of the Remaining Available Quantity field.';
             }
         }
     }
@@ -26,7 +28,4 @@ pageextension 66004 "CCS Modify PO Subform" extends "Purchase Order Subform" //5
         Rec.CalcFields("Pre Sold Quantity");
         rec."Free Available Stock" := Rec.Quantity - (Rec."Pre Sold Quantity");
     end;
-
-    var
-        freeAvailableStock: Decimal;
 }

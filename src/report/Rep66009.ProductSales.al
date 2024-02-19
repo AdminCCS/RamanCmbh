@@ -32,8 +32,6 @@ report 66009 "Product Sales"
 
             trigger OnAfterGetRecord()
             var
-                ArrFromSales: array[12] of Decimal;
-                ArrtoSales: array[12] of Decimal;
                 i: Integer;
             begin
                 if Code = '' then
@@ -93,8 +91,8 @@ report 66009 "Product Sales"
                     ProdSales."Customer Posting Group" := Code;
                     ProdSales."Sale Amount" := 0;
                     ProdSales.Insert();
-                    IF i = 11 then
-                        completed := True;
+                    if i = 11 then
+                        completed := true;
                     i += 1;
                 end;
                 i := 0;
@@ -153,8 +151,8 @@ report 66009 "Product Sales"
                     ProdSales."Customer Posting Group" := Code;
                     ProdSales."Sale Amount" := 0;
                     ProdSales.Insert();
-                    IF i = 11 then
-                        completed := True;
+                    if i = 11 then
+                        completed := true;
                     i += 1;
                 end;
                 //------sales invoice line
@@ -198,7 +196,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'JANUARY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -228,7 +226,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'FEBRUARY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -259,7 +257,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'MARCH');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -290,7 +288,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'APRIL');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -320,7 +318,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'MAY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -350,7 +348,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'JUNE');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -380,7 +378,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'JULY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -410,7 +408,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'AUGUST');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -440,7 +438,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -470,7 +468,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'OCTOBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -500,7 +498,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'NOVEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -530,7 +528,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'DECEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -542,7 +540,7 @@ report 66009 "Product Sales"
                                     end;
 
                                 until fromCLE.Next() = 0;
-                        END;
+                        end;
                     until SInvLine.Next() = 0;
                 SInvLine.Reset();
                 SInvLine.SetRange("Posting Date", toStartDate, toEndDate);
@@ -584,7 +582,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'JANUARY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -614,7 +612,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'FEBRUARY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -645,7 +643,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'MARCH');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -676,7 +674,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'APRIL');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -706,7 +704,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'MAY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -736,7 +734,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'JUNE');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -766,7 +764,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'JULY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -796,7 +794,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'AUGUST');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -826,7 +824,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -856,7 +854,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'OCTOBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -886,7 +884,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'NOVEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -917,7 +915,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'DECEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -974,7 +972,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'JANUARY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1004,7 +1002,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'FEBRUARY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1035,7 +1033,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'MARCH');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1066,7 +1064,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'APRIL');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1096,7 +1094,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'MAY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1126,7 +1124,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'JUNE');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1156,7 +1154,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'JULY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1186,7 +1184,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'AUGUST');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1216,7 +1214,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1246,7 +1244,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'OCTOBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1276,7 +1274,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'NOVEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1306,7 +1304,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                                                 ProdSales.SetRange(Year, Format(fromYear));
                                                 ProdSales.SetRange(Month, 'DECEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += fromCLE."Sales (LCY)";
                                                     ProdSales.Margin += fromCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1318,7 +1316,7 @@ report 66009 "Product Sales"
                                     end;
 
                                 until fromCLE.Next() = 0;
-                        END;
+                        end;
                     until SCrmLine.Next() = 0;
                 SCrmLine.Reset();
                 SCrmLine.SetRange("Posting Date", toStartDate, toEndDate);
@@ -1360,7 +1358,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'JANUARY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1390,7 +1388,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'FEBRUARY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1421,7 +1419,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'MARCH');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1452,7 +1450,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'APRIL');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1482,7 +1480,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'MAY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1512,7 +1510,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'JUNE');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1542,7 +1540,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'JULY');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1572,7 +1570,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'AUGUST');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1602,7 +1600,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1632,7 +1630,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'OCTOBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1662,7 +1660,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'NOVEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1693,7 +1691,7 @@ report 66009 "Product Sales"
                                                 ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
                                                 ProdSales.SetRange(Year, Format(toYear));
                                                 ProdSales.SetRange(Month, 'DECEMBER');
-                                                if ProdSales.findfirst then begin
+                                                if ProdSales.findfirst() then begin
                                                     ProdSales.TotalSales += toCLE."Sales (LCY)";
                                                     ProdSales.Margin += toCLE."Profit (LCY)";
                                                     if ProdSales.TotalSales <> 0 then
@@ -1713,7 +1711,6 @@ report 66009 "Product Sales"
             trigger OnPostDataItem()
             var
                 ProdSalesNew: Record "Product Sales";
-                i: Integer;
             begin
                 ProdSales.Reset();
                 //ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
@@ -2586,27 +2583,26 @@ report 66009 "Product Sales"
                     {
                         ApplicationArea = All;
                         Caption = 'From Year';
-
+                        ToolTip = 'Specifies the value of the From Year field.';
                     }
                     field(ToYear; varToYear)
                     {
                         ApplicationArea = All;
                         Caption = 'To Year';
+                        ToolTip = 'Specifies the value of the To Year field.';
                     }
                     field(itemno; itemno)
                     {
                         ApplicationArea = All;
                         Caption = 'Item No.';
                         TableRelation = Item."No.";
-
+                        ToolTip = 'Specifies the value of the Item No. field.';
                     }
                 }
             }
         }
 
         trigger OnOpenPage()
-        var
-            myInt: Integer;
         begin
             yearint := Date2DMY(Today, 3);
             Evaluate(varToYear, Format(yearint));
@@ -2623,32 +2619,27 @@ report 66009 "Product Sales"
     end;
 
     var
-        varFromYear: Option " ","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030";
-        varToYear: Option " ","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030";
-        fromStartDate: Date;
-        fromEndDate: Date;
-        toStartDate: Date;
-        toEndDate: Date;
-        fromYear: Integer;
-        toyear: Integer;
         fromCLE: Record "Cust. Ledger Entry";
         toCLE: Record "Cust. Ledger Entry";
+        ItemRec: Record Item;
         ProdSales: Record "Product Sales";
-        ProdSales2: Record "Product Sales";
+        SCrmHdr: Record "Sales Cr.Memo Header";
+        SCrmLine: Record "Sales Cr.Memo Line";
+        SInvHdr: Record "Sales Invoice Header";
+        SInvLine: Record "Sales Invoice Line";
         completed: Boolean;
+        itemno: Code[20];
+        fromEndDate: Date;
+        fromStartDate: Date;
+        toEndDate: Date;
+        toStartDate: Date;
         fromTotalSale: Decimal;
         toTotalSale: Decimal;
-        yearint: Integer;
-        itemno: Code[20];
-        custpostgrpfilter: Text;
-        fromTurnOver: Decimal;
-        toTurnOver: Decimal;
-        fromMargin: Decimal;
-        toMargin: Decimal;
-        SInvLine: Record "Sales Invoice Line";
-        SInvHdr: Record "Sales Invoice Header";
-        SCrmLine: Record "Sales Cr.Memo Line";
-        SCrmHdr: Record "Sales Cr.Memo Header";
-        ItemRec: Record Item;
+        fromYear: Integer;
         j: Integer;
+        toyear: Integer;
+        yearint: Integer;
+        varFromYear: Option " ","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030";
+        varToYear: Option " ","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030";
+        custpostgrpfilter: Text;
 }

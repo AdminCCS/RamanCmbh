@@ -8,7 +8,7 @@ tableextension 66000 "CCS Modify Purchheader" extends "Purchase Header" //38
         field(66000; "CCS Purchase Order Status"; Option)
         {
             OptionMembers = "Pending",Booked,Shipped;
-            dataClassification = CustomerContent;
+            DataClassification = CustomerContent;
             Caption = 'Purchase Order Status';
         }
         field(66001; "CCS ETD"; Date)
@@ -127,12 +127,6 @@ tableextension 66000 "CCS Modify Purchheader" extends "Purchase Header" //38
             Caption = 'Release Status';
             DataClassification = CustomerContent;
         }
-        field(66028; "CCS Port Agent"; code[20])
-        {
-            Caption = 'Port Agent';
-            TableRelation = "Port Agent";
-            DataClassification = CustomerContent;
-        }
         field(66023; "CCS Agent Invoice Amount"; Decimal)
         {
             Caption = 'Agent Invoice Amount';
@@ -149,15 +143,21 @@ tableextension 66000 "CCS Modify Purchheader" extends "Purchase Header" //38
             OptionMembers = "No","Yes";
             OptionCaption = 'No,Yes';
         }
-        field(66027; "CCS Inspection Agent"; code[20])
+        field(66026; "CCS Inspection Report No."; Text[50])
+        {
+            Caption = 'Inspection Report No.';
+            DataClassification = CustomerContent;
+        }
+        field(66027; "CCS Inspection Agent"; Code[20])
         {
             Caption = 'Inspection Agent';
             TableRelation = "Inspection Agent";
             DataClassification = CustomerContent;
         }
-        field(66026; "CCS Inspection Report No."; Text[50])
+        field(66028; "CCS Port Agent"; Code[20])
         {
-            Caption = 'Inspection Report No.';
+            Caption = 'Port Agent';
+            TableRelation = "Port Agent";
             DataClassification = CustomerContent;
         }
         field(66029; "CCS Total Balance Amt"; Decimal)
@@ -178,11 +178,6 @@ tableextension 66000 "CCS Modify Purchheader" extends "Purchase Header" //38
         }
     }
     trigger OnDelete()
-    var
-        salesLine: record "Sales Line";
-        SalesHeader: record "Sales Header";
-        purchLineRec: record "Purchase Line";
-        docNos: Text;
     begin
         /* if rec."No." <> '' then begin
             purchLineRec.Reset;

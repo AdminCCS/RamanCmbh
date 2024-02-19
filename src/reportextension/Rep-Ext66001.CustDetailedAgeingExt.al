@@ -50,15 +50,15 @@ reportextension 66001 CustDetailedAgeingExt extends 106
                 TotalAmountLcy += "Amount (LCY)";
             end;
         }
-        Add(Integer)
+        add(Integer)
         {
             column(TotalOriginalAmt; TotalOriginalAmt) { }
             column(TotalAmountLcy; TotalAmountLcy) { }
         }
     }
     var
-        TotalOriginalAmt: Decimal;
         TotalAmountLcy: Decimal;
+        TotalOriginalAmt: Decimal;
 
 
 }

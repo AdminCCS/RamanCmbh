@@ -21,7 +21,4 @@ pageextension 66008 CustomerCardExt extends "Customer Card"
     {
         // Add changes to page actions here
     }
-
-    var
-        myInt: Integer;
 }
