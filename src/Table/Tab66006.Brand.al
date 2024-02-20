@@ -9,12 +9,12 @@ table 66006 Brands
         field(1; Code; Code[20])
         {
             DataClassification = ToBeClassified;
-
+            Caption = 'Code';
         }
         field(2; Description; Text[100])
         {
             DataClassification = ToBeClassified;
-
+            Caption = 'Description';
         }
     }
 
@@ -25,5 +25,4 @@ table 66006 Brands
             Clustered = true;
         }
     }
-
 }

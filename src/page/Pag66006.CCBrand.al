@@ -5,7 +5,6 @@ page 66006 "CCS Brand"
     PageType = List;
     SourceTable = Brands;
     UsageCategory = Lists;
-    CardPageId = "Brand Card";
     layout
     {
         area(content)

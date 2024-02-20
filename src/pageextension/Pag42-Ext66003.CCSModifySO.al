@@ -14,5 +14,4 @@ pageextension 66003 "CCS ModifySO" extends "Sales Order" //42
             }
         }
     }
-
 }

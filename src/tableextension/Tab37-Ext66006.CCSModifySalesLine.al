@@ -20,7 +20,6 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
             Caption = 'Order Type';
             DataClassification = CustomerContent;
             OptionMembers = " ","Instant Order","Blocking Order","Disposition order","Backlog order";
-
         }
         field(66003; "CCS Cartons"; Decimal)
         {
@@ -34,9 +33,7 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
             trigger OnValidate()
             begin
                 Validate("Line Discount %", CalcRebateDisc("CCS Rebate 1 %"));
-
             end;
-
         }
         field(66005; "CCS Rebate 2 %"; Decimal)
         {
@@ -141,8 +138,6 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
                             ConsumeQty += SalesLine.Quantity;
                         until SalesLine.next() = 0;
 
-
-
                     SalesLine.Reset();
                     SalesLine.SetRange("Document No.", "CCS BA Number");
                     SalesLine.SetRange("No.", "No.");
@@ -170,7 +165,6 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
                         SalesLine.Modify();
                     end;
                 end;
-
             end;
         }
         field(66007; "CCS PO Number"; Code[20])
@@ -228,7 +222,6 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
         }
     }
 
-
     local procedure CalcRebateDisc(DiscPer: Decimal): Decimal
     var
         rebatAmt: Decimal;
@@ -241,8 +234,3 @@ tableextension 66006 "CCS ModifySalesLine" extends "Sales Line" //37
         exit(abs((rebatAmt / (Quantity * "Unit Price") * 100) - 100));
     end;
 }
-
-
-
-
-

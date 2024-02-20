@@ -13,5 +13,4 @@ pageextension 66010 "Posted Sales CrMemo Extension" extends "Posted Sales Credit
             }
         }
     }
-
 }

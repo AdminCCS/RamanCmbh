@@ -15,12 +15,10 @@ tableextension 66016 "CCS ModifyPurchaseLine" extends "Purchase Line" //39
         }
         field(66001; "Free Available Stock"; Decimal)
         {
-
             Caption = 'Free Available Stock';
             Editable = false;
             DecimalPlaces = 0 : 5;
         }
-
     }
     trigger OnDelete()
     var

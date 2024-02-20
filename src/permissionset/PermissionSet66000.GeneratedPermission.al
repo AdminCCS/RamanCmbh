@@ -29,5 +29,9 @@ permissionset 66000 GeneratedPermission
         page "CCS InspecAgent" = X,
         page "CCS Pod" = X,
         page "CCS PortAgent" = X,
-        page "Forwarder List" = X;
+        page "Forwarder List" = X,
+        tabledata Brands = RIMD,
+        table Brands = X,
+        page "Brand Card" = X,
+        page "CCS Brand" = X;
 }

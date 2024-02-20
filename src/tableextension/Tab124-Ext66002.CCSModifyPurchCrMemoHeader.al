@@ -155,5 +155,4 @@ tableextension 66002 "CCS Modify PurchCrMemoHeader" extends "Purch. Cr. Memo Hdr
             DataClassification = CustomerContent;
         }
     }
-
 }

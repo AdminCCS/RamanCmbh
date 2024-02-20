@@ -34,8 +34,6 @@ reportextension 66001 CustDetailedAgeingExt extends 106
 
         modify("Cust. Ledger Entry")
         {
-
-
             trigger OnBeforeAfterGetRecord()
             var
 
@@ -59,6 +57,4 @@ reportextension 66001 CustDetailedAgeingExt extends 106
     var
         TotalAmountLcy: Decimal;
         TotalOriginalAmt: Decimal;
-
-
 }

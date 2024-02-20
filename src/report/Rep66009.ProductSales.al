@@ -5,7 +5,6 @@ report 66009 "Product Sales"
     DefaultLayout = RDLC;
     RDLCLayout = 'Src\Layouts\ProductSales.rdl';
 
-
     dataset
     {
         dataitem("Customer Posting Group"; "Customer Posting Group")
@@ -164,7 +163,7 @@ report 66009 "Product Sales"
                 if SInvLine.FindSet() then
                     repeat
                         SInvHdr.GET(SInvLine."Document No.");
-                        if SInvHdr."Customer Posting Group" = Code then begin
+                        if SInvHdr."Customer Posting Group" = Code then
                             // fromCLE.Reset();
                             // fromCLE.SetRange("Customer Posting Group", Code);
                             // //fromCLE.SetRange("Posting Date", fromStartDate, fromEndDate);
@@ -537,11 +536,8 @@ report 66009 "Product Sales"
                                             ProdSales.Modify()
                                         end;
                                     end;
-
                             end;
-
-                            //until fromCLE.Next() = 0;
-                        end;
+                    //until fromCLE.Next() = 0;
                     until SInvLine.Next() = 0;
                 SInvLine.Reset();
                 SInvLine.SetRange("Posting Date", toStartDate, toEndDate);
@@ -551,7 +547,7 @@ report 66009 "Product Sales"
                 if SInvLine.FindSet() then
                     repeat
                         SInvHdr.GET(SInvLine."Document No.");
-                        if SInvHdr."Customer Posting Group" = Code then begin
+                        if SInvHdr."Customer Posting Group" = Code then
                             // toCLE.Reset();
                             // toCLE.SetRange("Customer Posting Group", Code);
                             // //toCLE.SetRange("Posting Date", toStartDate, toEndDate);
@@ -924,12 +920,9 @@ report 66009 "Product Sales"
                                             ProdSales.Modify()
                                         end;
                                     end;
-
                             end;
-
-                            // until toCLE.Next() = 0;
-                            //------------filling total line
-                        end;
+                    // until toCLE.Next() = 0;
+                    //------------filling total line
                     until SInvLine.Next() = 0;
 
                 //------sales Credit Memo line
@@ -941,7 +934,7 @@ report 66009 "Product Sales"
                 if SCrmLine.FindSet() then
                     repeat
                         SCrmHdr.GET(SCrmLine."Document No.");
-                        if SCrmHdr."Customer Posting Group" = Code then begin
+                        if SCrmHdr."Customer Posting Group" = Code then
                             // fromCLE.Reset();
                             // fromCLE.SetRange("Customer Posting Group", Code);
                             // //fromCLE.SetRange("Posting Date", fromStartDate, fromEndDate);
@@ -1313,11 +1306,8 @@ report 66009 "Product Sales"
                                             ProdSales.Modify()
                                         end;
                                     end;
-
                             end;
-
-                            //until fromCLE.Next() = 0;
-                        end;
+                    //until fromCLE.Next() = 0;
                     until SCrmLine.Next() = 0;
                 SCrmLine.Reset();
                 SCrmLine.SetRange("Posting Date", toStartDate, toEndDate);
@@ -1327,7 +1317,7 @@ report 66009 "Product Sales"
                 if SCrmLine.FindSet() then
                     repeat
                         SCrmHdr.GET(SCrmLine."Document No.");
-                        if SCrmHdr."Customer Posting Group" = Code then begin
+                        if SCrmHdr."Customer Posting Group" = Code then
                             // toCLE.Reset();
                             // toCLE.SetRange("Customer Posting Group", Code);
                             // //toCLE.SetRange("Posting Date", toStartDate, toEndDate);
@@ -1700,12 +1690,9 @@ report 66009 "Product Sales"
                                             ProdSales.Modify()
                                         end;
                                     end;
-
                             end;
-
-                            // until toCLE.Next() = 0;
-                            //------------filling total line
-                        end;
+                    // until toCLE.Next() = 0;
+                    //------------filling total line
                     until SCrmLine.Next() = 0;
             end;
 
@@ -1776,9 +1763,7 @@ report 66009 "Product Sales"
                             ProdSales.Margin := ProdSalesNew.Margin / 12;
                             ProdSales.MonthSort := 14;
                             ProdSales.Insert();
-
                         end;
-
                     until ProdSalesNew.Next() = 0;
                 ProdSalesNew.Reset();
                 ProdSalesNew.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
@@ -1833,7 +1818,7 @@ report 66009 "Product Sales"
                             j := ProdSales.MonthSort;
                         end;
                     until ProdSalesNew.Next() = 0;
-                //-----------from year totals   
+                //-----------from year totals
                 ProdSalesNew.Reset();
                 ProdSalesNew.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
                 ProdSalesNew.SetRange(Year, Format(fromYear));
@@ -1892,9 +1877,7 @@ report 66009 "Product Sales"
                             ProdSales.Margin := ProdSalesNew.Margin / 12;
                             ProdSales.MonthSort := 14;
                             ProdSales.Insert();
-
                         end;
-
                     until ProdSalesNew.Next() = 0;
                 ProdSalesNew.Reset();
                 ProdSalesNew.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
@@ -2103,7 +2086,6 @@ report 66009 "Product Sales"
                         ProdSales."Sale Amount" := toMargin - fromMargin;
                         ProdSales.MonthSort := 4;
                         ProdSales.Insert();
-
                     end;
                     if i = 4 then begin
                         fromTurnOver := 0;
@@ -2445,7 +2427,6 @@ report 66009 "Product Sales"
             end;
         }
 
-
         dataitem("Product Sales"; "Product Sales")
         {
             DataItemTableView = sorting(Year) where(FY_Options = const(FromYear), MonthSort = filter(< 15));
@@ -2552,7 +2533,6 @@ report 66009 "Product Sales"
             { }
             column(ToTFromMonthSort; MonthSort)
             { }
-
         }
         dataitem(ToT_To; "Product Sales")
         {
@@ -2612,11 +2592,9 @@ report 66009 "Product Sales"
         end;
     }
 
-
     trigger OnPreReport()
     begin
         ProdSales.DeleteAll();
-
     end;
 
     var

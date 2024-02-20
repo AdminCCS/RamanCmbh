@@ -45,7 +45,6 @@ pageextension 66002 "CCS ModifySalesLineSub" extends "Sales Order Subform" //46
         }
         addafter(Quantity)
         {
-
             field("Unit Cost"; rec."Unit Cost")
             {
                 ApplicationArea = all;
@@ -76,7 +75,6 @@ pageextension 66002 "CCS ModifySalesLineSub" extends "Sales Order Subform" //46
                 ApplicationArea = all;
                 ToolTip = 'Specifies the value of the Rebate 2 % field.';
             }
-
         }
         modify("Unit Cost (LCY)")
         {
@@ -125,7 +123,6 @@ pageextension 66002 "CCS ModifySalesLineSub" extends "Sales Order Subform" //46
         // SalesLine.SetRange("No.", Rec."No.");
         // if SalesLine.FindFirst() then
         //     error('Can not delete this line,this order tagged on order no%1', SalesLine."Document No.");
-
     end;
 
     var

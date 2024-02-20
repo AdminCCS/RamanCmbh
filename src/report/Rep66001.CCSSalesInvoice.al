@@ -311,7 +311,6 @@ report 66001 "CCS Sales Invoice"
             column(SalesPersonNameCode; SalespersonPurchaser2.Code)
             {
             }
-
             column(SelltoCustomerNo; "Sell-to Customer No.")
             {
             }
@@ -461,7 +460,6 @@ report 66001 "CCS Sales Invoice"
             }
             column(Currency_Code; "Currency Code")
             {
-
             }
             column(Posting_Date; "Posting Date")
             { }
@@ -517,7 +515,6 @@ report 66001 "CCS Sales Invoice"
                 column(ItemNo_Line_Lbl; FieldCaption("No."))
                 {
                 }
-
                 column(CrossReferenceNo_Line; "Item Reference No.")
                 {
                     ObsoleteState = Pending;
@@ -531,7 +528,6 @@ report 66001 "CCS Sales Invoice"
                     ObsoleteReason = 'Replaced by Item Reference No.';
                     ObsoleteTag = '17.0';
                 }
-
                 column(ItemReferenceNo_Line; "Item Reference No.")
                 {
                 }
@@ -620,7 +616,6 @@ report 66001 "CCS Sales Invoice"
                 { }
                 column(Cartons; "CCS Cartons")
                 { }
-
                 dataitem(ShipmentLine; "Sales Shipment Buffer")
                 {
                     DataItemTableView = sorting("Document No.", "Line No.", "Entry No.");
@@ -680,7 +675,6 @@ report 66001 "CCS Sales Invoice"
                     end;
                 }
 
-
                 trigger OnAfterGetRecord()
                 begin
                     InitializeShipmentLine();
@@ -726,7 +720,6 @@ report 66001 "CCS Sales Invoice"
                     TotalCarton += "CCS Cartons";
                     VolumeN += Round(Quantity * Item."Unit Volume");
 
-
                     if FirstLineHasBeenOutput then
                         Clear(DummyCompanyInfo.Picture);
                     FirstLineHasBeenOutput := true;
@@ -748,7 +741,6 @@ report 66001 "CCS Sales Invoice"
                         JobNoLbl := '';
 
                     FormatDocument.SetSalesInvoiceLine(Line, FormattedQuantity, FormattedUnitPrice, FormattedVATPct, FormattedLineAmount);
-
                 end;
 
                 trigger OnPreDataItem()
@@ -767,7 +759,6 @@ report 66001 "CCS Sales Invoice"
                     PrevLineAmount := 0;
                     FirstLineHasBeenOutput := false;
                     DummyCompanyInfo.Picture := CompanyInfo.Picture;
-
 
                     OnAfterLineOnPreDataItem(Header, Line);
                 end;
@@ -1151,7 +1142,6 @@ report 66001 "CCS Sales Invoice"
                 CalcFields("Work Description");
                 ShowWorkDescription := "Work Description".HasValue;
 
-
                 Clear(PaymentInstructionsTxt);
                 if PaymentTerms.get("Payment Terms Code") then
                     PaymentInstructionsTxt := PaymentTerms.Description;
@@ -1213,7 +1203,6 @@ report 66001 "CCS Sales Invoice"
                 FirstLineHasBeenOutput := false;
             end;
         }
-
     }
 
     requestpage
@@ -1299,8 +1288,6 @@ report 66001 "CCS Sales Invoice"
                           4, Header."No.", 0, 0, DATABASE::Customer, Header."Bill-to Customer No.", Header."Salesperson Code",
                           Header."Campaign No.", Header."Posting Description", '');
                 until Header.Next() = 0;
-
-
     end;
 
     trigger OnPreReport()
@@ -1454,7 +1441,6 @@ report 66001 "CCS Sales Invoice"
         VolumeN: Decimal;
         Pos: Integer;
         ItemEAN: Text;
-
 
     local procedure InitLogInteraction()
     begin
