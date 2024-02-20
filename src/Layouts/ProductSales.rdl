@@ -1681,7 +1681,7 @@
                 <Value>=First(Fields!Item__Picture.Value, "DataSet_Result")</Value>
                 <MIMEType>image/bmp</MIMEType>
                 <Sizing>FitProportional</Sizing>
-                <Height>1.45139in</Height>
+                <Height>1.26389in</Height>
                 <Width>2.19792in</Width>
                 <Style>
                   <Border>
@@ -1693,7 +1693,7 @@
             <KeepTogether>true</KeepTogether>
             <Top>0.06944in</Top>
             <Left>5.70708in</Left>
-            <Height>1.45139in</Height>
+            <Height>1.26389in</Height>
             <Width>2.19792in</Width>
             <ZIndex>3</ZIndex>
             <Style>
@@ -2272,7 +2272,7 @@
         <Height>3.35552in</Height>
         <Style />
       </Body>
-      <Width>10.78207in</Width>
+      <Width>10.88624in</Width>
       <Page>
         <PageHeader>
           <Height>0.94097in</Height>

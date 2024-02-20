@@ -2475,7 +2475,7 @@ report 66009 "Product Sales"
             begin
                 if itemno <> '' then
                     ItemRec.Get(itemno);
-                ItemRec.CalcFields(Inventory, "CCS Backlog order Invt");
+                ItemRec.CalcFields(Inventory, "CCS Blocking Order Invt");
             end;
         }
         dataitem("To_Product_Sales"; "Product Sales")
