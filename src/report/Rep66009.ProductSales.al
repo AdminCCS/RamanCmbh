@@ -165,381 +165,381 @@ report 66009 "Product Sales"
                     repeat
                         SInvHdr.GET(SInvLine."Document No.");
                         if SInvHdr."Customer Posting Group" = Code then begin
-                            fromCLE.Reset();
-                            fromCLE.SetRange("Customer Posting Group", Code);
-                            //fromCLE.SetRange("Posting Date", fromStartDate, fromEndDate);
-                            fromCLE.SetRange("Document No.", SInvLine."Document No.");
-                            //fromCLE.Setfilter("Document Type", '%1|%2', fromCLE."Document Type"::Invoice, fromCLE."Document Type"::"Credit Memo");
-                            if fromCLE.FindSet() then
-                                repeat
-                                    //fromCLE.CalcFields("Amount (LCY)");
-                                    case Date2DMY(fromCLE."Posting Date", 2) of
-                                        1:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JANUARY');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'JANUARY';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JANUARY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        2:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'FEBRUARY');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'FEBRUARY';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'FEBRUARY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        //ArrFromSales[2] += fromCLE."Sales (LCY)";
-                                        3:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'MARCH');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'MARCH';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'MARCH');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        //ArrFromSales[3] += fromCLE."Sales (LCY)";
-                                        4:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'APRIL');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'APRIL';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'APRIL');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        5:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'MAY');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'MAY';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'MAY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        6:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JUNE');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'JUNE';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JUNE');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        7:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JULY');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'JULY';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JULY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        8:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'AUGUST');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'AUGUST';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'AUGUST');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        9:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'SEPTEMBER';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        10:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'OCTOBER');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'OCTOBER';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'OCTOBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        11:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'NOVEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'NOVEMBER';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'NOVEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        12:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'DECEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'DECEMBER';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'DECEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-
+                            // fromCLE.Reset();
+                            // fromCLE.SetRange("Customer Posting Group", Code);
+                            // //fromCLE.SetRange("Posting Date", fromStartDate, fromEndDate);
+                            // fromCLE.SetRange("Document No.", SInvLine."Document No.");
+                            // //fromCLE.Setfilter("Document Type", '%1|%2', fromCLE."Document Type"::Invoice, fromCLE."Document Type"::"Credit Memo");
+                            // if fromCLE.FindSet() then
+                            //     repeat
+                            //fromCLE.CalcFields("Amount (LCY)");
+                            case Date2DMY(SInvLine."Posting Date", 2) of
+                                1:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JANUARY');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'JANUARY';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JANUARY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                2:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'FEBRUARY');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'FEBRUARY';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'FEBRUARY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                //ArrFromSales[2] += SInvLine.GetLineAmountExclVAT();
+                                3:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'MARCH');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'MARCH';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'MARCH');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                //ArrFromSales[3] += SInvLine.GetLineAmountExclVAT();
+                                4:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'APRIL');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'APRIL';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'APRIL');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                5:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'MAY');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'MAY';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'MAY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                6:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JUNE');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'JUNE';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JUNE');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                7:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JULY');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'JULY';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JULY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                8:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'AUGUST');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'AUGUST';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'AUGUST');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                9:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'SEPTEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'SEPTEMBER';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'SEPTEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                10:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'OCTOBER');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'OCTOBER';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'OCTOBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                11:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'NOVEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'NOVEMBER';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'NOVEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                12:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'DECEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'DECEMBER';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'DECEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
                                     end;
 
-                                until fromCLE.Next() = 0;
+                            end;
+
+                            //until fromCLE.Next() = 0;
                         end;
                     until SInvLine.Next() = 0;
                 SInvLine.Reset();
@@ -551,382 +551,382 @@ report 66009 "Product Sales"
                     repeat
                         SInvHdr.GET(SInvLine."Document No.");
                         if SInvHdr."Customer Posting Group" = Code then begin
-                            toCLE.Reset();
-                            toCLE.SetRange("Customer Posting Group", Code);
-                            //toCLE.SetRange("Posting Date", toStartDate, toEndDate);
-                            toCLE.SetRange("Document No.", SInvLine."Document No.");
-                            //toCLE.Setfilter("Document Type", '%1|%2', toCLE."Document Type"::Invoice, toCLE."Document Type"::"Credit Memo");
-                            if toCLE.FindSet() then
-                                repeat
-                                    //toCLE.CalcFields("Sales (LCY)");
-                                    case Date2DMY(toCLE."Posting Date", 2) of
-                                        1:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JANUARY');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'JANUARY';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JANUARY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        2:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'FEBRUARY');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'FEBRUARY';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'FEBRUARY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        //ArrFromSales[2] += toCLE."Sales (LCY)";
-                                        3:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'MARCH');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'MARCH';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'MARCH');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        //ArrFromSales[3] += toCLE."Sales (LCY)";
-                                        4:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'APRIL');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'APRIL';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'APRIL');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        5:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'MAY');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'MAY';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'MAY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        6:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JUNE');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'JUNE';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JUNE');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        7:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JULY');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'JULY';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JULY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        8:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'AUGUST');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'AUGUST';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'AUGUST');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        9:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'SEPTEMBER';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        10:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'OCTOBER');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'OCTOBER';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'OCTOBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        11:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'NOVEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'NOVEMBER';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'NOVEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        12:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'DECEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'DECEMBER';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
+                            // toCLE.Reset();
+                            // toCLE.SetRange("Customer Posting Group", Code);
+                            // //toCLE.SetRange("Posting Date", toStartDate, toEndDate);
+                            // toCLE.SetRange("Document No.", SInvLine."Document No.");
+                            // //toCLE.Setfilter("Document Type", '%1|%2', toCLE."Document Type"::Invoice, toCLE."Document Type"::"Credit Memo");
+                            // if toCLE.FindSet() then
+                            //     repeat
+                            //toCLE.CalcFields("Sales (LCY)");
+                            case Date2DMY(SInvLine."Posting Date", 2) of
+                                1:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JANUARY');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'JANUARY';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JANUARY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                2:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'FEBRUARY');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'FEBRUARY';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'FEBRUARY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                //ArrFromSales[2] += SInvLine.GetLineAmountExclVAT();
+                                3:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'MARCH');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'MARCH';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'MARCH');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                //ArrFromSales[3] += SInvLine.GetLineAmountExclVAT();
+                                4:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'APRIL');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'APRIL';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'APRIL');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                5:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'MAY');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'MAY';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'MAY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                6:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JUNE');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'JUNE';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JUNE');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                7:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JULY');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'JULY';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JULY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                8:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'AUGUST');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'AUGUST';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'AUGUST');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                9:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'SEPTEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'SEPTEMBER';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'SEPTEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                10:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'OCTOBER');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'OCTOBER';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'OCTOBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                11:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'NOVEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'NOVEMBER';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'NOVEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                12:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'DECEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SInvHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'DECEMBER';
+                                            ProdSales."Customer Posting Group" := SInvHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SInvLine.GetLineAmountExclVAT();
 
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'DECEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'DECEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
                                     end;
 
-                                until toCLE.Next() = 0;
+                            end;
+
+                            // until toCLE.Next() = 0;
                             //------------filling total line
                         end;
                     until SInvLine.Next() = 0;
@@ -941,381 +941,381 @@ report 66009 "Product Sales"
                     repeat
                         SCrmHdr.GET(SCrmLine."Document No.");
                         if SCrmHdr."Customer Posting Group" = Code then begin
-                            fromCLE.Reset();
-                            fromCLE.SetRange("Customer Posting Group", Code);
-                            //fromCLE.SetRange("Posting Date", fromStartDate, fromEndDate);
-                            fromCLE.SetRange("Document No.", SCrmLine."Document No.");
-                            //fromCLE.Setfilter("Document Type", '%1|%2', fromCLE."Document Type"::Invoice, fromCLE."Document Type"::"Credit Memo");
-                            if fromCLE.FindSet() then
-                                repeat
-                                    //fromCLE.CalcFields("Amount (LCY)");
-                                    case Date2DMY(fromCLE."Posting Date", 2) of
-                                        1:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JANUARY');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'JANUARY';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JANUARY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        2:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'FEBRUARY');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'FEBRUARY';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'FEBRUARY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        //ArrFromSales[2] += fromCLE."Sales (LCY)";
-                                        3:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'MARCH');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'MARCH';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'MARCH');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        //ArrFromSales[3] += fromCLE."Sales (LCY)";
-                                        4:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'APRIL');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'APRIL';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'APRIL');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        5:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'MAY');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'MAY';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'MAY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        6:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JUNE');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'JUNE';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JUNE');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        7:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JULY');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'JULY';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'JULY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        8:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'AUGUST');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'AUGUST';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'AUGUST');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        9:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'SEPTEMBER';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        10:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'OCTOBER');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'OCTOBER';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'OCTOBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        11:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'NOVEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'NOVEMBER';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'NOVEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        12:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'DECEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", fromCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(fromYear);
-                                                    ProdSales.Month := 'DECEMBER';
-                                                    ProdSales."Customer Posting Group" := fromCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := fromCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += fromCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
-                                                ProdSales.SetRange(Year, Format(fromYear));
-                                                ProdSales.SetRange(Month, 'DECEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += fromCLE."Sales (LCY)";
-                                                    ProdSales.Margin += fromCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-
+                            // fromCLE.Reset();
+                            // fromCLE.SetRange("Customer Posting Group", Code);
+                            // //fromCLE.SetRange("Posting Date", fromStartDate, fromEndDate);
+                            // fromCLE.SetRange("Document No.", SCrmLine."Document No.");
+                            // //fromCLE.Setfilter("Document Type", '%1|%2', fromCLE."Document Type"::Invoice, fromCLE."Document Type"::"Credit Memo");
+                            // if fromCLE.FindSet() then
+                            //     repeat
+                            //fromCLE.CalcFields("Amount (LCY)");
+                            case Date2DMY(SCrmLine."Posting Date", 2) of
+                                1:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JANUARY');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'JANUARY';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JANUARY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                2:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'FEBRUARY');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'FEBRUARY';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'FEBRUARY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                //ArrFromSales[2] += SCrmLine.GetLineAmountExclVAT();
+                                3:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'MARCH');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'MARCH';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'MARCH');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                //ArrFromSales[3] += SCrmLine.GetLineAmountExclVAT();
+                                4:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'APRIL');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'APRIL';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'APRIL');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                5:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'MAY');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'MAY';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'MAY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                6:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JUNE');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'JUNE';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JUNE');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                7:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JULY');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'JULY';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'JULY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                8:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'AUGUST');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'AUGUST';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'AUGUST');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                9:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'SEPTEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'SEPTEMBER';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'SEPTEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                10:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'OCTOBER');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'OCTOBER';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'OCTOBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                11:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'NOVEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'NOVEMBER';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'NOVEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                12:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'DECEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(fromYear);
+                                            ProdSales.Month := 'DECEMBER';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::FromYear);
+                                        ProdSales.SetRange(Year, Format(fromYear));
+                                        ProdSales.SetRange(Month, 'DECEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
                                     end;
 
-                                until fromCLE.Next() = 0;
+                            end;
+
+                            //until fromCLE.Next() = 0;
                         end;
                     until SCrmLine.Next() = 0;
                 SCrmLine.Reset();
@@ -1327,382 +1327,382 @@ report 66009 "Product Sales"
                     repeat
                         SCrmHdr.GET(SCrmLine."Document No.");
                         if SCrmHdr."Customer Posting Group" = Code then begin
-                            toCLE.Reset();
-                            toCLE.SetRange("Customer Posting Group", Code);
-                            //toCLE.SetRange("Posting Date", toStartDate, toEndDate);
-                            toCLE.SetRange("Document No.", SCrmLine."Document No.");
-                            //toCLE.Setfilter("Document Type", '%1|%2', toCLE."Document Type"::Invoice, toCLE."Document Type"::"Credit Memo");
-                            if toCLE.FindSet() then
-                                repeat
-                                    //toCLE.CalcFields("Sales (LCY)");
-                                    case Date2DMY(toCLE."Posting Date", 2) of
-                                        1:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JANUARY');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'JANUARY';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JANUARY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        2:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'FEBRUARY');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'FEBRUARY';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'FEBRUARY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        //ArrFromSales[2] += toCLE."Sales (LCY)";
-                                        3:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'MARCH');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'MARCH';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'MARCH');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        //ArrFromSales[3] += toCLE."Sales (LCY)";
-                                        4:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'APRIL');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'APRIL';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'APRIL');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        5:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'MAY');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'MAY';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'MAY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        6:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JUNE');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'JUNE';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JUNE');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        7:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JULY');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'JULY';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'JULY');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        8:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'AUGUST');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'AUGUST';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'AUGUST');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        9:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'SEPTEMBER';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'SEPTEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        10:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'OCTOBER');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'OCTOBER';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'OCTOBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        11:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'NOVEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'NOVEMBER';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'NOVEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-                                        12:
-                                            begin
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'DECEMBER');
-                                                ProdSales.SetRange("Customer Posting Group", toCLE."Customer Posting Group");
-                                                if not ProdSales.FindFirst() then begin
-                                                    ProdSales.Init();
-                                                    ProdSales.Year := Format(toYear);
-                                                    ProdSales.Month := 'DECEMBER';
-                                                    ProdSales."Customer Posting Group" := toCLE."Customer Posting Group";
-                                                    ProdSales."Sale Amount" := toCLE."Sales (LCY)";
+                            // toCLE.Reset();
+                            // toCLE.SetRange("Customer Posting Group", Code);
+                            // //toCLE.SetRange("Posting Date", toStartDate, toEndDate);
+                            // toCLE.SetRange("Document No.", SCrmLine."Document No.");
+                            // //toCLE.Setfilter("Document Type", '%1|%2', toCLE."Document Type"::Invoice, toCLE."Document Type"::"Credit Memo");
+                            // if toCLE.FindSet() then
+                            //     repeat
+                            //toCLE.CalcFields("Sales (LCY)");
+                            case Date2DMY(SCrmLine."Posting Date", 2) of
+                                1:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JANUARY');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'JANUARY';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JANUARY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                2:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'FEBRUARY');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'FEBRUARY';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'FEBRUARY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                //ArrFromSales[2] += SCrmLine.GetLineAmountExclVAT();
+                                3:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'MARCH');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'MARCH';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'MARCH');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                //ArrFromSales[3] += SCrmLine.GetLineAmountExclVAT();
+                                4:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'APRIL');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'APRIL';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'APRIL');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                5:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'MAY');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'MAY';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'MAY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                6:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JUNE');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'JUNE';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JUNE');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                7:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JULY');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'JULY';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'JULY');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                8:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'AUGUST');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'AUGUST';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'AUGUST');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                9:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'SEPTEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'SEPTEMBER';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'SEPTEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                10:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'OCTOBER');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'OCTOBER';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'OCTOBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                11:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'NOVEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'NOVEMBER';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'NOVEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
+                                    end;
+                                12:
+                                    begin
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'DECEMBER');
+                                        ProdSales.SetRange("Customer Posting Group", SCrmHdr."Customer Posting Group");
+                                        if not ProdSales.FindFirst() then begin
+                                            ProdSales.Init();
+                                            ProdSales.Year := Format(toYear);
+                                            ProdSales.Month := 'DECEMBER';
+                                            ProdSales."Customer Posting Group" := SCrmHdr."Customer Posting Group";
+                                            ProdSales."Sale Amount" := SCrmLine.GetLineAmountExclVAT();
 
-                                                    ProdSales.Insert();
-                                                end else begin
-                                                    ProdSales."Sale Amount" += toCLE."Sales (LCY)";
-                                                    ProdSales.Modify();
-                                                end;
-                                                ProdSales.Reset();
-                                                ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
-                                                ProdSales.SetRange(Year, Format(toYear));
-                                                ProdSales.SetRange(Month, 'DECEMBER');
-                                                if ProdSales.findfirst() then begin
-                                                    ProdSales.TotalSales += toCLE."Sales (LCY)";
-                                                    ProdSales.Margin += toCLE."Profit (LCY)";
-                                                    if ProdSales.TotalSales <> 0 then
-                                                        ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
-                                                    ProdSales.Modify()
-                                                end;
-                                            end;
-
+                                            ProdSales.Insert();
+                                        end else begin
+                                            ProdSales."Sale Amount" += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Modify();
+                                        end;
+                                        ProdSales.Reset();
+                                        ProdSales.SetRange(FY_Options, ProdSales.FY_Options::ToYear);
+                                        ProdSales.SetRange(Year, Format(toYear));
+                                        ProdSales.SetRange(Month, 'DECEMBER');
+                                        if ProdSales.findfirst() then begin
+                                            ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
+                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            if ProdSales.TotalSales <> 0 then
+                                                ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
+                                            ProdSales.Modify()
+                                        end;
                                     end;
 
-                                until toCLE.Next() = 0;
+                            end;
+
+                            // until toCLE.Next() = 0;
                             //------------filling total line
                         end;
                     until SCrmLine.Next() = 0;
