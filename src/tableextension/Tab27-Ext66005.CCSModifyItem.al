@@ -296,12 +296,12 @@ tableextension 66005 "CCS Modify Item" extends Item //27
             Caption = 'Technical 5';
             DataClassification = CustomerContent;
         }
-        field(66054; "Produkt LxHxB"; Decimal)
+        field(66054; "Produkt LxHxB"; text[50])
         {
             Caption = 'Produkt LxHxB';
             DataClassification = CustomerContent;
         }
-        field(66055; "VPE LxHxB"; Decimal)
+        field(66055; "VPE LxHxB"; text[50])
         {
             Caption = 'VPE LxHxB';
             DataClassification = CustomerContent;
