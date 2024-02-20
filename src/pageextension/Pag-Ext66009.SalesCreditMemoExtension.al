@@ -11,9 +11,6 @@ pageextension 66009 "Sales Credit Memo Extension" extends "Sales Credit Memo"
                 Caption = 'Credit Memo Print Option';
                 ToolTip = 'Specifies the value of the Credit Memo Print Option field.';
             }
-
         }
     }
-
-
 }

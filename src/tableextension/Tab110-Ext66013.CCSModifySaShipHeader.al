@@ -14,7 +14,6 @@ tableextension 66013 "CCS ModifySaShipHeader" extends "Sales Shipment Header" //
             DataClassification = CustomerContent;
             Editable = false;
             OptionMembers = "Credit Memo","Invoice correction";
-
         }
     }
 }

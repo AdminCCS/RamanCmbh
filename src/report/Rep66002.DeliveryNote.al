@@ -24,11 +24,9 @@ report 66002 "Delivery Note"
             }
             column(Header_NoCaption; fieldcaption("No."))
             {
-
             }
             column(ReportTitle; ReportTitle)
             {
-
             }
             column(CompanyInfo_Logo; CompanyInfo.Picture)
             {
@@ -57,7 +55,6 @@ report 66002 "Delivery Note"
             column(ContactPerson_Lbl; ContactPerson_Lbl) { }
             column(ShippingDeliveryAddress_Lbl; ShippingDeliveryAddress_Lbl) { }
             column(ShortLine_Lbl; ShortLine_Lbl) { }
-
             column(ShipToAddr1; ShipToAddr[1])
             {
             }
@@ -82,8 +79,6 @@ report 66002 "Delivery Note"
             column(ShipToAddr8; ShipToAddr[8])
             {
             }
-
-
             dataitem("Sales Shipment Line"; "Sales Shipment Line")
             {
                 DataItemLinkReference = "Sales Shipment Header";
@@ -95,10 +90,8 @@ report 66002 "Delivery Note"
                 column(Zollopos; tarrif)
                 { }
                 column(Pos_Lbl; Pos_Lbl) { }
-
                 column(ArticleNo_Lbl; ArticleNo_Lbl)
                 {
-
                 }
                 column(Qty_Lbl; Qty_Lbl) { }
                 column(Unit_Lbl; Unit_Lbl) { }
@@ -106,7 +99,6 @@ report 66002 "Delivery Note"
                 column(Carton; "CCS Cartons") { }
                 column(PU_Lbl; pu_lbl) { }//MasterBox
                 column(Carton_Lbl; Carton_Lbl) { }//CCS Cartons
-
                 column(ArticleDescription_Lbl; ArticleDescription_Lbl) { }
                 column(ItemDescription_Lbl; ItemDescription_Lbl) { }
                 column(SrNo; SrNo) { }
@@ -127,23 +119,18 @@ report 66002 "Delivery Note"
                 }
                 column(Unit_of_Measure_Code_Caption; Fieldcaption("Unit of Measure Code"))
                 {
-
                 }
                 column(Quantity; Quantity)
                 {
-
                 }
                 column(QuantityCaption; Fieldcaption(Quantity))
                 {
-
                 }
                 column(Line_Description; Description)
                 {
-
                 }
                 column(DescriptionCaption; Fieldcaption(Description))
                 {
-
                 }
                 column(VolumeN; VolumeN)
                 { }
@@ -180,10 +167,7 @@ report 66002 "Delivery Note"
                         TotalWeight += Round(Quantity * item."Gross Weight");
                         TotalCarton += "CCS Cartons";
                     end;
-
-
                 end;
-
             }
             trigger OnAfterGetRecord()
             begin
@@ -206,8 +190,6 @@ report 66002 "Delivery Note"
 
                 Clear(SalespersonPurchaser2);
                 if SalespersonPurchaser2.get("Salesperson Code") then;
-
-
             end;
         }
     }
@@ -240,7 +222,6 @@ report 66002 "Delivery Note"
                 }
             }
         }
-
     }
     labels
     {
@@ -250,7 +231,6 @@ report 66002 "Delivery Note"
     begin
         CompanyInfo.Get();
         CompanyInfo.CalcFields(Picture);
-
     end;
 
     var

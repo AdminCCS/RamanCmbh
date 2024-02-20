@@ -42,7 +42,6 @@ tableextension 66007 "CCS ModifySalesInvLine" extends "Sales Invoice Line" //113
         {
             DataClassification = CustomerContent;
             Caption = 'PO Number';
-
         }
     }
 }

@@ -881,7 +881,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension CCS ModifySaShipHeader - Field CCS Order Type - Property OptionCaption</note>
         </trans-unit>
          <trans-unit id="Table 2224537128 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-           <source>Forwarder</source>
+          <source>Forwarder</source>
           <target state="translated">Frachtführer</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Forwarder - Property Caption</note>

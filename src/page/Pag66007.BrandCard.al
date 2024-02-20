@@ -4,7 +4,7 @@ page 66007 "Brand Card"
     Caption = 'Brand Card';
     PageType = Card;
     SourceTable = Brands;
-    
+
     layout
     {
         area(content)
@@ -12,7 +12,7 @@ page 66007 "Brand Card"
             group(General)
             {
                 Caption = 'General';
-                
+
                 field("Code"; Rec."Code")
                 {
                     ToolTip = 'Specifies the value of the Code field.';

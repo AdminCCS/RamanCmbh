@@ -14,7 +14,6 @@ tableextension 66015 "CCS ModifySarHeadArch" extends "Sales Header Archive" //51
             DataClassification = CustomerContent;
             Editable = false;
             OptionMembers = "Credit Memo","Invoice correction";
-
         }
     }
 }
