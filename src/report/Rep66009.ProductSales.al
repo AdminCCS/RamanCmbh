@@ -198,7 +198,8 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JANUARY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            //Unit price*quantity-unit cost lcy*quantity
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -228,7 +229,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'FEBRUARY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -259,7 +260,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'MARCH');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -290,7 +291,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'APRIL');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -320,7 +321,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'MAY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -350,7 +351,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JUNE');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -380,7 +381,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JULY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -410,7 +411,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'AUGUST');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -440,7 +441,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'SEPTEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -470,7 +471,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'OCTOBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -500,7 +501,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'NOVEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -530,7 +531,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'DECEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -584,7 +585,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JANUARY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -614,7 +615,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'FEBRUARY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -645,7 +646,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'MARCH');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -676,7 +677,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'APRIL');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -706,7 +707,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'MAY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -736,7 +737,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JUNE');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -766,7 +767,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JULY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -796,7 +797,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'AUGUST');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -826,7 +827,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'SEPTEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -856,7 +857,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'OCTOBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -886,7 +887,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'NOVEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -917,7 +918,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'DECEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SInvLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SInvLine."Unit Price" * SInvLine.Quantity) - (SInvLine."Unit Cost (LCY)" * SInvLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -974,7 +975,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JANUARY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1004,7 +1005,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'FEBRUARY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1035,7 +1036,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'MARCH');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1066,7 +1067,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'APRIL');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1096,7 +1097,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'MAY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1126,7 +1127,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JUNE');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1156,7 +1157,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JULY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1186,7 +1187,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'AUGUST');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1216,7 +1217,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'SEPTEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1246,7 +1247,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'OCTOBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1276,7 +1277,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'NOVEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1306,7 +1307,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'DECEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += fromCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1360,7 +1361,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JANUARY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1390,7 +1391,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'FEBRUARY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1421,7 +1422,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'MARCH');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1452,7 +1453,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'APRIL');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1482,7 +1483,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'MAY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1512,7 +1513,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JUNE');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1542,7 +1543,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'JULY');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1572,7 +1573,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'AUGUST');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1602,7 +1603,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'SEPTEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1632,7 +1633,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'OCTOBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1662,7 +1663,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'NOVEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -1693,7 +1694,7 @@ report 66009 "Product Sales"
                                         ProdSales.SetRange(Month, 'DECEMBER');
                                         if ProdSales.findfirst() then begin
                                             ProdSales.TotalSales += SCrmLine.GetLineAmountExclVAT();
-                                            ProdSales.Margin += toCLE."Profit (LCY)";
+                                            ProdSales.Margin += ((SCrmLine."Unit Price" * SCrmLine.Quantity) - (SCrmLine."Unit Cost (LCY)" * SCrmLine.Quantity));
                                             if ProdSales.TotalSales <> 0 then
                                                 ProdSales."Margin %" := (ProdSales.Margin * 100) / ProdSales.TotalSales;
                                             ProdSales.Modify()
@@ -2619,8 +2620,8 @@ report 66009 "Product Sales"
     end;
 
     var
-        fromCLE: Record "Cust. Ledger Entry";
-        toCLE: Record "Cust. Ledger Entry";
+        //fromCLE: Record "Cust. Ledger Entry";
+        //toCLE: Record "Cust. Ledger Entry";
         ItemRec: Record Item;
         ProdSales: Record "Product Sales";
         SCrmHdr: Record "Sales Cr.Memo Header";
