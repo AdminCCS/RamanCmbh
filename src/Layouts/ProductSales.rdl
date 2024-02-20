@@ -520,7 +520,7 @@
             <DataSetName>DataSet_Result</DataSetName>
             <Top>1.60271in</Top>
             <Left>0.05083in</Left>
-            <Height>0.41667in</Height>
+            <Height>0.41666in</Height>
             <Width>5.28126in</Width>
             <Style>
               <Border>
@@ -619,7 +619,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.21875in</Height>
+                  <Height>0.20833in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1028,7 +1028,7 @@
             <DataSetName>DataSet_Result</DataSetName>
             <Top>1.60271in</Top>
             <Left>5.48in</Left>
-            <Height>0.41667in</Height>
+            <Height>0.40625in</Height>
             <Width>5.30207in</Width>
             <ZIndex>1</ZIndex>
             <Style>

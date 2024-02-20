@@ -520,7 +520,7 @@
             <DataSetName>DataSet_Result</DataSetName>
             <Top>0.70542in</Top>
             <Left>0.05451in</Left>
-            <Height>0.45833in</Height>
+            <Height>0.45834in</Height>
             <Width>5.28126in</Width>
             <Style>
               <Border>
@@ -1028,7 +1028,7 @@
             <DataSetName>DataSet_Result</DataSetName>
             <Top>0.70542in</Top>
             <Left>5.48368in</Left>
-            <Height>0.45833in</Height>
+            <Height>0.45834in</Height>
             <Width>5.30207in</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -1046,7 +1046,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.22917in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1101,7 +1101,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>0.25in</Size>
+                    <Size>0.22917in</Size>
                     <CellContents>
                       <Textbox Name="CompCustomer_Posting_Group">
                         <CanGrow>true</CanGrow>
@@ -1159,7 +1159,7 @@
             <DataSetName>DataSet_Result</DataSetName>
             <Top>0.70542in</Top>
             <Left>10.97535in</Left>
-            <Height>0.5in</Height>
+            <Height>0.45834in</Height>
             <Width>1.51042in</Width>
             <ZIndex>2</ZIndex>
             <Style>
