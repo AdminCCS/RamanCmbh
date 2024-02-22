@@ -32,7 +32,7 @@
             "launchBrowser": false,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
-            "schemaUpdateMode":"ForceSync"
+            "schemaUpdateMode":"Synchronize"
             
         }
         

@@ -50,6 +50,16 @@ table 66005 "Product Sales"
             DataClassification = CustomerContent;
             Caption = 'Margin %';
         }
+        field(10; "Sale Quantity"; Decimal)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Sale Quantity';
+        }
+        field(11; "TotalSaleQty"; Decimal)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Total Sale Quantity';
+        }
     }
 
     keys
