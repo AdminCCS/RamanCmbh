@@ -2127,6 +2127,8 @@ report 66009 "Product Sales"
             { }
             column(AlloverPurchAmount; AlloverPurchAmount)
             { }
+            column(OpenPurchQty; OpenPurchQty)
+            { }
             trigger OnPreDataItem()
 
             begin
@@ -2199,6 +2201,16 @@ report 66009 "Product Sales"
                     repeat
                         AlloverPurchAmount -= PurchCrMLine.Amount;
                     until PurchCrMLine.Next() = 0;
+
+                purchOrderLine.Reset();
+                purchOrderLine.SetRange(Type, purchOrderLine.Type::Item);
+                purchOrderLine.SetRange("No.", itemno);
+
+                if purchOrderLine.FindSet() then
+                    repeat
+                        OpenPurchQty += purchOrderLine.Quantity;
+                    until purchOrderLine.Next() = 0;
+
             end;
 
 
@@ -2360,6 +2372,7 @@ report 66009 "Product Sales"
         custpostgrpfilter: Text;
         purchArr: array[3] of Decimal;
         purchLine: Record "Purch. Inv. Line";
+        purchOrderLine: Record "Purchase Line";
         PurchCrMLine: Record "Purch. Cr. Memo Line";
         AlloverPurchQty: Decimal;
         SalesInvLine: Record "Sales Invoice Line";
@@ -2368,4 +2381,5 @@ report 66009 "Product Sales"
         AlloverMargin: Decimal;
         AlloverMargin_per: Decimal;
         AlloverPurchAmount: Decimal;
+        OpenPurchQty: Decimal;
 }
