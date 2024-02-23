@@ -2129,12 +2129,16 @@ report 66009 "Product Sales"
             { }
             column(OpenPurchQty; OpenPurchQty)
             { }
+            column(Disposition_Invt; ItemRec."CCS MRP order Invt")
+            { }
+            column(FreeIncomingQty; FreeIncomingQty)
+            { }
             trigger OnPreDataItem()
 
             begin
                 if itemno <> '' then
                     ItemRec.Get(itemno);
-                ItemRec.CalcFields(Inventory, "CCS Blocking Order Invt");
+                ItemRec.CalcFields(Inventory, "CCS Blocking Order Invt", "CCS MRP order Invt");
                 if ItemRec."Vendor No." <> '' then
                     VendRec.Get(ItemRec."Vendor No.");
                 j := 0;
@@ -2210,28 +2214,37 @@ report 66009 "Product Sales"
                     repeat
                         OpenPurchQty += purchOrderLine.Quantity;
                     until purchOrderLine.Next() = 0;
+                FreeIncomingQty := OpenPurchQty - itemRec."CCS MRP order Invt";
 
             end;
 
 
 
         }
-        dataitem("To_Product_Sales"; "Product Sales")
+        dataitem("To_Product_Sales";
+        "Product Sales")
         {
             DataItemTableView = sorting(Year) where(FY_Options = const(ToYear), Year = filter(<> '3000'), MonthSort = filter(< 15));
-            column(ToYear; Year)
+            column(ToYear;
+            Year)
             { }
-            column(ToMonth; Month)
+            column(ToMonth;
+            Month)
             { }
-            column(ToCustomer_Posting_Group; "Customer Posting Group")
+            column(ToCustomer_Posting_Group;
+            "Customer Posting Group")
             { }
-            column(ToSale_Amount; "Sale Amount")
+            column(ToSale_Amount;
+            "Sale Amount")
             { }
-            column(ToTotalSales; TotalSales)
+            column(ToTotalSales;
+            TotalSales)
             { }
-            column(ToSale_Quantity; "Sale Quantity")
+            column(ToSale_Quantity;
+            "Sale Quantity")
             { }
-            column(ToTotalSaleQty; TotalSaleQty)
+            column(ToTotalSaleQty;
+            TotalSaleQty)
             { }
             column(ToMonthSort; MonthSort)
             { }
@@ -2382,4 +2395,5 @@ report 66009 "Product Sales"
         AlloverMargin_per: Decimal;
         AlloverPurchAmount: Decimal;
         OpenPurchQty: Decimal;
+        FreeIncomingQty: Decimal;
 }
