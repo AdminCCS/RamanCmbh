@@ -8,8 +8,6 @@ tableextension 66018 "CCS ModifyPurchInvLine" extends "Purch. Inv. Line" //123
             FieldClass = FlowField;
             CalcFormula = sum("Sales Line".Quantity where(Type = const(Item), "No." = field("No."),
                                                                  "Document No." = field("Document No.")));
-
         }
-
     }
 }

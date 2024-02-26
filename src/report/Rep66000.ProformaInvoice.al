@@ -21,7 +21,6 @@ report 66000 "ProformaInvoice"
             column(CompanyPicture; CompanyInformation.Picture)
             {
             }
-
             column(CompanyEMail; CompanyInformation."E-Mail")
             {
             }
@@ -189,7 +188,6 @@ report 66000 "ProformaInvoice"
             column(MasterBoxLbl; Item.FieldCaption("CCS Masterbox"))
             {
             }
-
             column(CountryOfManufactuctureLbl; CountryOfManufactuctureLbl)
             {
             }
@@ -235,7 +233,6 @@ report 66000 "ProformaInvoice"
             column(Sell_to_Customer_No_; "Sell-to Customer No.")
             {
             }
-
             column(ShiptoName; ShiptoName) { }
             column(ShipToAdd1; ShipToAdd1) { }
             column(ShiptoAdd2; ShiptoAdd2) { }
@@ -244,9 +241,7 @@ report 66000 "ProformaInvoice"
             column(ShipToCountry; ShipToCountry) { }
             column(Payment_Terms_Code; "Payment Terms Code")
             {
-
             }
-
             dataitem(Line; "Sales Line")
             {
                 DataItemLink = "Document Type" = field("Document Type"), "Document No." = field("No.");
@@ -255,7 +250,6 @@ report 66000 "ProformaInvoice"
                 column(No_; "No.")
                 {
                 }
-
                 column(ItemDescription; Description)
                 {
                 }
@@ -414,12 +408,10 @@ report 66000 "ProformaInvoice"
         }
     }
 
-
     trigger OnInitReport()
     begin
         CompanyInformation.Get();
         CompanyInformation.CalcFields(Picture);
-
     end;
 
     var

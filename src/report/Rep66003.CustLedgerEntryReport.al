@@ -36,7 +36,6 @@ report 66003 "CustLedgerEntryReport"
                 BalanceTotal := "Balance (LCY)" + ("Debit Amount (LCY)" - "Credit Amount (LCY)");
             end;
         }
-
     }
 
     var

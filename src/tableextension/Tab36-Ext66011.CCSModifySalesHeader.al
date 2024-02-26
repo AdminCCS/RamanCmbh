@@ -25,7 +25,6 @@ tableextension 66011 "CCS ModifySalesHeader" extends "Sales Header" //36
             Caption = 'Credit Memo Print Option';
             DataClassification = CustomerContent;
             OptionMembers = "Credit Memo","Invoice correction";
-
         }
     }
 }

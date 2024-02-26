@@ -14,7 +14,6 @@ tableextension 66012 "CCS ModifySalesInHeader" extends "Sales Invoice Header" //
             DataClassification = CustomerContent;
             Editable = false;
             OptionMembers = "Credit Memo","Invoice correction";
-
         }
     }
 }

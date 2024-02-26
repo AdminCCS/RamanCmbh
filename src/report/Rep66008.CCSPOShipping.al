@@ -43,7 +43,6 @@ report 66008 "CCS PO Shipping"
             column(CCSDepositPaymentStatus_PurchaseHeader; PurchaseHeader."CCS Deposit Payment Status")
             {
             }
-
             column(CCSBalanceExchange_PurchaseHeader; PurchaseHeader."CCS Balance Exchange")
             {
             }
@@ -110,7 +109,6 @@ report 66008 "CCS PO Shipping"
             { }
             column(TotalBalanceAmt; TotalBalanceAmt)
             {
-
             }
             column(TotalDepoAmt; TotalDepoAmt)
             { }
@@ -165,9 +163,6 @@ report 66008 "CCS PO Shipping"
                     SubTotalCarton += TotalCarton;
                     TotalCbm += Quantity * Item."Unit Volume";
                 end;
-
-
-
             }
             trigger OnPreDataItem()
             begin
@@ -194,5 +189,4 @@ report 66008 "CCS PO Shipping"
         TotalDepoAmt: Decimal;
         TotalOrderAmt: Decimal;
         TotalShipCost: Decimal;
-
 }

@@ -42,7 +42,6 @@ tableextension 66010 "CCS ModifySalesShipLine" extends "Sales Shipment Line" //1
         {
             DataClassification = CustomerContent;
             Caption = 'PO Number';
-
         }
     }
 }

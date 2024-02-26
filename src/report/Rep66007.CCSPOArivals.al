@@ -68,13 +68,10 @@ report 66007 "CCS PO Arivals"
             begin
                 SetCurrentKey("CCS Container No.");
             end;
-
         }
     }
     var
         Item: Record Item;
         TotalCBM: Decimal;
         TotalQty: Decimal;
-
 }
-

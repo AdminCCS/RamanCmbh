@@ -155,5 +155,4 @@ tableextension 66003 "CCS ModifyPurchRcptheader" extends "Purch. Rcpt. Header" /
             DataClassification = CustomerContent;
         }
     }
-
 }

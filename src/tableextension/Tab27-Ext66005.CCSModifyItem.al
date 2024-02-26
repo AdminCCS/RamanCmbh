@@ -82,19 +82,16 @@ tableextension 66005 "CCS Modify Item" extends Item //27
         {
             DataClassification = CustomerContent;
             Caption = 'Brand';
+            TableRelation = Brands.Code;
         }
-
         field(66016; "CCS Instant Ord Invt"; Decimal)
         {
-
             Caption = 'Instant Order Inventory';
             FieldClass = FlowField;
             CalcFormula = sum("Sales Line".Quantity where(Type = const(Item), "No." = field("No."),
                                                                  "CCS Order Type" = const("Instant Order")));
-
             DecimalPlaces = 0 : 5;
             Editable = false;
-
         }
         field(66017; "CCS Blocking Order Invt"; Decimal)
         {
@@ -138,7 +135,6 @@ tableextension 66005 "CCS Modify Item" extends Item //27
         {
             DataClassification = CustomerContent;
             Caption = 'Pallet height 2,20m';
-
         }
         field(66023; "VPE length in cm"; Decimal)
         {
@@ -260,7 +256,6 @@ tableextension 66005 "CCS Modify Item" extends Item //27
             Caption = 'PU PE foam in gr.';
             DataClassification = CustomerContent;
         }
-
         field(66047; "CCS Image Included"; Boolean)
         {
             DataClassification = CustomerContent;
@@ -296,12 +291,12 @@ tableextension 66005 "CCS Modify Item" extends Item //27
             Caption = 'Technical 5';
             DataClassification = CustomerContent;
         }
-        field(66054; "Produkt LxHxB"; Decimal)
+        field(66054; "Produkt LxHxB"; Text[50])
         {
             Caption = 'Produkt LxHxB';
             DataClassification = CustomerContent;
         }
-        field(66055; "VPE LxHxB"; Decimal)
+        field(66055; "VPE LxHxB"; Text[50])
         {
             Caption = 'VPE LxHxB';
             DataClassification = CustomerContent;
@@ -318,6 +313,4 @@ tableextension 66005 "CCS Modify Item" extends Item //27
         {
         }
     }
-
-
 }

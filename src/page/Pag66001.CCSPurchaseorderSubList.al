@@ -15,7 +15,6 @@ page 66001 "CCS Purchase order Sub List"
         {
             repeater(SalesLineList)
             {
-
                 field("Document No."; Rec."Document No.")
                 {
                     ApplicationArea = all;
@@ -41,7 +40,6 @@ page 66001 "CCS Purchase order Sub List"
                     ApplicationArea = all;
                     ToolTip = 'Specifies the value of the Free Available Stock field.';
                 }
-
             }
         }
     }
@@ -52,5 +50,4 @@ page 66001 "CCS Purchase order Sub List"
         Rec.CalcFields("Pre Sold Quantity");
         rec."Free Available Stock" := Rec.Quantity - (Rec."Pre Sold Quantity");
     end;
-
 }

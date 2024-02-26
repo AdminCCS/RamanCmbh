@@ -10,7 +10,6 @@ report 66005 "Item List"
     {
         // dataitem(Customer; Customer)
         // {
-
         //     DataItemTableView = SORTING("Customer Price Group") where("Customer Price Group" = filter(<> ''));
         //     RequestFilterFields = "No.";
         //     dataitem("Sales Price"; "Sales Price")
@@ -73,7 +72,6 @@ report 66005 "Item List"
             column(Item__Unit_Cost_Caption; FieldCaption(Item."Unit Cost"))
             {
             }
-
             column(Model_Status; item."CCS Model Status")
             {
             }
@@ -208,7 +206,6 @@ report 66005 "Item List"
         //}
 
         //}
-
     }
 
     requestpage
@@ -232,11 +229,9 @@ report 66005 "Item List"
                         TableRelation = Customer."No.";
                         ToolTip = 'Specifies the value of the Customer No. field.';
                     }
-
                 }
             }
         }
-
     }
 
     trigger OnPreReport()
@@ -256,7 +251,4 @@ report 66005 "Item List"
         SalesPrice: Decimal;
         CurrReport_PAGENOCaptionLbl: Label 'Page';
         Text000Lbl: Label 'Item List';
-
-
 }
-
