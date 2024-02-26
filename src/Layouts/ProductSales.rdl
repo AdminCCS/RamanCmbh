@@ -11,6 +11,325 @@
       <rd:DataSourceID>d0c8a615-b32a-4380-9bf4-a8d555dce654</rd:DataSourceID>
     </DataSource>
   </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="Year">
+          <DataField>Year</DataField>
+        </Field>
+        <Field Name="Month">
+          <DataField>Month</DataField>
+        </Field>
+        <Field Name="Customer_Posting_Group">
+          <DataField>Customer_Posting_Group</DataField>
+        </Field>
+        <Field Name="Sale_Amount">
+          <DataField>Sale_Amount</DataField>
+        </Field>
+        <Field Name="Sale_AmountFormat">
+          <DataField>Sale_AmountFormat</DataField>
+        </Field>
+        <Field Name="TotalSales">
+          <DataField>TotalSales</DataField>
+        </Field>
+        <Field Name="TotalSalesFormat">
+          <DataField>TotalSalesFormat</DataField>
+        </Field>
+        <Field Name="Sale_Quantity">
+          <DataField>Sale_Quantity</DataField>
+        </Field>
+        <Field Name="Sale_QuantityFormat">
+          <DataField>Sale_QuantityFormat</DataField>
+        </Field>
+        <Field Name="TotalSaleQty">
+          <DataField>TotalSaleQty</DataField>
+        </Field>
+        <Field Name="TotalSaleQtyFormat">
+          <DataField>TotalSaleQtyFormat</DataField>
+        </Field>
+        <Field Name="MonthSort">
+          <DataField>MonthSort</DataField>
+        </Field>
+        <Field Name="Margin">
+          <DataField>Margin</DataField>
+        </Field>
+        <Field Name="MarginFormat">
+          <DataField>MarginFormat</DataField>
+        </Field>
+        <Field Name="Margin__">
+          <DataField>Margin__</DataField>
+        </Field>
+        <Field Name="Margin__Format">
+          <DataField>Margin__Format</DataField>
+        </Field>
+        <Field Name="itemno">
+          <DataField>itemno</DataField>
+        </Field>
+        <Field Name="custpostgrpfilter">
+          <DataField>custpostgrpfilter</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Goods_Group">
+          <DataField>Goods_Group</DataField>
+        </Field>
+        <Field Name="Unit_Qty_40_HC_feet">
+          <DataField>Unit_Qty_40_HC_feet</DataField>
+        </Field>
+        <Field Name="Unit_Qty_40_HC_feetFormat">
+          <DataField>Unit_Qty_40_HC_feetFormat</DataField>
+        </Field>
+        <Field Name="Rec_Sales_Price">
+          <DataField>Rec_Sales_Price</DataField>
+        </Field>
+        <Field Name="Rec_Sales_PriceFormat">
+          <DataField>Rec_Sales_PriceFormat</DataField>
+        </Field>
+        <Field Name="Vendor_No">
+          <DataField>Vendor_No</DataField>
+        </Field>
+        <Field Name="Vendor_Item_No">
+          <DataField>Vendor_Item_No</DataField>
+        </Field>
+        <Field Name="Item__Picture">
+          <DataField>Item__Picture</DataField>
+        </Field>
+        <Field Name="Inventory">
+          <DataField>Inventory</DataField>
+        </Field>
+        <Field Name="InventoryFormat">
+          <DataField>InventoryFormat</DataField>
+        </Field>
+        <Field Name="Blocking_Order_Invt">
+          <DataField>Blocking_Order_Invt</DataField>
+        </Field>
+        <Field Name="Blocking_Order_InvtFormat">
+          <DataField>Blocking_Order_InvtFormat</DataField>
+        </Field>
+        <Field Name="Free_Available_Stock">
+          <DataField>Free_Available_Stock</DataField>
+        </Field>
+        <Field Name="Free_Available_StockFormat">
+          <DataField>Free_Available_StockFormat</DataField>
+        </Field>
+        <Field Name="Vendor_Name">
+          <DataField>Vendor_Name</DataField>
+        </Field>
+        <Field Name="Vendor_Currency">
+          <DataField>Vendor_Currency</DataField>
+        </Field>
+        <Field Name="purchVal1">
+          <DataField>purchVal1</DataField>
+        </Field>
+        <Field Name="purchVal1Format">
+          <DataField>purchVal1Format</DataField>
+        </Field>
+        <Field Name="purchVal2">
+          <DataField>purchVal2</DataField>
+        </Field>
+        <Field Name="purchVal2Format">
+          <DataField>purchVal2Format</DataField>
+        </Field>
+        <Field Name="purchVal3">
+          <DataField>purchVal3</DataField>
+        </Field>
+        <Field Name="purchVal3Format">
+          <DataField>purchVal3Format</DataField>
+        </Field>
+        <Field Name="AlloverSales">
+          <DataField>AlloverSales</DataField>
+        </Field>
+        <Field Name="AlloverSalesFormat">
+          <DataField>AlloverSalesFormat</DataField>
+        </Field>
+        <Field Name="AlloverMargin">
+          <DataField>AlloverMargin</DataField>
+        </Field>
+        <Field Name="AlloverMarginFormat">
+          <DataField>AlloverMarginFormat</DataField>
+        </Field>
+        <Field Name="AlloverMargin_per">
+          <DataField>AlloverMargin_per</DataField>
+        </Field>
+        <Field Name="AlloverMargin_perFormat">
+          <DataField>AlloverMargin_perFormat</DataField>
+        </Field>
+        <Field Name="AlloverPurchQty">
+          <DataField>AlloverPurchQty</DataField>
+        </Field>
+        <Field Name="AlloverPurchQtyFormat">
+          <DataField>AlloverPurchQtyFormat</DataField>
+        </Field>
+        <Field Name="AlloverPurchAmount">
+          <DataField>AlloverPurchAmount</DataField>
+        </Field>
+        <Field Name="AlloverPurchAmountFormat">
+          <DataField>AlloverPurchAmountFormat</DataField>
+        </Field>
+        <Field Name="OpenPurchQty">
+          <DataField>OpenPurchQty</DataField>
+        </Field>
+        <Field Name="OpenPurchQtyFormat">
+          <DataField>OpenPurchQtyFormat</DataField>
+        </Field>
+        <Field Name="Disposition_Invt">
+          <DataField>Disposition_Invt</DataField>
+        </Field>
+        <Field Name="Disposition_InvtFormat">
+          <DataField>Disposition_InvtFormat</DataField>
+        </Field>
+        <Field Name="FreeIncomingQty">
+          <DataField>FreeIncomingQty</DataField>
+        </Field>
+        <Field Name="FreeIncomingQtyFormat">
+          <DataField>FreeIncomingQtyFormat</DataField>
+        </Field>
+        <Field Name="ToYear">
+          <DataField>ToYear</DataField>
+        </Field>
+        <Field Name="ToMonth">
+          <DataField>ToMonth</DataField>
+        </Field>
+        <Field Name="ToCustomer_Posting_Group">
+          <DataField>ToCustomer_Posting_Group</DataField>
+        </Field>
+        <Field Name="ToSale_Amount">
+          <DataField>ToSale_Amount</DataField>
+        </Field>
+        <Field Name="ToSale_AmountFormat">
+          <DataField>ToSale_AmountFormat</DataField>
+        </Field>
+        <Field Name="ToTotalSales">
+          <DataField>ToTotalSales</DataField>
+        </Field>
+        <Field Name="ToTotalSalesFormat">
+          <DataField>ToTotalSalesFormat</DataField>
+        </Field>
+        <Field Name="ToSale_Quantity">
+          <DataField>ToSale_Quantity</DataField>
+        </Field>
+        <Field Name="ToSale_QuantityFormat">
+          <DataField>ToSale_QuantityFormat</DataField>
+        </Field>
+        <Field Name="ToTotalSaleQty">
+          <DataField>ToTotalSaleQty</DataField>
+        </Field>
+        <Field Name="ToTotalSaleQtyFormat">
+          <DataField>ToTotalSaleQtyFormat</DataField>
+        </Field>
+        <Field Name="ToMonthSort">
+          <DataField>ToMonthSort</DataField>
+        </Field>
+        <Field Name="ToMargin">
+          <DataField>ToMargin</DataField>
+        </Field>
+        <Field Name="ToMarginFormat">
+          <DataField>ToMarginFormat</DataField>
+        </Field>
+        <Field Name="ToMargin__">
+          <DataField>ToMargin__</DataField>
+        </Field>
+        <Field Name="ToMargin__Format">
+          <DataField>ToMargin__Format</DataField>
+        </Field>
+        <Field Name="CompYear">
+          <DataField>CompYear</DataField>
+        </Field>
+        <Field Name="CompMonth">
+          <DataField>CompMonth</DataField>
+        </Field>
+        <Field Name="CompCustomer_Posting_Group">
+          <DataField>CompCustomer_Posting_Group</DataField>
+        </Field>
+        <Field Name="CompSale_Amount">
+          <DataField>CompSale_Amount</DataField>
+        </Field>
+        <Field Name="CompSale_AmountFormat">
+          <DataField>CompSale_AmountFormat</DataField>
+        </Field>
+        <Field Name="CompMonthSort">
+          <DataField>CompMonthSort</DataField>
+        </Field>
+        <Field Name="ToTFromYear">
+          <DataField>ToTFromYear</DataField>
+        </Field>
+        <Field Name="ToTFromMonth">
+          <DataField>ToTFromMonth</DataField>
+        </Field>
+        <Field Name="ToTFromCustomer_Posting_Group">
+          <DataField>ToTFromCustomer_Posting_Group</DataField>
+        </Field>
+        <Field Name="ToTFromSale_Amount">
+          <DataField>ToTFromSale_Amount</DataField>
+        </Field>
+        <Field Name="ToTFromSale_AmountFormat">
+          <DataField>ToTFromSale_AmountFormat</DataField>
+        </Field>
+        <Field Name="ToTFromTotalSales">
+          <DataField>ToTFromTotalSales</DataField>
+        </Field>
+        <Field Name="ToTFromTotalSalesFormat">
+          <DataField>ToTFromTotalSalesFormat</DataField>
+        </Field>
+        <Field Name="ToTFromSale_Quantity">
+          <DataField>ToTFromSale_Quantity</DataField>
+        </Field>
+        <Field Name="ToTFromSale_QuantityFormat">
+          <DataField>ToTFromSale_QuantityFormat</DataField>
+        </Field>
+        <Field Name="ToTFromTotalSaleQty">
+          <DataField>ToTFromTotalSaleQty</DataField>
+        </Field>
+        <Field Name="ToTFromTotalSaleQtyFormat">
+          <DataField>ToTFromTotalSaleQtyFormat</DataField>
+        </Field>
+        <Field Name="ToTFromMonthSort">
+          <DataField>ToTFromMonthSort</DataField>
+        </Field>
+        <Field Name="ToT_ToToYear">
+          <DataField>ToT_ToToYear</DataField>
+        </Field>
+        <Field Name="ToT_ToToMonth">
+          <DataField>ToT_ToToMonth</DataField>
+        </Field>
+        <Field Name="ToT_ToToCustomer_Posting_Group">
+          <DataField>ToT_ToToCustomer_Posting_Group</DataField>
+        </Field>
+        <Field Name="ToT_ToToSale_Amount">
+          <DataField>ToT_ToToSale_Amount</DataField>
+        </Field>
+        <Field Name="ToT_ToToSale_AmountFormat">
+          <DataField>ToT_ToToSale_AmountFormat</DataField>
+        </Field>
+        <Field Name="ToT_ToToTotalSales">
+          <DataField>ToT_ToToTotalSales</DataField>
+        </Field>
+        <Field Name="ToT_ToToTotalSalesFormat">
+          <DataField>ToT_ToToTotalSalesFormat</DataField>
+        </Field>
+        <Field Name="ToT_ToToSale_Quantity">
+          <DataField>ToT_ToToSale_Quantity</DataField>
+        </Field>
+        <Field Name="ToT_ToToSale_QuantityFormat">
+          <DataField>ToT_ToToSale_QuantityFormat</DataField>
+        </Field>
+        <Field Name="ToT_ToToTotalSaleQty">
+          <DataField>ToT_ToToTotalSaleQty</DataField>
+        </Field>
+        <Field Name="ToT_ToToTotalSaleQtyFormat">
+          <DataField>ToT_ToToTotalSaleQtyFormat</DataField>
+        </Field>
+        <Field Name="ToT_ToToMonthSort">
+          <DataField>ToT_ToToMonthSort</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -3220,6 +3539,7 @@
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>=Fields!Disposition_InvtFormat.Value</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3240,6 +3560,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -3906,7 +4227,7 @@
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>=Fields!MarginFormat.Value</Format>
+                                    <Format>=Fields!Disposition_InvtFormat.Value</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4054,7 +4375,7 @@
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>=Fields!FreeIncomingQtyFormat.Value</Format>
+                                    <Format>=Fields!Disposition_InvtFormat.Value</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4278,6 +4599,12 @@
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -4317,323 +4644,4 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Fields>
-        <Field Name="Year">
-          <DataField>Year</DataField>
-        </Field>
-        <Field Name="Month">
-          <DataField>Month</DataField>
-        </Field>
-        <Field Name="Customer_Posting_Group">
-          <DataField>Customer_Posting_Group</DataField>
-        </Field>
-        <Field Name="Sale_Amount">
-          <DataField>Sale_Amount</DataField>
-        </Field>
-        <Field Name="Sale_AmountFormat">
-          <DataField>Sale_AmountFormat</DataField>
-        </Field>
-        <Field Name="TotalSales">
-          <DataField>TotalSales</DataField>
-        </Field>
-        <Field Name="TotalSalesFormat">
-          <DataField>TotalSalesFormat</DataField>
-        </Field>
-        <Field Name="Sale_Quantity">
-          <DataField>Sale_Quantity</DataField>
-        </Field>
-        <Field Name="Sale_QuantityFormat">
-          <DataField>Sale_QuantityFormat</DataField>
-        </Field>
-        <Field Name="TotalSaleQty">
-          <DataField>TotalSaleQty</DataField>
-        </Field>
-        <Field Name="TotalSaleQtyFormat">
-          <DataField>TotalSaleQtyFormat</DataField>
-        </Field>
-        <Field Name="MonthSort">
-          <DataField>MonthSort</DataField>
-        </Field>
-        <Field Name="Margin">
-          <DataField>Margin</DataField>
-        </Field>
-        <Field Name="MarginFormat">
-          <DataField>MarginFormat</DataField>
-        </Field>
-        <Field Name="Margin__">
-          <DataField>Margin__</DataField>
-        </Field>
-        <Field Name="Margin__Format">
-          <DataField>Margin__Format</DataField>
-        </Field>
-        <Field Name="itemno">
-          <DataField>itemno</DataField>
-        </Field>
-        <Field Name="custpostgrpfilter">
-          <DataField>custpostgrpfilter</DataField>
-        </Field>
-        <Field Name="Description">
-          <DataField>Description</DataField>
-        </Field>
-        <Field Name="Goods_Group">
-          <DataField>Goods_Group</DataField>
-        </Field>
-        <Field Name="Unit_Qty_40_HC_feet">
-          <DataField>Unit_Qty_40_HC_feet</DataField>
-        </Field>
-        <Field Name="Unit_Qty_40_HC_feetFormat">
-          <DataField>Unit_Qty_40_HC_feetFormat</DataField>
-        </Field>
-        <Field Name="Rec_Sales_Price">
-          <DataField>Rec_Sales_Price</DataField>
-        </Field>
-        <Field Name="Rec_Sales_PriceFormat">
-          <DataField>Rec_Sales_PriceFormat</DataField>
-        </Field>
-        <Field Name="Vendor_No">
-          <DataField>Vendor_No</DataField>
-        </Field>
-        <Field Name="Vendor_Item_No">
-          <DataField>Vendor_Item_No</DataField>
-        </Field>
-        <Field Name="Item__Picture">
-          <DataField>Item__Picture</DataField>
-        </Field>
-        <Field Name="Inventory">
-          <DataField>Inventory</DataField>
-        </Field>
-        <Field Name="InventoryFormat">
-          <DataField>InventoryFormat</DataField>
-        </Field>
-        <Field Name="Blocking_Order_Invt">
-          <DataField>Blocking_Order_Invt</DataField>
-        </Field>
-        <Field Name="Blocking_Order_InvtFormat">
-          <DataField>Blocking_Order_InvtFormat</DataField>
-        </Field>
-        <Field Name="Free_Available_Stock">
-          <DataField>Free_Available_Stock</DataField>
-        </Field>
-        <Field Name="Free_Available_StockFormat">
-          <DataField>Free_Available_StockFormat</DataField>
-        </Field>
-        <Field Name="Vendor_Name">
-          <DataField>Vendor_Name</DataField>
-        </Field>
-        <Field Name="Vendor_Currency">
-          <DataField>Vendor_Currency</DataField>
-        </Field>
-        <Field Name="purchVal1">
-          <DataField>purchVal1</DataField>
-        </Field>
-        <Field Name="purchVal1Format">
-          <DataField>purchVal1Format</DataField>
-        </Field>
-        <Field Name="purchVal2">
-          <DataField>purchVal2</DataField>
-        </Field>
-        <Field Name="purchVal2Format">
-          <DataField>purchVal2Format</DataField>
-        </Field>
-        <Field Name="purchVal3">
-          <DataField>purchVal3</DataField>
-        </Field>
-        <Field Name="purchVal3Format">
-          <DataField>purchVal3Format</DataField>
-        </Field>
-        <Field Name="AlloverSales">
-          <DataField>AlloverSales</DataField>
-        </Field>
-        <Field Name="AlloverSalesFormat">
-          <DataField>AlloverSalesFormat</DataField>
-        </Field>
-        <Field Name="AlloverMargin">
-          <DataField>AlloverMargin</DataField>
-        </Field>
-        <Field Name="AlloverMarginFormat">
-          <DataField>AlloverMarginFormat</DataField>
-        </Field>
-        <Field Name="AlloverMargin_per">
-          <DataField>AlloverMargin_per</DataField>
-        </Field>
-        <Field Name="AlloverMargin_perFormat">
-          <DataField>AlloverMargin_perFormat</DataField>
-        </Field>
-        <Field Name="AlloverPurchQty">
-          <DataField>AlloverPurchQty</DataField>
-        </Field>
-        <Field Name="AlloverPurchQtyFormat">
-          <DataField>AlloverPurchQtyFormat</DataField>
-        </Field>
-        <Field Name="AlloverPurchAmount">
-          <DataField>AlloverPurchAmount</DataField>
-        </Field>
-        <Field Name="AlloverPurchAmountFormat">
-          <DataField>AlloverPurchAmountFormat</DataField>
-        </Field>
-        <Field Name="OpenPurchQty">
-          <DataField>OpenPurchQty</DataField>
-        </Field>
-        <Field Name="OpenPurchQtyFormat">
-          <DataField>OpenPurchQtyFormat</DataField>
-        </Field>
-        <Field Name="Disposition_Invt">
-          <DataField>Disposition_Invt</DataField>
-        </Field>
-        <Field Name="Disposition_InvtFormat">
-          <DataField>Disposition_InvtFormat</DataField>
-        </Field>
-        <Field Name="FreeIncomingQty">
-          <DataField>FreeIncomingQty</DataField>
-        </Field>
-        <Field Name="FreeIncomingQtyFormat">
-          <DataField>FreeIncomingQtyFormat</DataField>
-        </Field>
-        <Field Name="ToYear">
-          <DataField>ToYear</DataField>
-        </Field>
-        <Field Name="ToMonth">
-          <DataField>ToMonth</DataField>
-        </Field>
-        <Field Name="ToCustomer_Posting_Group">
-          <DataField>ToCustomer_Posting_Group</DataField>
-        </Field>
-        <Field Name="ToSale_Amount">
-          <DataField>ToSale_Amount</DataField>
-        </Field>
-        <Field Name="ToSale_AmountFormat">
-          <DataField>ToSale_AmountFormat</DataField>
-        </Field>
-        <Field Name="ToTotalSales">
-          <DataField>ToTotalSales</DataField>
-        </Field>
-        <Field Name="ToTotalSalesFormat">
-          <DataField>ToTotalSalesFormat</DataField>
-        </Field>
-        <Field Name="ToSale_Quantity">
-          <DataField>ToSale_Quantity</DataField>
-        </Field>
-        <Field Name="ToSale_QuantityFormat">
-          <DataField>ToSale_QuantityFormat</DataField>
-        </Field>
-        <Field Name="ToTotalSaleQty">
-          <DataField>ToTotalSaleQty</DataField>
-        </Field>
-        <Field Name="ToTotalSaleQtyFormat">
-          <DataField>ToTotalSaleQtyFormat</DataField>
-        </Field>
-        <Field Name="ToMonthSort">
-          <DataField>ToMonthSort</DataField>
-        </Field>
-        <Field Name="ToMargin">
-          <DataField>ToMargin</DataField>
-        </Field>
-        <Field Name="ToMarginFormat">
-          <DataField>ToMarginFormat</DataField>
-        </Field>
-        <Field Name="ToMargin__">
-          <DataField>ToMargin__</DataField>
-        </Field>
-        <Field Name="ToMargin__Format">
-          <DataField>ToMargin__Format</DataField>
-        </Field>
-        <Field Name="CompYear">
-          <DataField>CompYear</DataField>
-        </Field>
-        <Field Name="CompMonth">
-          <DataField>CompMonth</DataField>
-        </Field>
-        <Field Name="CompCustomer_Posting_Group">
-          <DataField>CompCustomer_Posting_Group</DataField>
-        </Field>
-        <Field Name="CompSale_Amount">
-          <DataField>CompSale_Amount</DataField>
-        </Field>
-        <Field Name="CompSale_AmountFormat">
-          <DataField>CompSale_AmountFormat</DataField>
-        </Field>
-        <Field Name="CompMonthSort">
-          <DataField>CompMonthSort</DataField>
-        </Field>
-        <Field Name="ToTFromYear">
-          <DataField>ToTFromYear</DataField>
-        </Field>
-        <Field Name="ToTFromMonth">
-          <DataField>ToTFromMonth</DataField>
-        </Field>
-        <Field Name="ToTFromCustomer_Posting_Group">
-          <DataField>ToTFromCustomer_Posting_Group</DataField>
-        </Field>
-        <Field Name="ToTFromSale_Amount">
-          <DataField>ToTFromSale_Amount</DataField>
-        </Field>
-        <Field Name="ToTFromSale_AmountFormat">
-          <DataField>ToTFromSale_AmountFormat</DataField>
-        </Field>
-        <Field Name="ToTFromTotalSales">
-          <DataField>ToTFromTotalSales</DataField>
-        </Field>
-        <Field Name="ToTFromTotalSalesFormat">
-          <DataField>ToTFromTotalSalesFormat</DataField>
-        </Field>
-        <Field Name="ToTFromSale_Quantity">
-          <DataField>ToTFromSale_Quantity</DataField>
-        </Field>
-        <Field Name="ToTFromSale_QuantityFormat">
-          <DataField>ToTFromSale_QuantityFormat</DataField>
-        </Field>
-        <Field Name="ToTFromTotalSaleQty">
-          <DataField>ToTFromTotalSaleQty</DataField>
-        </Field>
-        <Field Name="ToTFromTotalSaleQtyFormat">
-          <DataField>ToTFromTotalSaleQtyFormat</DataField>
-        </Field>
-        <Field Name="ToTFromMonthSort">
-          <DataField>ToTFromMonthSort</DataField>
-        </Field>
-        <Field Name="ToT_ToToYear">
-          <DataField>ToT_ToToYear</DataField>
-        </Field>
-        <Field Name="ToT_ToToMonth">
-          <DataField>ToT_ToToMonth</DataField>
-        </Field>
-        <Field Name="ToT_ToToCustomer_Posting_Group">
-          <DataField>ToT_ToToCustomer_Posting_Group</DataField>
-        </Field>
-        <Field Name="ToT_ToToSale_Amount">
-          <DataField>ToT_ToToSale_Amount</DataField>
-        </Field>
-        <Field Name="ToT_ToToSale_AmountFormat">
-          <DataField>ToT_ToToSale_AmountFormat</DataField>
-        </Field>
-        <Field Name="ToT_ToToTotalSales">
-          <DataField>ToT_ToToTotalSales</DataField>
-        </Field>
-        <Field Name="ToT_ToToTotalSalesFormat">
-          <DataField>ToT_ToToTotalSalesFormat</DataField>
-        </Field>
-        <Field Name="ToT_ToToSale_Quantity">
-          <DataField>ToT_ToToSale_Quantity</DataField>
-        </Field>
-        <Field Name="ToT_ToToSale_QuantityFormat">
-          <DataField>ToT_ToToSale_QuantityFormat</DataField>
-        </Field>
-        <Field Name="ToT_ToToTotalSaleQty">
-          <DataField>ToT_ToToTotalSaleQty</DataField>
-        </Field>
-        <Field Name="ToT_ToToTotalSaleQtyFormat">
-          <DataField>ToT_ToToTotalSaleQtyFormat</DataField>
-        </Field>
-        <Field Name="ToT_ToToMonthSort">
-          <DataField>ToT_ToToMonthSort</DataField>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-    </DataSet>
-  </DataSets>
 </Report>
