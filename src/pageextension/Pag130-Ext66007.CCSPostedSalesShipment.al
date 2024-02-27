@@ -28,7 +28,6 @@ pageextension 66007 "CCS PostedSalesShipment" extends "Posted Sales Shipment" //
                     SalesShipmentHeaderRec.Reset();
                     SalesShipmentHeaderRec.SetRange("No.", Rec."No.");
                     Report.Run(Report::"Delivery Note", true, true, SalesShipmentHeaderRec);
-
                 end;
             }
         }

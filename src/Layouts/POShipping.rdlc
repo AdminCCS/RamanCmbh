@@ -109,90 +109,12 @@
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
-                                          <ColSpan>2</ColSpan>
+                                          <ColSpan>4</ColSpan>
                                         </CellContents>
                                       </TablixCell>
                                       <TablixCell />
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox10">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox10</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <TopBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </TopBorder>
-                                              <BottomBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <BackgroundColor>LightGrey</BackgroundColor>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox27">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox27</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <TopBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </TopBorder>
-                                              <BottomBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <BackgroundColor>LightGrey</BackgroundColor>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell />
                                       <TablixCell>
                                         <CellContents>
                                           <Textbox Name="Textbox24">

@@ -26,9 +26,6 @@ reportextension 66000 "Posted Sales CrMemo Extension" extends "Standard Sales - 
         }
     }
 
-
     var
         RepLabel: Text[30];
-
-
 }

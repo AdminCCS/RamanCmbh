@@ -1489,7 +1489,6 @@
                                                 <Value>=Fields!VPE_HLW.Value</Value>
                                                 <Style>
                                                   <FontSize>7pt</FontSize>
-                                                  <Format>0.00000;(0.00000)</Format>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1505,6 +1504,7 @@
                                           </Border>
                                         </Style>
                                       </Textbox>
+                                      <rd:Selected>true</rd:Selected>
                                     </CellContents>
                                   </TablixCell>
                                   <TablixCell>
@@ -1645,7 +1645,6 @@
                                         <rd:DefaultName>Cabel_Length_in_mFormat</rd:DefaultName>
                                         <Style />
                                       </Textbox>
-                                      <rd:Selected>true</rd:Selected>
                                     </CellContents>
                                   </TablixCell>
                                   <TablixCell>
@@ -2573,14 +2572,8 @@ End Function
         <Field Name="Product_HLW">
           <DataField>Product_HLW</DataField>
         </Field>
-        <Field Name="Product_HLWFormat">
-          <DataField>Product_HLWFormat</DataField>
-        </Field>
         <Field Name="VPE_HLW">
           <DataField>VPE_HLW</DataField>
-        </Field>
-        <Field Name="VPE_HLWFormat">
-          <DataField>VPE_HLWFormat</DataField>
         </Field>
         <Field Name="Pal_Location_Krt">
           <DataField>Pal_Location_Krt</DataField>

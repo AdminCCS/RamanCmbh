@@ -8,8 +8,6 @@ tableextension 66019 "CCS ModifyPurchCrMemoLine" extends "Purch. Cr. Memo Line" 
             FieldClass = FlowField;
             CalcFormula = sum("Sales Line".Quantity where(Type = const(Item), "No." = field("No."),
                                                                  "Document No." = field("Document No.")));
-
         }
-
     }
 }

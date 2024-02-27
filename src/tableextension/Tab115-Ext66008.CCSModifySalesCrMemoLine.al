@@ -42,7 +42,6 @@ tableextension 66008 "CCS ModifySalesCrMemoLine" extends "Sales Cr.Memo Line" //
         {
             DataClassification = CustomerContent;
             Caption = 'PO Number';
-
         }
     }
 }

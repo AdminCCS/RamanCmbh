@@ -155,5 +155,4 @@ tableextension 66004 "CCS Modify PurchArchieve" extends "Purchase Header Archive
             DataClassification = CustomerContent;
         }
     }
-
 }

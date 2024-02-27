@@ -42,7 +42,6 @@ tableextension 66009 "CCS ModifySalesArchLine" extends "Sales Line Archive" //51
         {
             DataClassification = CustomerContent;
             Caption = 'PO Number';
-
         }
     }
 }

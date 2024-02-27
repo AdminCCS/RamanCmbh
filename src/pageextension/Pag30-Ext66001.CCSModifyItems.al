@@ -3,7 +3,6 @@
 /// </summary>
 pageextension 66001 "CCS ModifyItems" extends "Item Card" //30
 {
-
     layout
     {
         modify("Description 2")
@@ -35,7 +34,6 @@ pageextension 66001 "CCS ModifyItems" extends "Item Card" //30
         }
         addafter(Warehouse)
         {
-
             group(CCSSetups)
             {
                 Caption = 'CCS Setups';
@@ -44,7 +42,6 @@ pageextension 66001 "CCS ModifyItems" extends "Item Card" //30
                     ApplicationArea = all;
                     ToolTip = 'Specifies the value of the Unit Qty 20 feet Cont. field.';
                 }
-
                 field("CCS Unit Qty 40 feet Cont."; Rec."CCS Unit Qty 40 feet Cont.")
                 {
                     ApplicationArea = all;
@@ -60,8 +57,6 @@ pageextension 66001 "CCS ModifyItems" extends "Item Card" //30
                     ApplicationArea = all;
                     ToolTip = 'Specifies the value of the Rec. Sales Price field.';
                 }
-
-
                 field("CCS Rec. Street Price"; Rec."CCS Rec. Street Price")
                 {
                     ApplicationArea = all;
@@ -73,7 +68,6 @@ pageextension 66001 "CCS ModifyItems" extends "Item Card" //30
                     Visible = false;
                     ToolTip = 'Specifies the value of the Pallet Info. field.';
                 }
-
                 field("CCS Model Status"; Rec."CCS Model Status")
                 {
                     ApplicationArea = all;
@@ -110,14 +104,12 @@ pageextension 66001 "CCS ModifyItems" extends "Item Card" //30
                     Visible = false;
                     ToolTip = 'Specifies the value of the Item Status field.';
                 }
-
                 field("CCS Packsize Unit"; Rec."CCS Packsize Unit")
                 {
                     ApplicationArea = all;
                     Visible = false;
                     ToolTip = 'Specifies the value of the Packsize Unit field.';
                 }
-
                 field("CCS Packsize Masterbox"; Rec."CCS Masterbox")
                 {
                     ApplicationArea = all;
@@ -262,7 +254,6 @@ pageextension 66001 "CCS ModifyItems" extends "Item Card" //30
                     ApplicationArea = all;
                     ToolTip = 'Specifies the value of the VK P/P/K in gr. field.';
                 }
-
                 field("VK foil in gr."; Rec."VK foil in gr.")
                 {
                     ApplicationArea = all;
@@ -359,10 +350,8 @@ pageextension 66001 "CCS ModifyItems" extends "Item Card" //30
                     ApplicationArea = all;
                     ToolTip = 'Specifies the value of the Technical 5 field.';
                 }
-
             }
         }
-
     }
     trigger OnAfterGetRecord()
     var
@@ -371,5 +360,4 @@ pageextension 66001 "CCS ModifyItems" extends "Item Card" //30
         Rec.CalcFields(Inventory, "CCS Instant Ord Invt", "CCS Blocking Order Invt");
         rec."Free Available Stock" := Rec.Inventory - (Rec."CCS Instant Ord Invt" + Rec."CCS Blocking Order Invt");
     end;
-
 }

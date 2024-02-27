@@ -8,7 +8,7 @@
         <ConnectString />
       </ConnectionProperties>
       <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>6c2ec8ad-f6c5-416a-a0bb-9ac1b5718107</rd:DataSourceID>
+      <rd:DataSourceID>d0c8a615-b32a-4380-9bf4-a8d555dce654</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <ReportSections>
@@ -105,7 +105,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.22917in</Height>
+                  <Height>0.20833in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -251,7 +251,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.22917in</Size>
+                    <Size>0.20833in</Size>
                     <CellContents>
                       <Textbox Name="Textbox11">
                         <CanGrow>true</CanGrow>
@@ -306,7 +306,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>0.22917in</Size>
+                    <Size>0.20833in</Size>
                     <CellContents>
                       <Textbox Name="Customer_Posting_Group">
                         <CanGrow>true</CanGrow>
@@ -345,7 +345,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.22917in</Size>
+                    <Size>0.20833in</Size>
                     <CellContents>
                       <Textbox Name="Textbox15">
                         <CanGrow>true</CanGrow>
@@ -381,7 +381,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.22917in</Size>
+                    <Size>0.20833in</Size>
                     <CellContents>
                       <Textbox Name="Textbox2">
                         <CanGrow>true</CanGrow>
@@ -518,9 +518,9 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.70542in</Top>
-            <Left>0.17951in</Left>
-            <Height>0.45834in</Height>
+            <Top>1.60271in</Top>
+            <Left>0.05083in</Left>
+            <Height>0.41666in</Height>
             <Width>5.28126in</Width>
             <Style>
               <Border>
@@ -619,7 +619,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.22917in</Height>
+                  <Height>0.20833in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -765,7 +765,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.22917in</Size>
+                    <Size>0.19792in</Size>
                     <CellContents>
                       <Textbox Name="Textbox21">
                         <CanGrow>true</CanGrow>
@@ -811,7 +811,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>0.22917in</Size>
+                    <Size>0.19792in</Size>
                     <CellContents>
                       <Textbox Name="ToCustomer_Posting_Group">
                         <CanGrow>true</CanGrow>
@@ -850,7 +850,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.22917in</Size>
+                    <Size>0.19792in</Size>
                     <CellContents>
                       <Textbox Name="Textbox19">
                         <CanGrow>true</CanGrow>
@@ -886,7 +886,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.22917in</Size>
+                    <Size>0.19792in</Size>
                     <CellContents>
                       <Textbox Name="Textbox23">
                         <CanGrow>true</CanGrow>
@@ -1026,142 +1026,11 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.70542in</Top>
-            <Left>5.60868in</Left>
-            <Height>0.45834in</Height>
+            <Top>1.60271in</Top>
+            <Left>5.48in</Left>
+            <Height>0.40625in</Height>
             <Width>5.30207in</Width>
             <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Tablix>
-          <Tablix Name="Tablix5">
-            <TablixBody>
-              <TablixColumns>
-                <TablixColumn>
-                  <Width>1.51042in</Width>
-                </TablixColumn>
-              </TablixColumns>
-              <TablixRows>
-                <TablixRow>
-                  <Height>0.22917in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="CompSale_Amount">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Code.BlankZero(Fields!CompSale_Amount.Value)</Value>
-                                  <Style>
-                                    <FontSize>8pt</FontSize>
-                                    <Format>=Fields!CompSale_AmountFormat.Value</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>CompSale_Amount</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=iif(Fields!CompMonthSort.Value Mod 2 = 0,"White","LightGrey")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-              </TablixRows>
-            </TablixBody>
-            <TablixColumnHierarchy>
-              <TablixMembers>
-                <TablixMember>
-                  <Group Name="CompCustomer_Posting_Group">
-                    <GroupExpressions>
-                      <GroupExpression>=Fields!CompCustomer_Posting_Group.Value</GroupExpression>
-                    </GroupExpressions>
-                  </Group>
-                  <SortExpressions>
-                    <SortExpression>
-                      <Value>=Fields!CompCustomer_Posting_Group.Value</Value>
-                      <Direction>Descending</Direction>
-                    </SortExpression>
-                  </SortExpressions>
-                  <TablixHeader>
-                    <Size>0.22917in</Size>
-                    <CellContents>
-                      <Textbox Name="CompCustomer_Posting_Group">
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value>=Fields!CompCustomer_Posting_Group.Value</Value>
-                                <Style>
-                                  <FontSize>8pt</FontSize>
-                                  <FontWeight>Bold</FontWeight>
-                                </Style>
-                              </TextRun>
-                            </TextRuns>
-                            <Style />
-                          </Paragraph>
-                        </Paragraphs>
-                        <rd:DefaultName>CompCustomer_Posting_Group</rd:DefaultName>
-                        <Style>
-                          <Border>
-                            <Color>LightGrey</Color>
-                            <Style>Solid</Style>
-                          </Border>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
-                    </CellContents>
-                  </TablixHeader>
-                  <Visibility>
-                    <Hidden>=iif(Fields!CompCustomer_Posting_Group.Value="",true,false)</Hidden>
-                  </Visibility>
-                </TablixMember>
-              </TablixMembers>
-            </TablixColumnHierarchy>
-            <TablixRowHierarchy>
-              <TablixMembers>
-                <TablixMember>
-                  <Group Name="CompMonth">
-                    <GroupExpressions>
-                      <GroupExpression>=Fields!CompMonth.Value</GroupExpression>
-                    </GroupExpressions>
-                  </Group>
-                  <SortExpressions>
-                    <SortExpression>
-                      <Value>=Fields!CompMonthSort.Value</Value>
-                    </SortExpression>
-                  </SortExpressions>
-                </TablixMember>
-              </TablixMembers>
-            </TablixRowHierarchy>
-            <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.70542in</Top>
-            <Left>11.10035in</Left>
-            <Height>0.45834in</Height>
-            <Width>1.51042in</Width>
-            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1175,12 +1044,12 @@
                   <Width>1.72792in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>5.70833in</Width>
+                  <Width>3.55334in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.21875in</Height>
+                  <Height>0.17708in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1191,7 +1060,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Customer No Filter:</Value>
+                                  <Value>Item No Filter</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1202,9 +1071,6 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox17</rd:DefaultName>
-                          <Visibility>
-                            <Hidden>=iif(First(Fields!custno.Value, "DataSet_Result")="",true,false)</Hidden>
-                          </Visibility>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1220,14 +1086,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox14">
+                        <Textbox Name="itemno">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=First(Fields!custno.Value, "DataSet_Result")</Value>
+                                  <Value>=Fields!itemno.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1239,9 +1105,9 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox14</rd:DefaultName>
+                          <rd:DefaultName>itemno</rd:DefaultName>
                           <Visibility>
-                            <Hidden>=iif(First(Fields!custno.Value, "DataSet_Result")="",true,false)</Hidden>
+                            <Hidden>=iif(First(Fields!itemno.Value, "DataSet_Result")="",true,false)</Hidden>
                           </Visibility>
                           <Style>
                             <Border>
@@ -1259,18 +1125,458 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.17708in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox18">
+                        <Textbox Name="Textbox27">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Cust. Posting Group Filter:</Value>
+                                  <Value>Description</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox27</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Description">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Description.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Description</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.1875in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox29">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Goods Group</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox29</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Goods_Group">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Goods_Group.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Goods_Group</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.1875in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Unit Qty HC 40 Feet</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Unit_Qty_40_HC_feet">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Unit_Qty_40_HC_feet.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>=Fields!Unit_Qty_40_HC_feetFormat.Value</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Unit_Qty_40_HC_feet</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.19792in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Rec Sales Price</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Rec_Sales_Price">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Rec_Sales_Price.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>=Fields!Rec_Sales_PriceFormat.Value</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Rec_Sales_Price</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.20833in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox25">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Vendor No.</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox25</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Vendor_No">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Vendor_No.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Vendor_No</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.19792in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox22">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Vendor Item No.</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox22</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Vendor_Item_No">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Vendor_Item_No.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Vendor_Item_No</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.1875in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox33">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Cust. Posting Group Filter</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1282,7 +1588,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox18</rd:DefaultName>
                           <Visibility>
-                            <Hidden>=iif(First(Fields!custpostgrpfilter.Value, "DataSet_Result")="",true,false)</Hidden>
+                            <Hidden>=iif(First(Fields!custpostgrpfilter.Value, "DataSet_Result") = "", True, False)</Hidden>
                           </Visibility>
                           <Style>
                             <Border>
@@ -1299,14 +1605,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox20">
+                        <Textbox Name="Textbox34">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=First(Fields!custpostgrpfilter.Value, "DataSet_Result")</Value>
+                                  <Value>=Fields!custpostgrpfilter.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1320,7 +1626,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox20</rd:DefaultName>
                           <Visibility>
-                            <Hidden>=iif(First(Fields!custpostgrpfilter.Value, "DataSet_Result")="",true,false)</Hidden>
+                            <Hidden>=iif(First(Fields!custpostgrpfilter.Value, "DataSet_Result") = "", True, False)</Hidden>
                           </Visibility>
                           <Style>
                             <Border>
@@ -1349,28 +1655,363 @@
               <TablixMembers>
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
-            <Left>0.17868in</Left>
-            <Height>0.46875in</Height>
-            <Width>7.43625in</Width>
-            <ZIndex>3</ZIndex>
+            <DataSetName>DataSet_Result</DataSetName>
+            <Left>0.05083in</Left>
+            <Height>1.52083in</Height>
+            <Width>5.28126in</Width>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Tablix Name="Tablix6">
+          <Rectangle Name="Rectangle1">
+            <ReportItems>
+              <Image Name="Image1">
+                <Source>Database</Source>
+                <Value>=First(Fields!Item__Picture.Value, "DataSet_Result")</Value>
+                <MIMEType>image/bmp</MIMEType>
+                <Sizing>FitProportional</Sizing>
+                <Height>1.26389in</Height>
+                <Width>2.19792in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Image>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>0.06944in</Top>
+            <Left>5.70708in</Left>
+            <Height>1.26389in</Height>
+            <Width>2.19792in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Tablix Name="Tablix4">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.75in</Width>
+                  <Width>1.72792in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.55334in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
                   <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox39">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Current Product Availability</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox39</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>2</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.17708in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox18">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Inevntory</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox17</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox16">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Inventory.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>=Fields!InventoryFormat.Value</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox14</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.17708in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox28">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Blocking order Qty</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox27</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Description2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Blocking_Order_Invt.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>=Fields!Blocking_Order_InvtFormat.Value</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Description</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.1875in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox30">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Free Available Stock</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox29</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Goods_Group2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Free_Available_Stock.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>=Fields!Free_Available_StockFormat.Value</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Goods_Group</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet_Result</DataSetName>
+            <Top>2.56386in</Top>
+            <Left>0.06291in</Left>
+            <Height>0.79166in</Height>
+            <Width>5.28126in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Tablix Name="Tablix5">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.39583in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.21875in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1441,7 +2082,7 @@
                         </SortExpression>
                       </SortExpressions>
                       <TablixHeader>
-                        <Size>1.67709in</Size>
+                        <Size>1.66501in</Size>
                         <CellContents>
                           <Textbox Name="ToTFromMonth">
                             <CanGrow>true</CanGrow>
@@ -1483,31 +2124,31 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>1.32501in</Top>
-            <Left>0.17951in</Left>
-            <Height>0.25in</Height>
-            <Width>3.42709in</Width>
-            <ZIndex>4</ZIndex>
+            <Top>2.21382in</Top>
+            <Left>0.05249in</Left>
+            <Height>0.21875in</Height>
+            <Width>3.06084in</Width>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Tablix Name="Tablix4">
+          <Tablix Name="Tablix6">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.57292in</Width>
+                  <Width>1.38542in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.19792in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ToT_ToToTotalSales">
+                        <Textbox Name="ToTFromTotalSales2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1525,7 +2166,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>ToT_ToToTotalSales</rd:DefaultName>
+                          <rd:DefaultName>ToTFromTotalSales</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1551,7 +2192,7 @@
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
-                  <Group Name="ToT_ToToYear">
+                  <Group Name="ToTToYear">
                     <GroupExpressions>
                       <GroupExpression>=Fields!ToT_ToToYear.Value</GroupExpression>
                     </GroupExpressions>
@@ -1563,7 +2204,7 @@
                   </SortExpressions>
                   <TablixMembers>
                     <TablixMember>
-                      <Group Name="ToT_ToToMonth">
+                      <Group Name="ToTToMonth">
                         <GroupExpressions>
                           <GroupExpression>=Fields!ToT_ToToMonth.Value</GroupExpression>
                         </GroupExpressions>
@@ -1574,9 +2215,9 @@
                         </SortExpression>
                       </SortExpressions>
                       <TablixHeader>
-                        <Size>1.67708in</Size>
+                        <Size>1.66501in</Size>
                         <CellContents>
-                          <Textbox Name="ToT_ToToMonth">
+                          <Textbox Name="ToTFromMonth2">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
@@ -1593,7 +2234,7 @@
                                 <Style />
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>ToT_ToToMonth</rd:DefaultName>
+                            <rd:DefaultName>ToTFromMonth</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>LightGrey</Color>
@@ -1610,17 +2251,17 @@
                     </TablixMember>
                   </TablixMembers>
                   <Visibility>
-                    <Hidden>=iif(Fields!ToT_ToToMonth.Value="",true,false)</Hidden>
+                    <Hidden>=iif(Fields!ToT_ToToYear.Value = "", True, False)</Hidden>
                   </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>1.32501in</Top>
-            <Left>5.60868in</Left>
-            <Height>0.25in</Height>
-            <Width>3.25in</Width>
-            <ZIndex>5</ZIndex>
+            <Top>2.21382in</Top>
+            <Left>5.48in</Left>
+            <Height>0.19792in</Height>
+            <Width>3.05043in</Width>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1628,13 +2269,13 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.57501in</Height>
+        <Height>3.35552in</Height>
         <Style />
       </Body>
-      <Width>12.62119in</Width>
+      <Width>10.88624in</Width>
       <Page>
         <PageHeader>
-          <Height>0.88416in</Height>
+          <Height>0.94097in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1657,8 +2298,8 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.12889cm</Top>
-              <Left>25.63879cm</Left>
+              <Top>0.73624cm</Top>
+              <Left>22.13694cm</Left>
               <Height>11.62006pt</Height>
               <Width>4.94437cm</Width>
               <Style>
@@ -1683,8 +2324,8 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.75425cm</Top>
-              <Left>25.63879cm</Left>
+              <Top>0.3616cm</Top>
+              <Left>22.13694cm</Left>
               <Height>10.61969pt</Height>
               <Width>4.94437cm</Width>
               <ZIndex>1</ZIndex>
@@ -1711,8 +2352,7 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.14417in</Top>
-              <Left>25.63879cm</Left>
+              <Left>22.13694cm</Left>
               <Height>11pt</Height>
               <Width>4.94437cm</Width>
               <ZIndex>2</ZIndex>
@@ -1728,7 +2368,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>General Sales Turnover Report</Value>
+                      <Value>Product Sales Report</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -1738,8 +2378,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.125in</Top>
-              <Left>0.17951in</Left>
+              <Top>0.01736in</Top>
+              <Left>0.05083in</Left>
               <Height>0.25in</Height>
               <Width>3.19792in</Width>
               <ZIndex>3</ZIndex>
@@ -1770,8 +2410,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>0.67583in</Top>
-              <Left>0.17951in</Left>
+              <Top>0.59723in</Top>
+              <Left>0.05083in</Left>
               <Height>0.20833in</Height>
               <Width>1.97917in</Width>
               <ZIndex>4</ZIndex>
@@ -1792,10 +2432,7 @@
             </Border>
           </Style>
         </PageHeader>
-        <PageHeight>8.5in</PageHeight>
-        <PageWidth>20in</PageWidth>
-        <LeftMargin>0.3in</LeftMargin>
-        <TopMargin>0.3in</TopMargin>
+        <PageWidth>17in</PageWidth>
         <Style />
       </Page>
     </ReportSection>
@@ -1863,6 +2500,18 @@ End Function
         <Field Name="TotalSalesFormat">
           <DataField>TotalSalesFormat</DataField>
         </Field>
+        <Field Name="Sale_Quantity">
+          <DataField>Sale_Quantity</DataField>
+        </Field>
+        <Field Name="Sale_QuantityFormat">
+          <DataField>Sale_QuantityFormat</DataField>
+        </Field>
+        <Field Name="TotalSaleQty">
+          <DataField>TotalSaleQty</DataField>
+        </Field>
+        <Field Name="TotalSaleQtyFormat">
+          <DataField>TotalSaleQtyFormat</DataField>
+        </Field>
         <Field Name="MonthSort">
           <DataField>MonthSort</DataField>
         </Field>
@@ -1878,11 +2527,92 @@ End Function
         <Field Name="Margin__Format">
           <DataField>Margin__Format</DataField>
         </Field>
-        <Field Name="custno">
-          <DataField>custno</DataField>
+        <Field Name="itemno">
+          <DataField>itemno</DataField>
         </Field>
         <Field Name="custpostgrpfilter">
           <DataField>custpostgrpfilter</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Goods_Group">
+          <DataField>Goods_Group</DataField>
+        </Field>
+        <Field Name="Unit_Qty_40_HC_feet">
+          <DataField>Unit_Qty_40_HC_feet</DataField>
+        </Field>
+        <Field Name="Unit_Qty_40_HC_feetFormat">
+          <DataField>Unit_Qty_40_HC_feetFormat</DataField>
+        </Field>
+        <Field Name="Rec_Sales_Price">
+          <DataField>Rec_Sales_Price</DataField>
+        </Field>
+        <Field Name="Rec_Sales_PriceFormat">
+          <DataField>Rec_Sales_PriceFormat</DataField>
+        </Field>
+        <Field Name="Vendor_No">
+          <DataField>Vendor_No</DataField>
+        </Field>
+        <Field Name="Vendor_Item_No">
+          <DataField>Vendor_Item_No</DataField>
+        </Field>
+        <Field Name="Item__Picture">
+          <DataField>Item__Picture</DataField>
+        </Field>
+        <Field Name="Inventory">
+          <DataField>Inventory</DataField>
+        </Field>
+        <Field Name="InventoryFormat">
+          <DataField>InventoryFormat</DataField>
+        </Field>
+        <Field Name="Blocking_Order_Invt">
+          <DataField>Blocking_Order_Invt</DataField>
+        </Field>
+        <Field Name="Blocking_Order_InvtFormat">
+          <DataField>Blocking_Order_InvtFormat</DataField>
+        </Field>
+        <Field Name="Free_Available_Stock">
+          <DataField>Free_Available_Stock</DataField>
+        </Field>
+        <Field Name="Free_Available_StockFormat">
+          <DataField>Free_Available_StockFormat</DataField>
+        </Field>
+        <Field Name="Vendor_Name">
+          <DataField>Vendor_Name</DataField>
+        </Field>
+        <Field Name="Vendor_Currency">
+          <DataField>Vendor_Currency</DataField>
+        </Field>
+        <Field Name="purchVal1">
+          <DataField>purchVal1</DataField>
+        </Field>
+        <Field Name="purchVal1Format">
+          <DataField>purchVal1Format</DataField>
+        </Field>
+        <Field Name="purchVal2">
+          <DataField>purchVal2</DataField>
+        </Field>
+        <Field Name="purchVal2Format">
+          <DataField>purchVal2Format</DataField>
+        </Field>
+        <Field Name="purchVal3">
+          <DataField>purchVal3</DataField>
+        </Field>
+        <Field Name="purchVal3Format">
+          <DataField>purchVal3Format</DataField>
+        </Field>
+        <Field Name="AlloverSales">
+          <DataField>AlloverSales</DataField>
+        </Field>
+        <Field Name="AlloverSalesFormat">
+          <DataField>AlloverSalesFormat</DataField>
+        </Field>
+        <Field Name="AlloverMargin">
+          <DataField>AlloverMargin</DataField>
+        </Field>
+        <Field Name="AlloverMarginFormat">
+          <DataField>AlloverMarginFormat</DataField>
         </Field>
         <Field Name="ToYear">
           <DataField>ToYear</DataField>
@@ -1904,6 +2634,18 @@ End Function
         </Field>
         <Field Name="ToTotalSalesFormat">
           <DataField>ToTotalSalesFormat</DataField>
+        </Field>
+        <Field Name="ToSale_Quantity">
+          <DataField>ToSale_Quantity</DataField>
+        </Field>
+        <Field Name="ToSale_QuantityFormat">
+          <DataField>ToSale_QuantityFormat</DataField>
+        </Field>
+        <Field Name="ToTotalSaleQty">
+          <DataField>ToTotalSaleQty</DataField>
+        </Field>
+        <Field Name="ToTotalSaleQtyFormat">
+          <DataField>ToTotalSaleQtyFormat</DataField>
         </Field>
         <Field Name="ToMonthSort">
           <DataField>ToMonthSort</DataField>
@@ -1959,6 +2701,18 @@ End Function
         <Field Name="ToTFromTotalSalesFormat">
           <DataField>ToTFromTotalSalesFormat</DataField>
         </Field>
+        <Field Name="ToTFromSale_Quantity">
+          <DataField>ToTFromSale_Quantity</DataField>
+        </Field>
+        <Field Name="ToTFromSale_QuantityFormat">
+          <DataField>ToTFromSale_QuantityFormat</DataField>
+        </Field>
+        <Field Name="ToTFromTotalSaleQty">
+          <DataField>ToTFromTotalSaleQty</DataField>
+        </Field>
+        <Field Name="ToTFromTotalSaleQtyFormat">
+          <DataField>ToTFromTotalSaleQtyFormat</DataField>
+        </Field>
         <Field Name="ToTFromMonthSort">
           <DataField>ToTFromMonthSort</DataField>
         </Field>
@@ -1982,6 +2736,18 @@ End Function
         </Field>
         <Field Name="ToT_ToToTotalSalesFormat">
           <DataField>ToT_ToToTotalSalesFormat</DataField>
+        </Field>
+        <Field Name="ToT_ToToSale_Quantity">
+          <DataField>ToT_ToToSale_Quantity</DataField>
+        </Field>
+        <Field Name="ToT_ToToSale_QuantityFormat">
+          <DataField>ToT_ToToSale_QuantityFormat</DataField>
+        </Field>
+        <Field Name="ToT_ToToTotalSaleQty">
+          <DataField>ToT_ToToTotalSaleQty</DataField>
+        </Field>
+        <Field Name="ToT_ToToTotalSaleQtyFormat">
+          <DataField>ToT_ToToTotalSaleQtyFormat</DataField>
         </Field>
         <Field Name="ToT_ToToMonthSort">
           <DataField>ToT_ToToMonthSort</DataField>

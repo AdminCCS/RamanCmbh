@@ -12,7 +12,6 @@ page 66000 "CCS Sales order Sub List"
         {
             repeater(SalesLineList)
             {
-
                 field("Document No."; Rec."Document No.")
                 {
                     ApplicationArea = all;
@@ -46,5 +45,4 @@ page 66000 "CCS Sales order Sub List"
             }
         }
     }
-
 }

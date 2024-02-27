@@ -164,11 +164,13 @@ tableextension 66000 "CCS Modify Purchheader" extends "Purchase Header" //38
         {
             FieldClass = FlowField;
             CalcFormula = sum("Purchase Header"."CCS Balance Amount" where("CCS Container No." = field("CCS Container No.")));
+            Caption = 'CCS Total Balance Amt';
         }
         field(66030; "CCS Total Deposit Amt"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Purchase Header"."CCS Deposit Amount" where("CCS Container No." = field("CCS Container No.")));
+            Caption = 'CCS Total Deposit Amt';
         }
         field(66031; "CCS Total Shipping Cost"; Decimal)
         {

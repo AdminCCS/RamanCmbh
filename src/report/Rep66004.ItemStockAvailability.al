@@ -49,7 +49,6 @@ report 66004 "Item Stock Availability"
             }
             column(ImageInclude; ImageInclude)
             { }
-
             dataitem("Purchase Line"; "Purchase Line")
             {
                 //PrintOnlyIfDetail = true;
@@ -80,7 +79,6 @@ report 66004 "Item Stock Availability"
                     if PurchHeader.get("Purchase Line"."Document Type", "Purchase Line"."Document No.") then
                         POstatus := FORMAT(PurchHeader."CCS Purchase Order Status");
                     EDD := PurchHeader."CCS ETD";
-
                 end;
             }
 
@@ -89,10 +87,7 @@ report 66004 "Item Stock Availability"
             begin
                 FreeAvailableStock := item.Inventory - (item."CCS Instant Ord Invt" + item."CCS Blocking Order Invt");
             end;
-
         }
-
-
     }
 
     requestpage
@@ -122,7 +117,6 @@ report 66004 "Item Stock Availability"
     trigger OnPreReport()
     begin
         ItemFilter := Item.GetFilters;
-
     end;
 
     var

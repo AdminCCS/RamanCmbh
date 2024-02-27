@@ -155,5 +155,4 @@ tableextension 66001 "CCS Modify PurhInvheader" extends "Purch. Inv. Header" //1
             DataClassification = CustomerContent;
         }
     }
-
 }

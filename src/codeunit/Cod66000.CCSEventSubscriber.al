@@ -3,7 +3,6 @@
 /// </summary>
 codeunit 66000 "CCS EventSubscriber"
 {
-
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnBeforePostSalesDoc', '', false, false)]
     local procedure OnBeforePostSalesDoc(var SalesHeader: Record "Sales Header")
     var
@@ -96,7 +95,6 @@ codeunit 66000 "CCS EventSubscriber"
                 SalesLine.Quantity := SalesLine."Initial Qty" - (Rec.Quantity + ConsumeQty);
                 SalesLine.Modify();
             end;
-
         end;
         SalesHeader.get(rec."Document Type", rec."Document No.");
         if (SalesHeader."CCS Order Type" = SalesHeader."CCS Order Type"::"Instant Order") or ((SalesHeader."CCS Order Type" = SalesHeader."CCS Order Type"::"Blocking Order")) then
@@ -144,7 +142,6 @@ codeunit 66000 "CCS EventSubscriber"
             item."Free Available Stock" := item.Inventory - (item."CCS Instant Ord Invt" + item."CCS Blocking Order Invt");
             item.Modify();
         end;
-
     end;
 
     [EventSubscriber(ObjectType::Table, database::"Sales Line", 'OnAfterInsertEvent', '', false, false)]
@@ -155,11 +152,10 @@ codeunit 66000 "CCS EventSubscriber"
 
         if SalesHeader.get(rec."Document Type", rec."Document No.") then
             rec."CCS Order Type" := SalesHeader."CCS Order Type";
-
     end;
 
     [EventSubscriber(ObjectType::Table, database::"Sales Line", 'OnAfterValidateEvent', 'No.', false, false)]
-    local procedure OnAfterValidateEventSalesLine(var Rec: Record "Sales Line");
+    local procedure OnAfterValidateEventSalesLine(var Rec: Record "Sales Line")
     var
         Item: Record Item;
     begin
@@ -192,7 +188,7 @@ codeunit 66000 "CCS EventSubscriber"
 
     //[EventSubscriber(ObjectType::Table, database::"Sales Line", 'OnBeforeDeleteEvent', '', false, false)]
     [EventSubscriber(ObjectType::page, page::"Sales Order Subform", 'OnDeleteRecordEvent', '', false, false)]
-    local procedure OnBeforeDeleteEventSalesLine(var Rec: Record "Sales Line");
+    local procedure OnBeforeDeleteEventSalesLine(var Rec: Record "Sales Line")
     var
         BANO: Code[20];
         PONO: Code[20];
@@ -216,7 +212,7 @@ codeunit 66000 "CCS EventSubscriber"
 
     // [EventSubscriber(ObjectType::Table, database::"Sales Header", 'OnBeforeDeleteEvent', '', false, false)]
     [EventSubscriber(ObjectType::Page, page::"Sales Order", 'OnDeleteRecordEvent', '', false, false)]
-    local procedure OnBeforeDeleteEventSalesHeader(var Rec: Record "Sales Header");
+    local procedure OnBeforeDeleteEventSalesHeader(var Rec: Record "Sales Header")
     var
         SalesLine: Record "Sales Line";
         docNos: Text;
@@ -298,7 +294,7 @@ codeunit 66000 "CCS EventSubscriber"
 
     // [EventSubscriber(ObjectType::Table, database::"Purchase Header", 'OnBeforeDeleteEvent', '', false, false)]
     [EventSubscriber(ObjectType::page, page::"Purchase Order", 'OnDeleteRecordEvent', '', false, false)]
-    local procedure OnBeforeDeleteEventPurchHeader(var Rec: Record "Purchase Header");
+    local procedure OnBeforeDeleteEventPurchHeader(var Rec: Record "Purchase Header")
     var
         purchLineRec: Record "Purchase Line";
         SalesHeader: Record "Sales Header";

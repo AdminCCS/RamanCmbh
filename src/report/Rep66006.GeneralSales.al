@@ -5,7 +5,6 @@ report 66006 "General Sales"
     DefaultLayout = RDLC;
     RDLCLayout = 'Src\Layouts\GeneralSales.rdl';
 
-
     dataset
     {
         dataitem("Customer Posting Group"; "Customer Posting Group")
@@ -514,9 +513,7 @@ report 66006 "General Sales"
                                         Gensales.Modify()
                                     end;
                                 end;
-
                         end;
-
                     until fromCLE.Next() = 0;
 
                 toCLE.Reset();
@@ -881,13 +878,9 @@ report 66006 "General Sales"
                                         Gensales.Modify()
                                     end;
                                 end;
-
                         end;
-
                     until toCLE.Next() = 0;
                 //------------filling total line
-
-
             end;
 
             trigger OnPostDataItem()
@@ -958,9 +951,7 @@ report 66006 "General Sales"
                             Gensales.Margin := GensalesNew.Margin / 12;
                             Gensales.MonthSort := 14;
                             Gensales.Insert();
-
                         end;
-
                     until GensalesNew.Next() = 0;
                 GensalesNew.Reset();
                 GensalesNew.SetRange(FY_Options, Gensales.FY_Options::ToYear);
@@ -1011,10 +1002,9 @@ report 66006 "General Sales"
                             Gensales.MonthSort := j + 1;
                             Gensales.Insert();
                             j := Gensales.MonthSort;
-
                         end;
                     until GensalesNew.Next() = 0;
-                //-----------from year totals   
+                //-----------from year totals
                 GensalesNew.Reset();
                 GensalesNew.SetRange(FY_Options, Gensales.FY_Options::FromYear);
                 GensalesNew.SetRange(Year, Format(fromYear));
@@ -1073,9 +1063,7 @@ report 66006 "General Sales"
                             Gensales.Margin := GensalesNew.Margin / 12;
                             Gensales.MonthSort := 14;
                             Gensales.Insert();
-
                         end;
-
                     until GensalesNew.Next() = 0;
                 GensalesNew.Reset();
                 GensalesNew.SetRange(FY_Options, Gensales.FY_Options::FromYear);
@@ -1126,7 +1114,6 @@ report 66006 "General Sales"
                             Gensales.MonthSort := j + 1;
                             Gensales.Insert();
                             j := Gensales.MonthSort;
-
                         end;
                     until GensalesNew.Next() = 0;
                 Gensales2.Reset();
@@ -1292,7 +1279,6 @@ report 66006 "General Sales"
                         Gensales."Sale Amount" := toMargin - fromMargin;
                         Gensales.MonthSort := 4;
                         Gensales.Insert();
-
                     end;
                     if i = 4 then begin
                         fromTurnOver := 0;
@@ -1634,7 +1620,6 @@ report 66006 "General Sales"
             end;
         }
 
-
         dataitem("General Sales"; "General Sales")
         {
             DataItemTableView = sorting(Year) where(FY_Options = const(FromYear), MonthSort = filter(< 15));
@@ -1714,7 +1699,6 @@ report 66006 "General Sales"
             { }
             column(ToTFromMonthSort; MonthSort)
             { }
-
         }
         dataitem(ToT_To; "General Sales")
         {
@@ -1774,11 +1758,9 @@ report 66006 "General Sales"
         end;
     }
 
-
     trigger OnPreReport()
     begin
         Gensales.DeleteAll();
-
     end;
 
     var
