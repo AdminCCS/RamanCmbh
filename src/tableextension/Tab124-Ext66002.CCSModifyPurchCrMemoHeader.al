@@ -4,7 +4,7 @@ tableextension 66002 "CCS Modify PurchCrMemoHeader" extends "Purch. Cr. Memo Hdr
     {
         field(66000; "CCS Purchase Order Status"; Option)
         {
-            OptionMembers = "Pending",Booked,Shipped;
+            OptionMembers = "Pending",Booked,Shipped,Confirmed,OnProduction;
             DataClassification = CustomerContent;
             Caption = 'Purchase Order Status';
         }
