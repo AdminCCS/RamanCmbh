@@ -4,7 +4,7 @@ tableextension 66004 "CCS Modify PurchArchieve" extends "Purchase Header Archive
     {
         field(66000; "CCS Purchase Order Status"; Option)
         {
-            OptionMembers = "Pending",Booked,Shipped;
+            OptionMembers = "Pending",Booked,Shipped,Confirmed,OnProduction;
             DataClassification = CustomerContent;
             Caption = 'Purchase Order Status';
         }

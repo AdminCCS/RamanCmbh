@@ -120,7 +120,7 @@ report 66000 "ProformaInvoice"
             column(DocumentNo; "No.")
             {
             }
-            column(CompanyLegalOffice; CompanyInformation.GetLegalOffice())
+            column(CompanyLegalOffice; '')
             {
             }
             column(SalesPersonName; SalespersonPurchaserName)
@@ -152,7 +152,7 @@ report 66000 "ProformaInvoice"
             column(ExternalDocumentNoLbl; FieldCaption("External Document No."))
             {
             }
-            column(CompanyLegalOfficeLbl; CompanyInformation.GetLegalOfficeLbl())
+            column(CompanyLegalOfficeLbl; '')
             {
             }
             column(SalesPersonLbl; SalesPersonLblText)

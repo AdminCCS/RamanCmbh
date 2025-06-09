@@ -4,7 +4,7 @@ tableextension 66001 "CCS Modify PurhInvheader" extends "Purch. Inv. Header" //1
     {
         field(66000; "CCS Purchase Order Status"; Option)
         {
-            OptionMembers = "Pending",Booked,Shipped;
+            OptionMembers = "Pending",Booked,Shipped,Confirmed,OnProduction;
             DataClassification = CustomerContent;
             Caption = 'Purchase Order Status';
         }

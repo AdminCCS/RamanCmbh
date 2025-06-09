@@ -116,16 +116,16 @@ report 66001 "CCS Sales Invoice"
             column(CompanyVATRegistrationNo_Lbl; CompanyInfo.GetVATRegistrationNumberLbl())
             {
             }
-            column(CompanyLegalOffice; CompanyInfo.GetLegalOffice())
+            column(CompanyLegalOffice; '')
             {
             }
-            column(CompanyLegalOffice_Lbl; CompanyInfo.GetLegalOfficeLbl())
+            column(CompanyLegalOffice_Lbl; '')
             {
             }
-            column(CompanyCustomGiro; CompanyInfo.GetCustomGiro())
+            column(CompanyCustomGiro; '')
             {
             }
-            column(CompanyCustomGiro_Lbl; CompanyInfo.GetCustomGiroLbl())
+            column(CompanyCustomGiro_Lbl; '')
             {
             }
             column(CompanyLegalStatement; GetLegalStatement())
